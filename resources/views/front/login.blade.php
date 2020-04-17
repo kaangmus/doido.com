@@ -1,70 +1,30 @@
 @extends('front.Base')
-@section('title','Đăng nhập | Thời trang cao cấp Render')
 @section('main')
-    <div class="content-area home-content-area top-area">
-        <div class="container">
-            <div class="navigation margin-top20">
-                <a href="#">Trang chủ</a> > <a href="#">Đăng nhập</a>
-            </div>
-            <div>
-                <p class="text-center upcase size-20 times-new-roman">Đăng nhập</p>
-                <div class="text-center nav-horizontal box-help-cart">
-                    <span class="upcase">TRỢ GIÚP? </span><span
-                            class="bold">1900 636 517</span>
-                    <a href="chinh-sach-doi-tra.html">Ch&iacute;nh s&aacute;ch đổi trả</a>
-                    <a href="chinh-sach-giao-hang.html">Ch&iacute;nh s&aacute;ch giao h&agrave;ng</a>
-                    <a href="chinh-sach-thanh-toan.html">Ch&iacute;nh s&aacute;ch thanh to&aacute;n</a>
-                    <a href="size-guide.html">Size Guide</a>
-                </div>
-                <div class="row box-gray relative">
-                    <form method="POST" id="frmregister">
-                        {{ csrf_field() }}
-                        <div class="col-md-9">
-                            <p class="title">KHÁCH HÀNG ĐÃ CÓ TÀI KHOẢN</p>
-                            <p>Nếu bạn đã có tài khoản tại RENDER, vui lòng đăng nhập tại đây.<br>
-                                Chú ý: Nếu bạn mới chỉ đăng ký theo dõi bản tin hàng tuần mà vẫn chưa đăng ký tài khoản
-                                thành viên, vui lòng đăng ký bên dưới.</p>
-
-                            <div class="relative row-control form-group">
-                                <label>Email *</label><input class="form-control" name="email" type="text"
-                                                             id="txtEmail"/>
-                            </div>
-                            <div class="relative row-control form-group">
-                                <label>Mật khẩu *</label><input type="password" name="password" class="form-control"
-                                                                id="txtPassword"/>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                        <button class="btn btn-black" type="submit" id="btnSignin" style="min-width: 184px;">Đăng nhập
-                            ngay
-                        </button>
-
-                        <a href="javascript:;" class="btn btn-fb" id="loginWithFacebook"
-                           data-url="index.html">Đăng nhập bằng Facebook</a>
-                        </div>
-                    </form>
-                </div>
-                <div class="row box-gray relative">
-                    <div class="col-md-9">
-                        <p class="title">QUÊN MẬT KHẨU?</p>
-                        <p>Nếu bạn quên mật khẩu, vui lòng chọn “ĐỐI MẬT KHẨU” và làm theo hướng dẫn.</p>
+    <div data-reactid="84">
+        <div class="container" data-reactid="85">
+            <div class="_1OYeUQpc5QDuJVynVgphOp form-container" data-reactid="86"><!-- react-empty: 87 -->
+                <div class="form-title" data-reactid="88">ĐĂNG NHẬP</div>
+                <form data-reactid="89"><input type="tel" placeholder="Nhập số điện thoại" class="form-control"
+                                               required="" data-reactid="90"><input type="password"
+                                                                                    placeholder="Nhập mật khẩu"
+                                                                                    class="form-control" required=""
+                                                                                    data-reactid="91">
+                    <div class="form-group" data-reactid="92"><input type="checkbox" id="rememberMe" data-reactid="93"
+                                                                     value="on" checked=""><label for="rememberMe"
+                                                                                                  data-reactid="94">Ghi
+                            nhớ tài khoản</label></div>
+                    <button type="submit" class="btn _2D4it_zTsY2nlyWHS26Xnj" data-reactid="95">ĐĂNG NHẬP</button>
+                    <button type="button" class="btn _1mvVFr95ffjqLU5XVVBhi3" data-reactid="96">Quên mật khẩu?</button>
+                    <div class="form-separator" data-reactid="97"><span data-reactid="98">hoặc</span></div>
+                    <div class="form-group group-2" data-reactid="99">
+                        <button type="button" class="btn _50dhdN8cZSZ6I0vtbnH0k" data-reactid="100">
+                            <!-- react-text: 101 -->Đăng nhập bằng <!-- /react-text --><img
+                                    src="https://static.chotot.com/storage/SSO_CDN_STAGING/dist/fb.svg"
+                                    data-reactid="102"></button>
+                        <button type="button" class="btn btn-success" data-reactid="103">Đăng ký</button>
                     </div>
-                    <a class="btn btn-black" id="btnChangePass" style="min-width: 184px;"
-                       href="forgotpassword.html">ĐỔI MẬT
-                        KHẨU</a>
-                </div>
-                <div class="row box-gray relative">
-                    <div class="col-md-9">
-                        <p class="title">BẠN CHƯA ĐĂNG KÝ TÀI KHOẢN?</p>
-                        <p>Nếu bạn mới đến RENDER, vui lòng chọn “ĐĂNG KÝ NGAY”</p>
-                    </div>
-                    <a href="register.html">
-                        <button class="btn btn-black" type="button" style="min-width: 184px;">ĐĂNG KÝ NGAY</button>
-                    </a>
-                    <a href="javascript:;" class="btn btn-fb" id="loginWithFacebook"
-                       data-url="index.html">Đăng nhập bằng Facebook</a>
-                </div>
+                </form>
             </div>
         </div>
-    </div><!-- End content area -->
-@stop
+    </div>
+    @stop

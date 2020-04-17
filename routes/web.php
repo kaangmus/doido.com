@@ -14,6 +14,9 @@ use App\Http\Middleware\CheckLogin;
 |
 */
 Route::group(['namespace'=>'Front'],function (){
+    Route::get('test',function (){
+       return view('admin.login');
+    });
     Route::get('/','indexController@indexShow');
     Route::get('search/{search}','indexController@searchItem');
     Route::get('search','indexController@getsearch');

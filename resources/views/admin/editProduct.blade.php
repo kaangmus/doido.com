@@ -3,20 +3,22 @@
 @section('main')
     <script type="text/javascript">
         $('select').picker();
-        function changeImg(input){
+
+        function changeImg(input) {
             //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
-            if(input.files && input.files[0]){
+            if (input.files && input.files[0]) {
                 var reader = new FileReader();
                 //Sự kiện file đã được load vào website
-                reader.onload = function(e){
+                reader.onload = function (e) {
                     //Thay đổi đường dẫn ảnh
-                    $('#avatar').attr('src',e.target.result);
+                    $('#avatar').attr('src', e.target.result);
                 }
                 reader.readAsDataURL(input.files[0]);
             }
         }
-        $(document).ready(function() {
-            $('#avatar').click(function(){
+
+        $(document).ready(function () {
+            $('#avatar').click(function () {
                 $('#img').click();
             });
         });
@@ -43,72 +45,89 @@
                     <form method="POST" role="form" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label>Product category</label>
-                            <select id="boot-multiselect-demo" multiple="multiple" class="form-control" rows="5" name="idcategory[]">
-                                @foreach($listCate as $itemCate)
-                                <option value="{{$itemCate->id}}">{{$itemCate->title}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label>Product name</label>
-                            <input class="form-control" placeholder="Prodcut name" name="title" value="{{isset($item->title)?$item->title:''}}">
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label>Product price</label>
-                            <input class="form-control" type="number" placeholder="Prodcut price" name="price" value="{{isset($item->price)?$item->price:''}}">
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label>Product sale</label>
-                            <input class="form-control" type="number" placeholder="Prodcut sale" name="sale" value="{{isset($item->sale)?$item->sale:''}}">
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label>Product size</label><br>
-                            <select id="boot-multiselect-demo" class="form-control" rows="5" multiple="multiple" name="size[]">
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL" >XL</option>
-                            </select>
-
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <label>Product Color</label>
-                            <select id="boot-multiselect-demo" multiple="multiple" class="form-control" rows="5" name="color[]">
-                                <option value="red">Red</option>
-                                <option value="white">White</option>
-                                <option value="yellow">Yellow</option>
-                                <option value="black" >Black</option>
-                            </select>
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-sm-6">
-                            <label>Number of product</label>
-                            <input class="form-control" type="number" placeholder="Number of product" name="count" value="{{isset($item->count)?$item->count:''}}">
-                        </div>
-                        <div class="form-group col-sm-6">
-                                <label>Product describe</label>
-                                <br>
-                                <textarea class="form-control" rows="5" name="content" placeholder="Product describe">{{isset($item->content)?$item->content:''}}</textarea>
+                            <div class="form-group col-sm-6">
+                                <label>Product category</label>
+                                <select id="boot-multiselect-demo" multiple="multiple" class="form-control" rows="5"
+                                        name="idcategory[]">
+                                    @foreach($listCate as $itemCate)
+                                        <option value="{{$itemCate->id}}">{{$itemCate->title}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label>Product name</label>
+                                <input class="form-control" placeholder="Prodcut name" name="title"
+                                       value="{{isset($item->title)?$item->title:''}}">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
+                                <label>Product price</label>
+                                <input class="form-control" type="number" placeholder="Prodcut price" name="price"
+                                       value="{{isset($item->price)?$item->price:''}}">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label>Product sale</label>
+                                <input class="form-control" type="number" placeholder="Prodcut sale" name="sale"
+                                       value="{{isset($item->sale)?$item->sale:''}}">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label>#Tag</label>
+                                <input class="form-control" placeholder="Prodcut Tag" name="tag"
+                                       value="{{isset($item->tag)?$item->tag:''}}">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label>Loại đăng tin</label>
+                                <select id="boot-multiselect-demo" multiple="multiple" class="form-control" rows="5"
+                                        name="style[]">
+                                    <option value="bán">Bán</option>
+                                    <option value="cho">Cho</option>
+                                    <option value="đổi">Đổi</option>
+                                    <option value="tặng">Tặng</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
+                                <label>Number of product</label>
+                                <input class="form-control" type="number" placeholder="Number of product" name="count"
+                                       value="{{isset($item->count)?$item->count:''}}">
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label>Product describe</label>
+                                <br>
+                                <textarea class="form-control" rows="5" name="describe"
+                                          placeholder="Product describe">{{isset($item->describe)?$item->describe:''}}</textarea>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label>Product content</label>
+                            <br>
+                            <textarea class="form-control" rows="5" name="content"
+                                      placeholder="Product content">{{isset($item->content)?$item->content:''}}</textarea>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-sm-6">
                                 <label>Product Img</label>
-                                <input id="img" type="file" name="coverimg" value="" class="form-control" onchange="changeImg(this)">
-                                <img id="avatar" class="thumbnail" width="300px" src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}" >
+                                <input id="img" type="file" name="coverimg" value="" class="form-control"
+                                       onchange="changeImg(this)">
+                                <img id="avatar" class="thumbnail" width="300px"
+                                     src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}">
                                 <p class="help-block">Ảnh đại diện.</p>
                             </div>
                             <div class="form-group col-sm-6">
                                 <label>Product Img</label>
                                 <input multiple type="file" name="media[]" value="" class="form-control">
                             </div>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label>Status</label>
+                            <select id="boot-multiselect-demo" class="form-control" rows="5" name="status">
+                                <option value="bán">Show</option>
+                                <option value="cho">Hide</option>
+                            </select>
                         </div>
                         <button class="btn btn-lg btn-primary">Add</button>
                     </form>
