@@ -15,6 +15,9 @@ class CreateTableMessenger extends Migration
     {
         Schema::create('mesenger', function (Blueprint $table) {
             $table->id();
+            $table->integer('idguest')->nullable();
+            $table->text('title')->nullable();
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }

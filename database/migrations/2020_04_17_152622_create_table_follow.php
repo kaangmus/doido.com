@@ -15,6 +15,9 @@ class CreateTableFollow extends Migration
     {
         Schema::create('follow', function (Blueprint $table) {
             $table->id();
+            $table->integer('idguest')->nullable();
+            $table->text('describe')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

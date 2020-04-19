@@ -15,7 +15,7 @@ use App\Http\Middleware\CheckLogin;
 */
 Route::group(['namespace'=>'Front'],function (){
     Route::get('test',function (){
-       return view('admin.login');
+       return view('front.detailProduct');
     });
     Route::get('/','indexController@indexShow');
     Route::get('search/{search}','indexController@searchItem');
@@ -34,7 +34,10 @@ Route::group(['namespace'=>'Front'],function (){
 Route::group(['namespace'=>'Admin'],function(){
    Route::group(['prefix'=>'admin','middleware'=>'checklogin'],function(){
       Route::get('/','indexController@indexShow');
-
+      Route::group(['prefix'=>'profile'],function ()
+      {
+         Route::get('/','profileController@showItem');
+      });
        Route::group(['prefix'=>'category'],function (){
            Route::get('/','categoryController@listAll');
            Route::post('/','categoryController@addItem');

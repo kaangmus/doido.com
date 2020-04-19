@@ -15,6 +15,10 @@ class CreateTableLike extends Migration
     {
         Schema::create('like', function (Blueprint $table) {
             $table->id();
+            $table->integer('iduser')->nullable();
+            $table->integer('idproduct')->nullable();
+            $table->text('title')->nullable();
+            $table->text('style')->nullable();
             $table->timestamps();
         });
     }

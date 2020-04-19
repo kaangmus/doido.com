@@ -14,7 +14,7 @@ class mediaModel extends Model
         $item=mediaModel::orderBy('created_at','DESC')->get();
         return $item;
     }
-    public function addItem(Request $request,$idproduct,$idblog)
+    public function addItem(Request $request,$idproduct)
     {
             try {
                 if($request->hasfile('media'))
@@ -24,7 +24,6 @@ class mediaModel extends Model
                     {
                         $item = new mediaModel();
                         $item->idproduct=$idproduct;
-                        $item->idblog=$idblog;
                         $filename=$file->getClientOriginalName();
                         $item->url = $filename;
                         //$file->storeAs('media',$filename);

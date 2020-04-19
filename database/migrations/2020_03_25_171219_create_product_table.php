@@ -20,7 +20,7 @@ class CreateProductTable extends Migration
             $table->text('tag')->nullable();
             $table->integer('price')->nullable();
             $table->integer('sale')->nullable();
-            $table->integer('style')->nullable();
+            $table->text('style')->nullable();
             $table->integer('status')->nullable();
             $table->integer('count')->nullable();
             $table->text('content')->nullable();

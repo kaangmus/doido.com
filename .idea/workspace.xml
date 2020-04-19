@@ -2,373 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a82cd3c-ff08-44cd-bca2-64a6f8fcbaa0" name="Default Changelist" comment="louis commit">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/render.vn.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/detailProduct.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/indexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/indexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/mediaModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/mediaModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/productModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/productModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_25_170045_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_25_170045_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_25_171207_create_cart_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_25_171207_create_cart_product_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_25_171219_create_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_25_171219_create_product_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/bo-suu-tap/bst-tui-xach-2020.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/bo-suu-tap/giay-2020.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/bootstrap-slider.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/bootstrapValidator.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/fonts-telo/css/fontello.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/fonts-telo/font/fontelloce35.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/fonts-telo/font/fontelloce35.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/fonts-telo/font/fontelloce35.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/fonts-telo/font/fontelloce35.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/owl.theme.default.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/responsivee67d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/css/style2048.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1002-bkyel-tráng-thuỷ-bạc.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1002-bkyel-tráng-thủy-xanh-duong.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1002-fullbk-tráng-thủy-xanh-duong.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1002-whbl-tráng-thủy-tráng.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1006-bk-tráng-thủy-xanh-duong.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1006-bkwh-tráng-thủy-tráng.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1011-bk-tráng-thủy-tráng.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1011-bkredbl-tráng-thủy-xanh-duong.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-e1011-bkyel-tráng-thủy-xanh-tráng.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5525-c1.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5525-c2.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5525-c3.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5525-c4.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5525-c5.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5525-c6.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5527-c1.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5527-c2.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5527-c3.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5527-c4.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5527-c5.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5527-c6.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5528-bk.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5531-bkw.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5532-bkor-tráng-thuỷ-xanh-duong.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5532-bkwh-tráng-thuỷ-vàng.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5532-bkwh-tráng-thuỷ-xanh-duong.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5532-whor-tráng-thuỷ-xanh-duong.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5542-c1-den-bóng.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5542-c2-den-nhám.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5542-c3.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5542-c4.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-ex5542-c6.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-exr015-gold.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-exr015-m-black.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-exr015-m-brown.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-exr015-m-silver.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-exr015-m-violet.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/exodus-kính-mát-unisex-exr015-m-wine.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-tui-hop-flora-hoa-dỏ-r12s402.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a41-den-d05a41.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a41-nau-cam-b11a41.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a41-nau-reu-g13a41.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a42-den-d05a42.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a42-xanh-la-g13a42.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a43-den-d05a43.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a43-kem-k01a43.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a43-nau-b11a43.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a44-den-d05a44.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a45-den-d05a45.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a46-den-d05a46.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a47-den-d05a47.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a50-den-d05a50.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a50-hong-cam-b11a50.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a50-hong-phán-k01a50.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a51-cam-b11a51.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a51-hong-k01a51.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-a51-xanh-da-troi-b09a51.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-f40-den.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-da-that-f40-nau-b11f40.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-xach-vm-f39-hong-p20f39.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-xách-f04-hoa-xam-d09f04.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/venuco-túi-xách-f04-hoa-xanh-p13f04.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/vigcom-gong-kính-unisex-vigcom-vg1733-c10.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/vigcom-gong-kính-unisex-vigcom-vg1733-c12.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/giay/vigcom-gong-kính-unisex-vigcom-vg1733-c2.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/hang-moi/nhan-da-mat-rong-oval.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/hang-moi/nhan-garnet-giac-cat-oval.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/hang-moi/nhan-ho-phach-chiec-la-doi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/hang-moi/nhan-kyanite-vien-buom.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/hang-moi/nhan-tourmaline-giac-cat-baguette.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/BCT-seal-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/articel/bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/banner1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/banner2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/banner3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/bg-left-14-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/bg-right-14-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/checked.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/filter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/footer_logo_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/icon-card.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/icon-left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/icon-right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/icon-sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/icon-video.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/shirt-render.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/suutap1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/images/wishlist.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/bootstrap-3.1.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/bootstrap-slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/bootstrapValidator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/jquery-2.1.1.mind41d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/jquery.elevatezoom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/jquery.slimscroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/lazyload.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/main83a7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/js/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/21six-fashion.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/3w-clinicec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/adelineec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/am-young.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/am-youngec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/arcancilec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/aromaec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/baecicstore.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/baecicstoreec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/beauskinec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/cashewec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/cathe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/clara-mare.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/clara-mareec79.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/cofason.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/de-leah.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/elise.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/elly.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/gianni-conti.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/gouttobed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/guess.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/h-t-studios-by-ha-truong.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/holster.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/just-feel-free.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/la-pham.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/le-chat.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/lecas.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/lepetit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/nha-thiet-ke/nature-maiden.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-cach-tan-chuòn-chuòn-co-nu.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-cach-tan-cong-mãu-don-vang-nam.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-cach-tan-cong-mãu-don-vang-nu.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-cach-tan-cong-phung-dỏ-nam.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-cach-tan-cong-phung-dỏ-nu.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-cach-tan-hong-hạc-nu.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-dỏ-cỏ-tàu-nu.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-gam-hoa-hong-dỏ-nam.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-dai-gam-hoa-hong-dỏ-nu.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/ao-so-mi-caro-túi-xéo-nam.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/áo-det-kim-den-soc-dỏ-nam.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/de-leah-dàm-xoe-cach-dieu-mau-do-cam.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/hate-ao-sơ-mi-thiét-ké-thanh-lich-vói-kiẻu-cỏ-button.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/index9311.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/indexa373.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/indexd5f2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/indexf49a.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/phi-by-phi-pham-áo-dỏ-dài-tay.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/phi-by-phi-pham-áo-hai-day-họa-tiét-dỏ.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/phi-by-phi-pham-áo-khoác-bomber-họa-tiét.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/san-pham/phi-by-phi-pham-áo-khoá́c-họa-tiét-dỏ.html.z" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/028d0a7edbc0a88a9c0bfa5822d7b376/525x787/OjCYZyMOEjHiCV7j7ebaXTjUxiOry57nO2beunvY.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/03abddc67647f4283654c0503482e74b/525x787/CUmwT6HGwh9NjjOyrtKCIjav9udZB2vDCCT9buXR.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/03abddc67647f4283654c0503482e74b/525x787/jmdlD9dM5M6upRyWLQKz67ihA8QC4hFWOZDo412w.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/04ff2896ed09b2e8d686c58dcb78cb83/525x787/acDlSCPE8tht5AbuizBW6dBENpXMWNF4RO7TfPIe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/05fcd4cd897496a3adb59e6d0ec7e9dc/525x787/BIbgP3mrfIuoLqJR1eFvq8p8Mjkjz6uBcTI9j7cP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/05fcd4cd897496a3adb59e6d0ec7e9dc/525x787/yORiz2vRkRXrYCwSbgTvmxbMxaBJ6pzqeykXVeh5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/0c9fd755f1e941587cabab631a81f89e/525x787/4Z2OsfboVCaX1gTDqVVESPizNIhrYk9wldmxvL5g.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/0c9fd755f1e941587cabab631a81f89e/525x787/UIKvxpVjBMKs4NDL58nVXOvlbK7unPca8lL936vX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/10b7aacb4303a22494c755fd942ab5b8/420x630/w8jKQBgyTJ2D04hTDgKsBBr9DrGmRdjdXzt0Cepb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/10b7aacb4303a22494c755fd942ab5b8/525x787/hRqqc5LLEBCTcBnZ40UrhkwTpL63BS8f9wsi6ErW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/1282361fd91dd7d33e973c529627e0a1/420x630/zNRna8JL8OtxTmFF1gjhaUAWj2Xn9AfGnvXF6tlF.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/1282361fd91dd7d33e973c529627e0a1/525x787/zNRna8JL8OtxTmFF1gjhaUAWj2Xn9AfGnvXF6tlF.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/12c7c68e4e25a6bb27bcdbccf500b5fd/525x787/XV3JlGGjWnBB9Bah2AEjBXkqqbodiPqambbiOs8i.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/12c7c68e4e25a6bb27bcdbccf500b5fd/525x787/vtv9TdDHmNRYWfh6n9rcm0mdYkpwmoTWMx8gY7t8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/1690bccd010b308cd33989d3819ed96a/525x787/iTOioPD90I4JF0vAv1rbyHSBaVbrLEeYm8wgtGaG.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/1ba2e3e63336e31e2474cac0fd74bb40/525x787/B9YU9m1Khuie9mcY0wjIZPZ1piBz7nXW5hzKDRh3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/1ba2e3e63336e31e2474cac0fd74bb40/525x787/sZuLA9NXyVu6o6hGg5O6SLwGBJ8KUXIYEFDtwlBw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/24b8238ed3a342bd6ade866de537a029/525x787/nwwZoCmaEDD1o3o9caoqwnZOrvkCVhqTjyWSxCbI.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/288da4070b563521170fcaa92e24bbfb/525x787/BtTC0tCZssc28krKFlJrGnHdsDu2ACWjdOXNwJ8P.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/288da4070b563521170fcaa92e24bbfb/525x787/tq42umqCEeke8cUWafxoOSuJybuux1PSavzFejOP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/2ae659bde981b0ad9c0f24835a8d1232/525x787/SjqPDsuZYaT4yAdQXAU4GHtTMNwlMS1MFtyJiARu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/2ae659bde981b0ad9c0f24835a8d1232/525x787/WUxndC8VrNP2Xk6XCD2ISYkm1bxm12B3rRetElaH.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/2c2c5fd01b61e3e0e687573af8f7e1fa/525x787/CSlmSmfjmcPBi2bIKSfN4PO2v4mqXv8hb3RvrCaH.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/2c2c5fd01b61e3e0e687573af8f7e1fa/525x787/JjVy7uqSK3hGdBAO7LYQFER9sPs9llIJ0gb7bD7h.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/2dfb6bf59bf35a07d6787f7f04c28e11/525x787/aY3a4Jj0hCHY2g9jUnflWDLbrrLtUrNMzlfjVLTu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/2dfb6bf59bf35a07d6787f7f04c28e11/525x787/hpnHbthfV50wz8qY8pqrADHMeYOG13gJz3JSurnw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/2f8ad0a8b0f357680b14408c30c53a11/525x787/LOytebDoGLIU9DyI03tnwACak4EdN8tpb6R5gfOY.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/2f8ad0a8b0f357680b14408c30c53a11/525x787/ipDnhdi1PaPQXMJVc4DWwtiJQcXbKsgAjKfkPN3a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/3707a6adbeb137bfde132463d77ac17d/525x787/O5ICmdNcy7alVAN5kkahEOwjCC0IZHej9AAACQWY.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/3707a6adbeb137bfde132463d77ac17d/525x787/slmw8nFzcqNrJBtGdCJI7v4LCdb6ZFMkJ2n8u9Qz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/39aca26227b4762cf59f50e09159ca84/525x787/5HNNV1QNvalIFnmepDeNOYmkNgBwRpU0pZ4oufKC.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/39aca26227b4762cf59f50e09159ca84/525x787/u2bo6bnOAoL0sk81SThCI9XF2P2LHk5fqqAgrQp9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/3cab6b8b2708f469275039d7ad17380c/525x787/hFPbQaQ6zVMwm3eb3my9EAIpC8bluHJ2463wflIW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/3f882a4bb95c43e27924205306955021/525x787/FCvB4n2fCVW9C5xqFcO7mJymJ7RvciCmscHrB0eQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/3f882a4bb95c43e27924205306955021/525x787/ixSFO2Eq8OVZXgSLNRqFu4QYoc8QUO76jwchU0Nm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/3faebb27540633c9d2065e5131ddf2a5/525x787/8g5L96T3fwfLqa0jW4XTTcNVUKbCW1fbhYfbixML.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/3faebb27540633c9d2065e5131ddf2a5/525x787/l5fPNzz1DrX5Telk2ekdgPQ48QJlG7yTojbOwgyM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/496ad1139911eeb014d31dce575faa61/525x787/KLVBaggKq13psGEbga6arzN15fYcsLd3XYtOqUl5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/496ad1139911eeb014d31dce575faa61/525x787/metndWNDEdEFrOsAbLWXH3sgid6roh499kh15aZw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5003307d211c815c97cc8bada9c6edec/525x787/B8eZB3GMlkJotTq2m8Ab4eMy4LgMdwMGZ7hSaC4S.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/50ff2b95b8b53b5f12b4dd19575edf62/525x787/WIHVgFr3O89FXkX3KqVRRhjLvllB2Dcb4xgJN91A.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/50ff2b95b8b53b5f12b4dd19575edf62/525x787/xZ5mjx8CUkBnzfJqnx3HH6nU2PWvykXnCCI3uVWA.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5211bda24f5c44114c473a74b8bdf361/525x787/PmEtyKtPr2GDjhE7vzSOGZxr1e4AfJfbGr65S5XZ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5211bda24f5c44114c473a74b8bdf361/525x787/q4nVHVWNWFUK11I7vKhodkyng9QeQm3cZ0oOFkPH.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5468b368b1b5adcbfc133ee8ee94bfa1/525x787/aCdq0l8q0b3JYHYyk8aWQkjj8uscFYXj2vIK44r6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5468b368b1b5adcbfc133ee8ee94bfa1/525x787/h4aJXVl6PGNZdScW51OAhWxvadf7xjQd9gVZVl1a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5df7657a7d6b119029e5ad06fe039644/525x787/8xfFkrwbRQcWQjK1y29HcUvK1YQahlTKqmkLPtvy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5df7657a7d6b119029e5ad06fe039644/525x787/COaeuM9PqhQIv4WtiLFL7AEaIRd4JK2q58OYNXya.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5e13d1e382d895a5a58b40173eb7abfd/525x787/BgCGbOoAKAQUX875Ye5moUpRyiVPsArhepHMDicW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/5e13d1e382d895a5a58b40173eb7abfd/525x787/ccw3XGWWloHIBpY7VFlz3fF9AzkWSp7grqRlf9F0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/61ee0f699345f07a005c3c9de446436d/525x787/8TjjlUJYgwHGz0XNih2EomlDmKOVcQCo9I8qiD16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/61ee0f699345f07a005c3c9de446436d/525x787/Ccz9IPny80caYnzQwiiPYKlBwvRVW3M2ytC7wRkm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/649f7e2bf4d7efb62d56f6090cf943eb/525x787/kDdedT3xuLyzpY6jNhBY0ZBuRreojtpymzPE3KF6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/649f7e2bf4d7efb62d56f6090cf943eb/525x787/mjbha0LmM1X6TcjP1Icd0KT8FyJya7BhUAFDFrch.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/68d7496649e857a0149ab0cdd40233e2/525x787/3QcnXRDrQ65bND1PkjLg1kBwJdJmEhf6LrPkiINS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/68d7496649e857a0149ab0cdd40233e2/525x787/Tp3EaBEVrkAqraf21ChnvoRWRXZZRWAEaD2kqbs6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/6c777229ea7df5098a0a57a29558ed31/525x787/WvyxWFdEigMneVcUqKiI4CnUfTljZLaYGBvCNk8V.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/6c777229ea7df5098a0a57a29558ed31/525x787/s0p2C70NWwaoHmGUqB4emNP1zT9RMPWqenF4TuRT.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/6d6072ea730f062537e458a1e7d47e78/525x787/Is4WpcAEbd8mUn8hIRxuLN8d2DNr3Rj17FMDwL7j.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/6d6072ea730f062537e458a1e7d47e78/525x787/WCsL8hdWvLYu1V54UjxlhadLn7W6YRFtfjBU6g7a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/7143b3c23169789d1d83178002a9b07f/525x787/Fzwsd5ZPGLcEbQCyNx0bQS1otyMq9F0eX0QJRhxZ.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/80ee6b4e99b7282ccb7d6688af1b6edc/525x787/1Nbmp9knAlcHMNXOhlF6pfyd5OH8YZRnIAnDTJ8s.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/8aa7db6b925810b453eb63028f4f770a/525x787/3sns5cyucbUHrbvt2d4rCvGLDEH6u6L1VVNFWlvM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/8aa7db6b925810b453eb63028f4f770a/525x787/xl9NJRMvXKYmpBFVqGwvq94ON8itvZBnfkhGdSnr.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/8e017d9b51e7b9284cd0da58fae39b33/525x787/6eun4q2kpJMzzm9cCtViMH7oBVuVaL5VrsY7yXww.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/8f1413c110295f3ea61b667558c6f9b8/525x787/5hE9VTbpdIBsNMKZw3G3AGzT94Bw9ZDe83EDkkhA.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/9191b0a3b4c41e6732dbb644bd52d6fc/525x787/Ukmi2To72JrU8swa547PjeZfbdMhjIKd6x08WSPl.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/9191b0a3b4c41e6732dbb644bd52d6fc/525x787/ZLFkR3ae32BOljiHcE7jh2xnK2dKAhOtcgKIEsJE.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/92b0605fa6bbad929f59797ab8db168f/525x787/0JLYEv6OkG0aVhmGAhrR5zBIc08ISMXWoaE5TCDb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/94a7358e05938307a0e91a10c608d675/525x787/GpWap86tuL0yHaXFw4gEJLsAyaD3LNWwOwDsWmLS.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/94a7358e05938307a0e91a10c608d675/525x787/gvMk1wbQZxHLX2cFvJXpaTN5HPjRJTz4dUhSxb2P.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/a2896cb11aed969ffec7bb02a7c772a8/525x787/18A5zTFiBxtkFwD8gOiJqKmCgMzJ6yDLXtVh20Ll.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/a384ead3aad1e06df0952aa69c305380/525x787/VmBo7bqzu8rjSx328xj5PCt3W6Zh5UdTVUpvNaIa.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/b14306cd6ce646b9b7bee6ea942711a1/420x630/gWi6CqThFaqPFvCHyXyFcUJfqx32vvRi6XH93fXv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/b14306cd6ce646b9b7bee6ea942711a1/525x787/gWi6CqThFaqPFvCHyXyFcUJfqx32vvRi6XH93fXv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/b17817e6bd62910a6e9016c9a58ee9bb/525x787/nFAR7e4i2IqI0Itl6J1ckxYVswhm63NYOUfXEnod.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/b17817e6bd62910a6e9016c9a58ee9bb/525x787/r5arrhEB2kXR8EicGxB98ab2P9kxRjxvCCeQZQty.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/b2b9e8eb2b9bc46c4f57785472b96f4d/525x787/JLC5KxStiEypEFyK34tBGO5pJnBT0JyKg6WZ9C8n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/b2b9e8eb2b9bc46c4f57785472b96f4d/525x787/c70WtFydatWbjLbTCHQb01zCKoWhklIYoTbNk6B1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/bde4a681eceb6f2c6d01c533b80a7a6e/525x787/iuBJ2Zj77vNuVw0U3YECZRisNLNaGesSRaZ8PGd1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/bde4a681eceb6f2c6d01c533b80a7a6e/525x787/riwYfICIAsPtR0m2W4nrRclNQ0oAeKxndWUDtAKt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/c0b9b187cfd326a101efae8da2a1936e/525x787/kxZKK0K3Pw7J7W9W2wKbvROmFykWfRPsiRbyYQHx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/c0b9b187cfd326a101efae8da2a1936e/525x787/s3os0Aroaj4xTUjlqBtJNF4VfKOnpFcEc2CAk8bq.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/d3b1db304152af564f2675ca8e5ac45f/525x787/S0Yxt5z1Pvt08R9nSnwvkiZeESTMruZmTSrcptaV.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/d748a600fe89a6abd01b174e8d2eb35c/525x787/WZ2Hb7HmNKUn3mq2ksF6RuKrVvPyRgam4UGsXvWj.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/d978feca237e502810bbe54a398e1dac/525x787/LyUecVCoQ0arOkMh07P7Ye1URod8QMg5iW0HyZ99.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/d978feca237e502810bbe54a398e1dac/525x787/saneKxk5o6PXSWDwcBrmtOTkqLwgaUuXJj24TT6k.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/d9ed2b6c791262bc6c2c2c42bc62f2fa/420x630/T3Uhw7c0Ybu3ALCZvgG4tw3yMcsNSlESI5HOA6p6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/d9ed2b6c791262bc6c2c2c42bc62f2fa/525x787/SW8c74ArJtZLGgLsxsqxtpKl4RomTj5Tx2YhCdcW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/da36dbd22af21eca8661ff099dfb95b3/525x787/ZurJUlAFuKhI7pMkwFMPBcD1tIym8gRfz0UQvLfs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/dcdca98a68d012618ce17d4fe3c87f34/525x787/2oJeGMW8tevpCdQRrX21OwUYdnzxotvRtGn9x6ZL.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/dcdca98a68d012618ce17d4fe3c87f34/525x787/bpcBmvLLL5OQBD96wtAklx5N9o17I0nQbxXTxk8l.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/dd2dde535d322743ac08d65bf6df132d/525x787/vQd02z9pYwJWEQZQnhnWXGbqYESre4wiRwbIIKjQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/df461bdc860cb693713eb0de173f6937/525x787/EUwTXBz8O0u1OBjhrTe5OmdlmbZ6VVmnvBmcljUb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/df461bdc860cb693713eb0de173f6937/525x787/RD3L4A4hZnWuRF7tebdb8wl52R9tYkssFb1qG8pv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/e7e83e3735e7cc2c714ab560f390af18/525x787/Pnf3dgaxQsI7JJKa0TwKIydQVRj0qkTrF1U0QfXP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/eab1afa09dad06a14a00c44a5824e531/525x787/CjeoflkrDZhiLUqip0pWHfGuN3LQwrURwhnZ3qE1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/eab1afa09dad06a14a00c44a5824e531/525x787/cK8SBOTgDTrpTDgP9DgA4yRpJ74UOUO7a9sAEfG6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/ebc764ed84593fef4bd6cde9eb72be0a/525x787/LUmKYM2eapZoKXwDEhnO5MkxXmmMsdNkDO4DfJ74.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/ebc764ed84593fef4bd6cde9eb72be0a/525x787/oNbE3ZmkaNNPF5g0O2tiEkD1o2150bcUGLvx1Is6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/ebd74cf36fe3e37b3c647dc2b7610d2d/420x630/3a8yyoWD8x3bJPySrtIFgILigtl5SnjCr0oBrr10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/ebd74cf36fe3e37b3c647dc2b7610d2d/525x787/nhSRIAtUptcZMTbp41L0GUFGa3xrxg7IZ96dSb7X.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/ef1b9b0b9c5ad1de09b779f4f97ca59b/525x787/Xn8yX1za819tb0WhL6660GXXcFxRHcWNJi9Pn4cR.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/ef1b9b0b9c5ad1de09b779f4f97ca59b/525x787/sGUDqdyfgjmp1g064TCLgzJkJ7XzzCc3eurZtMgQ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/ef7412faef2bb19790400382abdd532d/525x787/X6AbRQ6p5ejXmhQYyXSFv3p78okTush3EDC26If9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/ef7412faef2bb19790400382abdd532d/525x787/ZnzCY412OOqMzQnkc04aVIDiNBY26jfyHVY7XYER.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/fc6515df8b8222ae9cdf71b55a021935/525x787/8iJbTqrwsahfPxSunJ9OJHqk3amwXYF9r8C4AeI4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/storage/images/fc6515df8b8222ae9cdf71b55a021935/525x787/KpuYyNs9SX1rXUV55HCTSxA1bmF4Yom42qFg3tOq.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/2000x668(16).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/31_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/37-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/EL710zes91TNbpYJSr6GRunBIRMxI92IS5rsGS9N(1).jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/Ferosh logo_website(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/Ferosh logo_website.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/Ferosh_favicon_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/PCK22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/navigations/920x1380-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/navigations/bo-suu-tap-giay-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/navigations/bo-suu-tap-giay.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/navigations/dongu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/navigations/dotap.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/navigations/elise.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/navigations/lagu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/navigations/san-pham-sale.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/styles/phong-cach-cong-so.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/styles/phong-cach-dao-pho.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/styles/phong-cach-du-lich.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/styles/phong-cach-du-tiec.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/files/tag-buy1-get1 (1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/images/Beta/_tócjpg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/images/Beta/dưỡng da.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/images/Lasix/LAS200319-006_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/upload/images/Lasix/LAS200319-006_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/02-10-2019/VL1923061X-1(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/02-10-2019/VL1923061X-4(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/02-11-2019/IMG-0833(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/02-11-2019/IMG-0837(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/04-02-2020/DSC-6721(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/04-03-2020/A027HR-c(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/04-03-2020/IMG-2726(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/06-12-2019/IMG-2850-copy(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/06-12-2019/IMG-2852-copy(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/08-11-2019/3M3A8325(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/09-12-2019/Jumpsuit-s--t-n--ch-c---t-d--y-eo(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/09-12-2019/Jumpsuit-s--t-n--ch-c---t-d--y-eo--2-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/10-03-2020/--o-d--i-c--ch-t--n-m---u-----n-v--ng--2-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/11-02-2020/FXDL19030833XA(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/12-03-2020/-MG-8852(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/12-03-2020/-MG-8854(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/12-03-2020/v07(1)(2)(3)(4).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/12-09-2018/AP2048-0-CASHEW1544(1)(2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/12-09-2018/AP2048-0-CASHEW1563(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/13-02-2020/SP00074--4-.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/16-01-2020/5835511e5674ae2af765(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/16-01-2020/IMGL1550(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/16-01-2020/a4aeb5b8b2d24a8c13c3(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/20-02-2020/Baroque(1)(2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/20-02-2020/Bracelet-1-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/20-02-2020/Dor-3-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/20-02-2020/Feather-3-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/20-02-2020/Fleur-2-(1)(2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/20-02-2020/Floral-2-(1)(2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/20-02-2020/Snake-4-(1)(2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/21-01-2020/15(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/22-05-2019/PAL-8469(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/22-05-2019/PAL-8473(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/24-10-2019/TRS10123-1(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/24-10-2019/TRS10123-4(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/26-10-2018/229A2002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/26-10-2018/229A2012.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/27-02-2020/FW1908074TUWOPK(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/27-12-2019/63--1-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/27-12-2019/63--7-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/28-02-2020/YS20J031--2-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/28-02-2020/YS20J031--3-(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/30-12-2019/VL1820111Dl-1(1).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/uploads/30-12-2019/VL1820111Dl-3(1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_25_171243_create_media_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_25_171243_create_media_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_25_171408_create_blog_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_17_152057_create_table_like.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_17_152057_create_table_like.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_17_152437_create_table_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_17_152437_create_table_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_17_152512_create_table_messenger.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_17_152512_create_table_messenger.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_17_152622_create_table_follow.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_17_152622_create_table_follow.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/Base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/Base.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/editProduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/editProduct.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/Base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/Base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/blogDetail.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/cart.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/hang-moi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/nha-thiet-ke.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/productDetail.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/register.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/sale.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/sanpham.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/wishlist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/TweenLite.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/dangtin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/khong-ho-tro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/kinhnghiem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/login.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -385,44 +41,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="44" column="45" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="45" />
-              <folding>
-                <element signature="e#7#44#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/productController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="26" column="38" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="38" />
-              <folding>
-                <element signature="e#46#82#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/editProduct.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/profileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="101" column="113" selection-start-line="101" selection-start-column="113" selection-end-line="101" selection-end-column="113" />
-              <folding>
-                <element signature="e#82#817#0#HTML" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171219_create_product_table.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/Base.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+            <state relative-caret-position="296">
+              <caret line="111" column="43" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -431,9 +69,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>content-area home-content-area</find>
-      <find>prod-item</find>
-      <find>list-product-ajax</find>
       <find>prod-image relative</find>
       <find>ferosh.vn</find>
       <find>Render.vn</find>
@@ -461,6 +96,9 @@
       <find>new</find>
       <find>HeaderWrapper-nlv6vo-0 hyKLTY</find>
       <find>footer</find>
+      <find>status</find>
+      <find>w3-container</find>
+      <find>Lumino</find>
     </findStrings>
     <replaceStrings>
       <replace>//blog.ferosh.vn/</replace>
@@ -485,14 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_170045_create_users_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171243_create_media_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171335_create_cate_product_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171355_create_category_table.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/database/seeds/UserSeeder.php" />
-        <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
-        <option value="$PROJECT_DIR$/app/usersModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/categoryController.php" />
         <option value="$PROJECT_DIR$/app/Model/categoryModel.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/category.blade.php" />
@@ -500,14 +130,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/productController.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/product.blade.php" />
-        <option value="$PROJECT_DIR$/app/Model/mediaModel.php" />
         <option value="$PROJECT_DIR$/resources/views/front/sanpham.blade.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/resources/views/front/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/usersModel.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171408_create_blog_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/Base.blade.php" />
         <option value="$PROJECT_DIR$/public/public/admin/ckfinder/config.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/editBlog.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/blog.blade.php" />
@@ -518,24 +145,35 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/views/front/productDetail.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/cartModel.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171148_create_cart_table.php" />
         <option value="$PROJECT_DIR$/app/Model/cart_productModel.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171207_create_cart_product_table.php" />
         <option value="$PROJECT_DIR$/resources/views/front/cart.blade.php" />
-        <option value="$PROJECT_DIR$/app/Model/productModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Front/cartController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/CheckLogout.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/CheckLogin.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php" />
-        <option value="$PROJECT_DIR$/resources/views/front/Base.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/front/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/login.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/indexController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/product.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_170045_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171148_create_cart_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171207_create_cart_product_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171219_create_product_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_03_25_171243_create_media_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_04_17_152057_create_table_like.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_04_17_152437_create_table_comment.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_04_17_152512_create_table_messenger.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2020_04_17_152622_create_table_follow.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/editProduct.blade.php" />
+        <option value="$PROJECT_DIR$/app/Model/productModel.php" />
+        <option value="$PROJECT_DIR$/app/Model/mediaModel.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/Base.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/detailProduct.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/Base.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/profileController.php" />
       </list>
     </option>
   </component>
@@ -657,6 +295,67 @@
               <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="doido.com" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="doido.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="doido.com" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -671,6 +370,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -740,7 +440,14 @@
       <workItem from="1586882270396" duration="490000" />
       <workItem from="1586957663568" duration="2862000" />
       <workItem from="1587050573298" duration="999000" />
-      <workItem from="1587135069862" duration="3993000" />
+      <workItem from="1587135069862" duration="5313000" />
+      <workItem from="1587194593154" duration="61000" />
+      <workItem from="1587222958586" duration="2792000" />
+      <workItem from="1587279041130" duration="4595000" />
+      <workItem from="1587284557669" duration="65000" />
+      <workItem from="1587284649827" duration="149000" />
+      <workItem from="1587285234058" duration="244000" />
+      <workItem from="1587285497186" duration="1283000" />
     </task>
     <task id="LOCAL-00001" summary="louis commit">
       <created>1585063309002</created>
@@ -816,7 +523,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120999000" />
+    <option name="totallyTimeSpent" value="131508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -829,8 +536,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.2806354" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4991453" visible="true" weight="0.20272315" />
       <window_info id="Structure" order="1" sideWeight="0.50085473" side_tool="true" weight="0.2677761" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
@@ -842,9 +550,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32820514" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32991454" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" weight="0.32991454" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32991454" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32991454" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.32991454" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -900,80 +608,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="louis commit" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Providers/AppServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <element signature="e#32#40#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/mediaModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
-          <folding>
-            <element signature="e#29#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/phpunit.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.styleci.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/sanpham.blade.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_170045_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/register.blade.php" />
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/usersModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-          <folding>
-            <element signature="e#29#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/product.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="128" column="37" lean-forward="true" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171408_create_blog_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/public/ckeditor/lang/af.js" />
     <entry file="file://$PROJECT_DIR$/public/public/admin/ckfinder/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -985,13 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="82" column="48" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/blogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1037,24 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171148_create_cart_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="35" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/cate_productModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="21" column="44" lean-forward="true" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171207_create_cart_product_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -1071,16 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
           <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/productModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="145" column="21" selection-start-line="145" selection-start-column="15" selection-end-line="145" selection-end-column="21" />
-          <folding>
-            <element signature="e#29#68#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,34 +743,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9639">
-          <caret line="567" column="9" selection-start-line="567" selection-start-column="9" selection-end-line="567" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/login.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/front/Base.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="2471" column="10" selection-start-line="2471" selection-start-column="10" selection-end-line="2471" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/Base.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="46" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/login.blade.php" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
@@ -1185,26 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="44" column="45" selection-start-line="44" selection-start-column="28" selection-end-line="44" selection-end-column="45" />
-          <folding>
-            <element signature="e#7#44#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/productController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="38" />
-          <folding>
-            <element signature="e#46#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/indexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-428">
@@ -1215,20 +771,263 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/product.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2159">
+          <caret line="127" column="55" selection-start-line="127" selection-start-column="55" selection-end-line="127" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_170045_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171219_create_product_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171335_create_cate_product_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171408_create_blog_table.php" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171355_create_category_table.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_17_152057_create_table_like.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_17_152512_create_table_messenger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_17_152622_create_table_follow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_04_17_152437_create_table_comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171243_create_media_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171207_create_cart_product_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2020_03_25_171148_create_cart_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/productModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="109" column="53" selection-start-line="109" selection-start-column="53" selection-end-line="109" selection-end-column="53" />
+          <folding>
+            <element signature="e#29#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/mediaModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="41" column="5" selection-start-line="40" selection-start-column="35" selection-end-line="41" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/editProduct.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="101" column="113" selection-start-line="101" selection-start-column="113" selection-end-line="101" selection-end-column="113" />
+        <state relative-caret-position="391">
+          <caret line="128" column="48" selection-start-line="128" selection-start-column="48" selection-end-line="128" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/productController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="38" />
           <folding>
-            <element signature="e#82#817#0#HTML" />
+            <element signature="e#46#82#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/blogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/Base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="146" column="51" selection-start-line="146" selection-start-column="51" selection-end-line="146" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/detailProduct.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="371" column="9" selection-start-line="371" selection-start-column="9" selection-end-line="371" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#span#0;n#span#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#1493#1499#0#HTML" expanded="true" />
+            <element signature="e#1499#1505#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#span#1;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#1697#1703#0#HTML" expanded="true" />
+            <element signature="e#1703#1709#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#2011#2017#0#HTML" expanded="true" />
+            <element signature="e#2017#2023#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#1;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#3;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#3;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#4;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#div#4;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#5;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#5;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#5;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#5;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#7;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#8;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#2;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#11729#11735#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#div#3;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#12198#12204#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#3;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#span#0;n#div#3;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#9;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#span#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#13648#13654#0#HTML" expanded="true" />
+            <element signature="e#13654#13660#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ins#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#span#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/Base.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="111" column="43" selection-start-line="111" selection-start-column="36" selection-end-line="111" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/profileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>

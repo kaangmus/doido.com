@@ -125,8 +125,8 @@
                         <div class="form-group col-sm-6">
                             <label>Status</label>
                             <select id="boot-multiselect-demo" class="form-control" rows="5" name="status">
-                                <option value="bán">Show</option>
-                                <option value="cho">Hide</option>
+                                <option value="1">Show</option>
+                                <option value="0">Hide</option>
                             </select>
                         </div>
                         <button class="btn btn-lg btn-primary">Add</button>

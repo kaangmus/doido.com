@@ -31,30 +31,26 @@ class productModel extends Model
     public function addItem(Request $request)
     {
         try{
-            $stringSize='';
-            $stringColor='';
+            $stringTag='';
+            $stringStyle='';
             $item= new productModel();
             $item->title=$request->title;
             $item->price=$request->price;
+            $item->describe=$request->describe;
             $item->sale=$request->sale;
-            if(isset($request->size))
+            $item->tag=$request->tag;
+            if(isset($request->style))
             {
-                foreach ($request->size as $itemSize)
+                foreach ($request->style as $itemStyle)
                 {
-                    $stringSize=$stringSize.$itemSize.',';
+                    $stringStyle=$stringStyle.$itemStyle.",";
                 }
-                $item->size=$stringSize;
-            }
-            if(isset($request->color))
-            {
-                foreach ($request->color as $itemColor)
-                {
-                    $stringColor=$stringColor.$itemColor.",";
-                }
-                $item->color=$stringColor;
+                $item->style=$stringStyle;
             }
             $item->count=$request->count;
             $item->content=$request->content;
+            $item->note=$request->note;
+            $item->status=$request->status;
             if($request->hasFile('coverimg'))
             {
                 $filename=$request->coverimg->getClientOriginalName();
@@ -82,31 +78,26 @@ class productModel extends Model
     public function updateItem(Request $request, $id)
     {
         try{
-            $stringSize='';
-            $stringColor='';
             $item=productModel::find($id);
+            $stringTag='';
+            $stringStyle='';
             $item->title=$request->title;
             $item->price=$request->price;
+            $item->describe=$request->describe;
             $item->sale=$request->sale;
-            if(isset($request->size))
+            $item->tag=$request->tag;
+            if(isset($request->style))
             {
-                foreach ($request->size as $itemSize)
+                foreach ($request->style as $itemStyle)
                 {
-                    $stringSize=$stringSize.$itemSize.',';
+                    $stringStyle=$stringStyle.$itemStyle.",";
                 }
-                $item->size=$stringSize;
+                $item->style=$stringStyle;
             }
-            if(isset($request->color))
-            {
-                foreach ($request->color as $itemColor)
-                {
-                    $stringColor=$stringColor.$itemColor.",";
-                }
-                $item->color=$stringColor;
-            }
-            $item->color=$stringColor;
             $item->count=$request->count;
             $item->content=$request->content;
+            $item->note=$request->note;
+            $item->status=$request->status;
             if($request->hasFile('coverimg'))
             {
                 $filename=$request->coverimg->getClientOriginalName();
@@ -116,7 +107,7 @@ class productModel extends Model
             }
             $item->save();
             $this->cate_product->addItem($item->id,$request->idcategory);
-            $this->media->addItem($request, $item->id,null);
+            $this->media->addItem($request, $item->id);
             return true;
         }catch (Exception $ex)
         {

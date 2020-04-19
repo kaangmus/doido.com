@@ -20,7 +20,6 @@ class CreateMediaTable extends Migration
             $table->integer('status')->nullable();
             $table->text('describe')->nullable();
             $table->integer('idproduct')->nullable();
-            $table->integer('idblog')->nullable();
             $table->timestamps();
         });
     }
