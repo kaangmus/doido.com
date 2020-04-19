@@ -13,6 +13,6 @@ class profileController extends Controller
     }
     public function showItem($id)
     {
-        
+
     }
 }
