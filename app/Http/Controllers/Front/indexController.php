@@ -20,13 +20,12 @@ class indexController extends Controller
     }
     public function indexShow()
     {
-//        $data['items1']=$this->product->searchCategoryProduct('SẢN PHẨM BÁN CHẠY');
-//        $data['items2']=$this->product->searchCategoryProduct('HÀNG MỚI');
-//        $data['items3']=$this->product->searchCategoryProduct('PHONG CÁCH');
-//        $data['items4']=$this->product->searchCategoryProduct('SẢN PHẨM');
-//        $data['items5']=$this->product->searchCategoryProduct('DÀNH RIÊNG CHO BẠN');
-//        $data['itemsBlog']=$this->blog->listAll();
-        return view('front.index');
+        $data['items1']=$this->product->listAll();
+        $data['items2']=$this->product->listAll();
+        $data['items3']=$this->product->listAll();
+        $data['items4']=$this->product->listAll();
+        $data['items5']=$this->product->listAll();
+        return view('front.index',$data);
     }
     public function searchItem($search)
     {

@@ -22,6 +22,7 @@ class usersModel extends Model
             $item->phone=$request->phone;
             $item->city=$request->city;
             $item->address=$request->address;
+            $item->describe=$request->describe;
             $item->password=bcrypt($request->password);
             $item->lever=isset($request->lever)?$request->lever:1;
             $item->status=$request->status;
@@ -54,6 +55,7 @@ class usersModel extends Model
             $item->email=$request->email;
             $item->phone=$request->phone;
             $item->city=$request->city;
+            $item->describe=$request->describe;
             $item->address=$request->address;
             $item->password=bcrypt($request->password);
             $item->lever=isset($request->lever)?1:0;

@@ -1,962 +1,533 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html lang="vi" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en-US">
 
-<!-- Mirrored from www.phomuaban.vn/index.php?mod=list&cat=1033 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Apr 2020 16:33:51 GMT -->
+
+<!-- Mirrored from RENDER.vn/signin.html?url=https://RENDER.vn by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2020 17:12:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
+    <meta charset="utf-8">
+    <title>@yield('title')</title>
+    <base href="{{asset('public/front')}}/">
+    <meta name="google-site-verification" content="1ZmmdFqf8YYS19y0dwjSKpu8-nBtXcn16MKeVUky_bg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="-1"/>
-    <meta name="format-detection" content="telephone=no">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116460939-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
+    <meta name="description" content="RENDER.VN - website thương mại điện tử đầu tiênn tại Việt Nam tập trung v&agrave;o h&agrave;ng thời trang thiết kế cao cấp. RENDER cung cấp c&aacute;c sản phẩm thời trang thiết kế trực tiếp từ c&aacute;c nh&agrave; thiết kế c&oacute; t&ecirc;n tuổi tại Việt Nam tới c&aacute;c kh&aacute;ch h&agrave;ng muốn khẳng định vị tr&iacute; v&agrave; tầm v&oacute;c của m&igrave;nh trong x&atilde; hội th&ocirc;ng qua c&aacute;ch ăn mặc. Ch&uacute;ng t&ocirc;i cũng hi vọng sẽ g&oacute;p phần củng cố hơn nữa gi&aacute; trị của thời trang trong cuộc sống của con người, đặc biệt đến th&agrave;nh c&ocirc;ng của người phụ nữ Việt Nam, đồng thời l&agrave; cầu nối vững chắc giữa đội ngũ c&aacute;c nh&agrave; thiết kế trẻ của Việt Nam v&agrave; c&aacute;c kh&aacute;ch h&agrave;ng tiềm năng." />
+    <link href="signin.html" rel="canonical" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Đăng nhập | RENDER | Thời trang thiết kế cao cấp" />
+    <meta property="og:description" content="RENDER.VN - website thương mại điện tử đầu ti&ecirc;n tại Việt Nam tập trung v&agrave;o h&agrave;ng thời trang thiết kế cao cấp. RENDER cung cấp c&aacute;c sản phẩm thời trang thiết kế trực tiếp từ c&aacute;c nh&agrave; thiết kế c&oacute; t&ecirc;n tuổi tại Việt Nam tới c&aacute;c kh&aacute;ch h&agrave;ng muốn khẳng định vị tr&iacute; v&agrave; tầm v&oacute;c của m&igrave;nh trong x&atilde; hội th&ocirc;ng qua c&aacute;ch ăn mặc. Ch&uacute;ng t&ocirc;i cũng hi vọng sẽ g&oacute;p phần củng cố hơn nữa gi&aacute; trị của thời trang trong cuộc sống của con người, đặc biệt đến th&agrave;nh c&ocirc;ng của người phụ nữ Việt Nam, đồng thời l&agrave; cầu nối vững chắc giữa đội ngũ c&aacute;c nh&agrave; thiết kế trẻ của Việt Nam v&agrave; c&aacute;c kh&aacute;ch h&agrave;ng tiềm năng." />
+    <meta property="og:url" content="signin.html" />
+    <meta property="og:site_name" content="RENDER | Thời trang thiết kế cao cấp" />
+    <meta property="article:author" content="©2016 RENDER | Số ĐKKD: 0107469891 do Sở kế hoạch và Đầu tư TP Hà Nội, cấp ngày 10/06/2016">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="vi">
+    <meta name="keywords" content="">
+    <meta name="news_keywords" content="">
+    <meta name="language" content="vietnamese">
+    <meta name="google-site-verification" content="2CpB1Z6I0VId1fTbBr8Dq26HuV5A0wQoSzep4tZtu5A" />  <link rel="shortcut icon" href="upload/files/RENDER_favicon_01.png">
+    <link rel="manifest" href="manifest.json" />
+    <link rel='stylesheet' href="css/bootstrap.min.css" type='text/css' media='all' />
+    <link rel='stylesheet' href="css/bootstrap-slider.css" type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="css/bootstrapValidator.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style2048.css?v=1.5">
+    <link rel="stylesheet" type="text/css" href="css/responsivee67d.css?v=1.3">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="../maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts-telo/css/fontello.css">
+    <style type="text/css">
+        .buyonegetonefree:before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-image: url('upload/files/tag-buy1-get1%20(1.html).png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 9;
         }
+    </style>  <script type='text/javascript' src="js/jquery-2.1.1.mind41d.js?"></script>
+    <script type='text/javascript' src="js/bootstrap-3.1.1.min.js"></script>
+    <script type='text/javascript' src="js/lazyload.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-slider.js"></script>
+    <script type="text/javascript" src="js/bootstrapValidator.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type='text/javascript' src="js/main83a7.js?v=1.9"></script>
+    <!-- harafunnel -->
+    <script src="../assets.harafunnel.com/widget/552107388329416.js" async="async"></script>
+
+    <script src="../cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+    <script type="text/javascript">
+        /*var showImage;
+          while (showImage--) {
+            window.clearTimeout(showImage); // will do nothing if no timeout with id is present
+          }*/
+        /*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-82113589-1', 'auto');
+        ga('send', 'pageview');*/
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MH7SMDT');
+    </script>
+    <!-- End Google Tag Manager -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['EmaticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../api.ematicsolutions.com/v1/ematic.min.js','ematics');
+        var ematicApikey = "21218b2f5d1a11ea939d0242ac110002-sg5";
+        var opt = {
+            email: "",
+            country_iso: "vietnam",
+            currency_iso: "vnd",
+            language_iso: "vietnam"
+        };
+        //initialize
+        ematics("create", ematicApikey, opt);
+    </script>
+
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "0ab5a5a9-7298-436c-b5ca-bde41d039f66",
+            });
+        });
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            '../connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1122064037846188');
+        fbq('track', 'PageView');
+
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1122064037846188&amp;ev=PageView%20%20&amp;noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- <script>
+        dataLayer = [];
+      </script> -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-876282344"></script>
+
+    <script>
+        function gtag(){dataLayer.push(arguments);}
 
         gtag('js', new Date());
-        gtag('config', 'UA-116460939-1', {'custom_map': {'dimension1': 'ui_type'}, 'ui_type': 'new'});
+
+        gtag('config', 'AW-876282344');
+
     </script>
 
-
-    <link rel="stylesheet" href="https://www.phomuaban.vn/css/w3_4.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <head profile="http://www.w3.org/2005/10/profile">
-        <link rel="icon"
-              type="image/x-icon"
-              href="https://www.phomuaban.vn/images/logo/favicon1.ico">
-        <link rel="shortcut icon" href="https://www.phomuaban.vn/images/logo/favicon1.ico">
-
-        <link rel="stylesheet" href="https://www.phomuaban.vn/css/standard/style.css?d=2660629g" type="text/css">
-        <link rel="stylesheet" href="https://www.phomuaban.vn/javascripts/swiper-5.2.0/swiper.min.css" type="text/css">
-        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-        <!--script src="https://kit.fontawesome.com/02648415c2.js" crossorigin="anonymous"></script-->
-
-        <script type="text/javascript" src="https://www.phomuaban.vn/javascripts/jquery-1.8.2-min.js"></script>
-        <script type="text/javascript" src="https://www.phomuaban.vn/javascripts/swiper-5.2.0/swiper.min.js"></script>
-
-
-        <script type="text/javascript" src="https://www.phomuaban.vn/javascripts/common.js?d=118an"></script>
-        <title>@yield('title')</title>
-        <link rel="canonical" href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1033"/>
-        <link rel="next" href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1033&amp;page=2"/>
-        <meta http-equiv="description" content="Cộng đồng sưu tập đồ cổ, đồ sưu tầm, đồng hồ, audio">
-        <meta http-equiv="keywords" content="Phố Mua Bán, đồ cổ, đồ sưu tầm">
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.phomuaban.vn/index.php?mod=list&cat=1033"/>
-        <meta property="og:title" content="Phố Máy Ảnh"/>
-        <meta property="og:description" content="Cộng đồng sưu tập đồ cổ, đồ sưu tầm, đồng hồ, audio"/>
-        <meta property="og:image" content="https://static.pmbvn.com/images/logo2016m.png"/>
-        <link type="text/css" media="screen" rel="stylesheet" href="https://www.phomuaban.vn/css/colorbox.1.3.20.1.css">
-        <script type="text/javascript" src="https://www.phomuaban.vn/javascripts/jquery.lazy.min.js"></script>
-        <script type="text/javascript" src="https://www.phomuaban.vn/javascripts/jquery.colorbox.1.3.20.1.js"></script>
-        <!--style type="text/css" media="all">@import "/extension/photoframe/photoframe.css";</style>
-<style type="text/css" media="all">@import "/extension/photoframe/gold-tapestry/style.css";</style>
-<style type="text/css" media="all">@import "/extension/photoframe/antique/style.css";</style>
-<style type="text/css" media="all">@import "/extension/photoframe/steel/style.css";</style>
-<style type="text/css" media="all">@import "/extension/photoframe/portrait/style.css";</style>
-<style type="text/css" media="all">@import "/extension/photoframe/grooved-wood/style.css";</style>
-<script type="text/javascript" src="/extension/photoframe/photoframe.js"></script>
-<script type="text/javascript" src="/extension/photoframe/initialize.js"></script-->
-        <script type="text/javascript">
-            function createWarning() {
-                // This comes from old code of FancyZoomHTML
+    <script>
+        window.dataLayer = window.dataLayer || [];
+    </script>      <style type="text/css">
+        @media  screen and (max-width: 650px) {
+            #callnowbutton {
+                display: block;
+                width: 100px;
+                right: 0;
+                border-bottom-left-radius: 40px;
+                border-top-left-radius: 40px;
+                height: 80px;
+                position: fixed;
+                bottom: -20px;
+                background: url("images/phone.png") center 2px no-repeat;
+                text-decoration: none;
+                z-index: 9999;
+                background-size: 58px 58px;
             }
-
-            $(document).ready(function () {
-                $(".zoomable a").append("<span></span>");
-                $(".zoomable a").hover(function () {
-                    $(this).children("span").fadeIn(600);
-                }, function () {
-                    $(this).children("span").fadeOut(200);
-                });
-                $("SPAN.zoomable a").colorbox({opacity: "0.0", slideshow: true, slideshowAuto: false, scrolling: true});
-                $(".sendContact").colorbox({opacity: "0.5", overlayClose: false});
-                $(".viewStore").colorbox({width: "50%", height: "70%", opacity: "0.5", overlayClose: true});
-            });
-        </script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $(".viewNotifyList").colorbox({opacity: "0.0", width: "500px", overlayClose: false});
-                $(".viewContactList").colorbox({opacity: "0.0", width: "700px", overlayClose: false});
-                //$("img.lazy").lazyload();
-                $("img.lazy").lazyload({threshold: 200});
-                if ($("input[name='email']").length > 0 && $("input[name='email']").val().length > 0) {
-                    $("input[name='password']").focus();
-                } else {
-                    $("input[name='email']").focus();
-                }
-                ;
-                //(adsbygoogle = window.adsbygoogle || []).push({});
-                $('#scrollup').click(function () {
-                    $("html, body").animate({scrollTop: 0}, 500);
-                    return false;
-                });
-            });
-        </script>
-
-        <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
-    </head>
-<body style="margin:0;margin-top:0; background-color:#f7f7f7; margin: auto; max-width: 100% !important; ">
-<div style="margin:0 auto;margin-top:0;  ">
-    <div id='mod-wrapper' class='w3-container'>
-        <div id="pageHeaderSpace" style="display:none "></div>
-
-        <div id="pageHeader"
-             style="background-color:#FFD41E; padding-left:0px; padding-right:0px; padding-bottom:10px;padding-top:2px;">
-
-
-            <div class="listAuthorCol1"
-                 style="padding:0px; border:0px solid #FFFFCC; padding-top:9px; padding-bottom:1px;  margin:0px auto; max-width:980px   ">
-                <a class="navlink" href="https://www.phomuaban.vn/"
-                   style="margin:3px 5px 3px 10px; text-decoration:none ">
-                    <img src="https://www.phomuaban.vn/images/logo/logos33.png" border="0" style=" ">
-                </a>
-                <a class="w3-round" onclick="openNav()" href="javascript:openNav()"
-                   style="text-decoration:none; color:#222; padding:5px 0px; ">
-
-                    <img src="https://www.phomuaban.vn/images/icon/map1.png" width="32" height="32">
-                </a>
-                <div style="float:right ">
-                    <a class="w3-round pmbmember" href="https://www.phomuaban.vn/store.php?mod=preadd&amp;cat=1033"
-                       style=" display:none; float: right; padding: 5px; background-color:#cc4e00; color:#FFFFFF; border:0px solid #ffffff;  margin-right:10px; margin-top:0px  "
-                       rel="nofollow">ĐĂNG TIN</a>
-
-
-                </div>
-
-                <div style="float:right; margin-top:5px; margin-right:3px ">
-						<span id="hdrSubBanner" class="bannerSub"
-                              style="  overflow:hidden;  font-size:13px; padding-top:0px; padding-left:5px; padding-right:5px; padding-bottom:15px; max-width:100%   ">
-															<a id="linkLogin" class="navlink " href="#"
-                                                               onclick="javascript:showLoginForm();"
-                                                               style=" color:#000; display:none; padding-left:15px; margin-top:0px; font-weight:normal; font-size:15px; "
-                                                               rel="nofollow"><span class="listAuthorColXSmall"><i
-                                                                            class="fa fa-user-circle-o"
-                                                                            style="font-size:14px; color:#cc4e00;  "></i></span> Đăng nhập</a>
-								<a id="linkRegister" class="navlink " href="https://www.phomuaban.vn/?page=register"
-                                   style="color:#000; display:none; padding-left:15px; margin-top:0px; margin-right:10px; font-weight:normal; font-size:15px; text-decoration:none"><span
-                                            class="listAuthorColXSmall"><i class="fa fa-user-plus"
-                                                                           style="font-size:14px; color:#cc4e00;  "></i></span> Đăng ký</a>
-
-													</span>
-                    <span id="hdrLoginButtons"
-                          style=" font-size:13px; padding-top:5px; padding-left:0px; padding-right:5px; display:none; padding-bottom:5px">
-
-								<a id="linkLogin" class="navlink" href="#" onclick="javascript:showLoginForm();"
-                                   style=" color:#000; display:none; padding-left:15px; margin-top:0px; font-weight:normal; font-size:15px "
-                                   rel="nofollow"><span class="listAuthorColXSmall"><i class="fa fa-user-circle-o"
-                                                                                       style="font-size:14px; color:#cc4e00;  "></i></span> Đăng nhập</a>
-								<a id="linkRegister" class="navlink" href="https://www.phomuaban.vn/?page=register"
-                                   style="color:#000; display:none; padding-left:15px; margin-top:0px; margin-right:10px; font-weight:normal; font-size:15px"><span
-                                            class="listAuthorColXSmall"><i class="fa fa-user-plus"
-                                                                           style="font-size:14px; color:#cc4e00;  "></i></span> Đăng ký</a>
-
-													</span>
-                    <span id="hdrLogin" class="w3-modal" style="margin-top:0px;text-align:left; display:none;  ">
-								<div id="contentPopup"
-                                     style=" background-color:#ffffff; padding:20px; padding-top:10px;padding-bottom:35px; margin:1px; border:1px solid #C9B499; max-width:450px; float:right  ">
-
-<form class="frmLogin" id="frmLogin" action="https://www.phomuaban.vn/login.php" method="post" name="frmHdrLogin">
-	  <input type="hidden" name="tuid" value="">
-	  <div class="container">
-
-		<i class="fa fa-user-circle-o" style="font-size:16px; color:#F8820A; margin-right:8px;  "></i><span for="uname"
-                                                                                                            style="color:#333333 "><b>Đăng nhập</b></span>
-
-		<div style="float:right; margin-top:-18px; position:relative  ">
-			<a href="javascript:void(0)"
-               style="color:#F8820A; margin-left:10px; font-size:30px; text-decoration:none; background-color:transparent "
-               onclick="document.getElementById('hdrLogin').style.display='none'"><i class="fa fa-times-circle"
-                                                                                     style="font-size:20px;"></i></a>
-		</div>
-
-
-		<input class="w3input w3-round" type="text" id="email" placeholder="Email hoặc số điện thoại" name="email"
-               value="" required style="font-size:16px; margin-top:0px; ">
-
-          <!--label for="psw"><b>Mật khẩu</b></label-->
-		<input class="w3input w3-round" type="password" id="password" placeholder="Mật khẩu" name="password" required
-               style="font-size:16px; margin-top:-3px; ">
-
-		<button type="submit" class="common w3-btn w3-padding-medium w3-round-large"
-                style="background-color:#F8820A; color:#FFFFFF; font-size:15px "
-                onClick="javascript:doLogin('frmHdrLogin'); return false;"> Đăng nhập</button>&nbsp;
-
-          <!--br>
-		<div class="w3-round-large" style=" border:1px solid #CCCCCC; padding:10px; margin-top:10px; background-color:#f1f1f1; color:#333333 ">
-		Đăng ký thành viên miễn phí<br>
-		<button class="common w3-btn w3-padding-small w3-round-large" style="background-color:#FFCC33; color:#333333;" ><a href="/?page=register">Đăng ký</a></button>&nbsp;
-		</div-->
-
-	  </div>
-
-	  <div class="container" style="text-align:right; margin-top:5px; float:right; margin-top:-32px; ">
-	  			<span class="psw1" style="margin-top:0px; display:block; margin-bottom:5px "><a
-                            href="https://www.phomuaban.vn/?page=register"
-                            style="color:#02bad6; text-decoration:underline ">Đăng ký thành viên</a></span><span
-                  class="psw1" style="display:block;"><a href="https://www.phomuaban.vn/?mod=forgot"
-                                                         style="color:#02bad6; text-decoration:underline ">Quên mật khẩu</a></span>
-
-	  </div>
-
-
-
-
-
-</form>
-</div>						</span>
-                    <span id="hdrTool" class="w3-container"
-                          style="margin-top:0px; margin-bottom:10px; margin-left:25px; display:none; padding:8px; "></span>
-                </div>
-
-            </div>
-
-
-            <!--div class="listAuthorLine" style="padding:0px; margin:0px;   ">
-			<div style=" display:block ; border:0px solid #D95657; margin:0px auto; max-width:980px ; padding:4px; padding-top:8px; padding-bottom:0px">
-					<a class="navlink" href="https://www.phomuaban.vn" style="padding-left:8px;text-decoration:none">
-						<img src="/images/logo/logos33.png" border="0"  >
-					</a>
-
-					<a onclick="openNav()" href="javascript:openNav()" style="margin-left:2px;margin-right:0px; text-decoration:none; color:#000; padding:2px; font-size:14px; " ><img class="w3-round" src="/images/icon/map1.png" style="margin-top:1px; " height="32" width="32"></a>
-
-					<a class="w3-round" href="/store.php?mod=preadd&cat=1033" style=" float: right; padding:5px 10px; background-color:#F8820A; color:#FFFFFF; border:0px solid #ffffff;  margin-right:5px; margin-top:1px  " rel="nofollow">ĐĂNG TIN</a>
-
-
-
-										<a class="w3-round" href="#" onClick="javascript:$(this).parent().find('#divSearchBox').toggle(); return false;" style=" float: right;  color:#000000; border:0px solid #ffffff;  margin-right:10px; margin-top:3px; text-decoration:none  " rel="nofollow"><i class="fa fa-search"></i></a>
-
-					<div id="divSearchBox" style="display:none ">
-						<form name="frmSearch" action="/">
-						<input type="hidden" name="cat" value="1033">
-						<input type="hidden" name="mod" value="search">
-						<div style="margin-left:5px; margin-right:5px ">
-						<input  class="w3input w3-round" placeholder="Tìm bản tin" name="searchkey" style="border:1px solid #CCCCCC; padding: 6px 10px; font-size:14px; width:100%; margin-top:4px; " value="">
-						</div>
-						</form>
-					</div>
-
-			</div>
-
-
-
-
-
-       </div-->
-        </div>
-        <div id="mySidenav" class="sidenav"
-             style="background-color:transparent; padding-bottom:50px; padding-top:0px !important; z-index:2 ">
-
-            <div style="border:1px solid #C9B499; background-color:#ffffff ">
-
-
-                <div style="overflow:auto; padding-top:5px; padding-left:5px; padding-right:2px; "
-                     class="w3-row w3-padding-2 ">
-                    <div style="left:0px; background-color:#CCCCCC ">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-                           style="font-size:20px;top:-2px; right:-8px; color:#F8820A "><i
-                                    class="fa fa-times-circle"></i></a>
-                    </div>
-                    <div class="w3-container w3-col " style="margin-bottom:10px;  width:50%; padding:1px;   ">
-                        <div class="w3-padding-2 w3-round"
-                             style="border:0px solid #C9B499; padding:0px; padding-top:0px; ">
-                            <table cellspacing="0px" cellpadding="0px" border="0" width="100%" height="100%">
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/speaker.gif"
-                                                          align="absmiddle" width="24" height="24" title="Âm Thanh">
-                                    </td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phoamthanh.phomuaban.vn/index.php?mod=list&amp;cat=887"><b>Âm
-                                                Thanh</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td width="10" valign="top"><img
-                                                src="https://static.pmbvn.com//images/icon/dilac.jpg" align="absmiddle"
-                                                width="24" height="24" title="Đồ Gỗ" style="margin-top:8px "></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phogo.phomuaban.vn/index.php?mod=list&amp;cat=947"><b>Đồ Gỗ</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td width="10" valign="top">
-                                        <img src="https://static.pmbvn.com//images/icon/gom.jpg" align="absmiddle"
-                                             width="24" height="24" title="Gốm Sứ">
-                                    </td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phocovat.phomuaban.vn/index.php?mod=list&amp;cat=968"><b>Gốm
-                                                Sứ</b></a>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/ruby.gif"
-                                                          align="absmiddle" width="24" height="24" title="Trang Sức">
-                                    </td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=902"><b>Trang
-                                                Sức</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/lamp.gif"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Đèn - Đồ Kim Loại"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1029"><b>Đèn - Đồ
-                                                Kim Loại</b></a>
-                                    </td>
-
-                                </tr>
-
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/quat.gif"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Quạt - Sưu Tập Đồ Xưa"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=984"><b>Quạt - Sưu
-                                                Tập Đồ Xưa</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td width="10" valign="top">
-                                        <img src="https://static.pmbvn.com//images/tienxu.gif" align="absmiddle"
-                                             width="24" height="24" title="Tiền và Tem">
-                                    </td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=809"><b>Tiền và
-                                                Tem</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td width="10" valign="top">
-                                        <img src="https://static.pmbvn.com//images/icon/noithatgo.jpg" align="absmiddle"
-                                             width="24" height="24" title="Nội Thất Cổ" style="margin-top:8px ">
-                                    </td>
-                                    <td valign="top">
-                                        <a style="color:#000"
-                                           href="https://phocovat.phomuaban.vn/index.php?mod=list&amp;cat=510"
-                                           style="color:#FFFFFFe "><b>Nội Thất Cổ</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/chair1.jpg"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Nội Thất Hiện Đại"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1060"><b>Nội Thất
-                                                Hiện Đại</b></a>
-                                    </td>
-
-                                </tr>
-
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/dienthoai.png"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Điện Thoại Cổ"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phodientu.phomuaban.vn/index.php?mod=list&amp;cat=1158"><b>Điện
-                                                Thoại Cổ</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/laptop.jpg"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Máy Tính - Laptop"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phodientu.phomuaban.vn/index.php?mod=list&amp;cat=1159"><b>Máy
-                                                Tính - Laptop</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/tivi.png"
-                                                          align="absmiddle" width="24" height="24" title="Điện Tử"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phodientu.phomuaban.vn/index.php?mod=list&amp;cat=1160"><b>Điện
-                                                Tử</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td width="10" valign="top">
-                                        <img src="https://static.pmbvn.com//images/monalisa.gif" align="absmiddle"
-                                             width="24" height="24" title="Tranh - Nghệ Thuật">
-                                    </td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=861"><b>Tranh -
-                                                Nghệ Thuật</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td width="10" valign="top">
-                                        <img src="https://static.pmbvn.com//images/icon/caycanh.png" align="absmiddle"
-                                             width="24" height="24" title="Cây Đá Cảnh">
-                                    </td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=897"><b>Cây Đá
-                                                Cảnh</b></a>
-                                    </td>
-
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-
-                    <div class="w3-container w3-col " style="margin-bottom:10px; width:50%; padding:1px  ">
-                        <div class="w3-padding-2 w3-round" style="border:0px solid #C9B499; padding:0px;">
-                            <table cellspacing="0px" cellpadding="0px" border="0" width="100%" height="100%">
-                                <tr>
-                                    <td width="10" valign="top"><img src="https://static.pmbvn.com//images/zippo.gif"
-                                                                     align="absmiddle" width="24" height="24"
-                                                                     title="Đồng Hồ"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phodongho.phomuaban.vn/index.php?mod=list&amp;cat=811"><b>Đồng
-                                                Hồ</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://www.phomuaban.vn/images/icon/denim.gif"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Thời Trang Nam"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1122"><b>Thời Trang
-                                                Nam</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://www.phomuaban.vn/images/icon/dress.png"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Thời Trang Nữ"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1275"><b>Thời Trang
-                                                Nữ</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/kinh.jpg"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Mắt Kính - Phụ Kiện"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1044"><b>Túi xách,
-                                                mắt kính, phụ kiện thời trang</b> <span style="color:#666 ">
-						<br>Mắt kính, túi xách, ví, ba lô, mũ nón, trang sức, nhẫn mỹ, cà vạt, dây nịch, bút</span></b>
-                                        </a>
-
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td width="10" valign="top">
-                                        <img src="https://static.pmbvn.com//images/icon/dungcu.gif" align="absmiddle"
-                                             width="24" height="24" title="Dụng Cụ Đồ Nghề">
-                                    </td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=855"><b>Dụng Cụ</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td width="10" valign="top">
-                                        <img src="https://static.pmbvn.com//images/icon/32/noicom1.png"
-                                             align="absmiddle" width="24" height="24" title="Gia Dụng Đời Sống">
-                                    </td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=932"><b>Gia
-                                                Dụng</b></a>
-                                    </td>
-
-                                </tr>
-
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/medal.gif"
-                                                          align="absmiddle" width="24" height="24"
-                                                          title="Bật Lửa Hộp Quẹt"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1038"><b>Bật Lửa
-                                                Hộp Quẹt</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/xedap.png"
-                                                          align="absmiddle" width="24" height="24" title="Xe Đạp"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phoxemoi.phomuaban.vn/index.php?mod=list&amp;cat=1156"><b>Xe
-                                                Đạp</b></a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/xemay.jpg"
-                                                          align="absmiddle" width="24" height="24" title="Xe Máy"></td>
-                                    <td>
-                                        <a style="color:#000" href="https://www.phoxexua.vn/" target="_blank"><b>Xe
-                                                Máy</b></a>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/oto.gif"
-                                                          align="absmiddle" width="24" height="24" title="Ô Tô"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://phoxemoi.phomuaban.vn/index.php?mod=list&amp;cat=1157"><b>Ô
-                                                Tô</b></a>
-                                    </td>
-
-                                </tr>
-
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/nhadat.jpg"
-                                                          align="absmiddle" width="24" height="24" title="Nhà Đất"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=988"><b>Nhà Đất</b></a>
-
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td valign="top"><img src="https://static.pmbvn.com//images/icon/mayanh.jpg"
-                                                          align="absmiddle" width="24" height="24" title="Máy Ảnh"></td>
-                                    <td>
-                                        <a style="color:#000"
-                                           href="https://www.phomuaban.vn/index.php?mod=list&amp;cat=1033"><b>Máy
-                                                Ảnh</b></a>
-                                    </td>
-
-                                </tr>
-
-
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w3-container "
-             style="padding:0px; padding-top:0px; padding-bottom:0px; padding-left:0px; padding-right:0px; margin:0px auto; max-width:980px; margin-top:0px; background-color:#D8CAAF; overflow:hidden    ">
-            @yield('main')
-        </div>
-    </div>
-
-
-    <script language="Javascript">
-        function xmlhttpPost(strURL, offset, divName) {
-            var xmlHttpReq = false;
-            var self = this;
-            // Mozilla/Safari
-            if (window.XMLHttpRequest) {
-                self.xmlHttpReq = new XMLHttpRequest();
-            }
-            // IE
-            else if (window.ActiveXObject) {
-                self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            self.xmlHttpReq.open('https://www.phomuaban.vn/POST', strURL, true);
-            self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            self.xmlHttpReq.onreadystatechange = function () {
-                if (self.xmlHttpReq.readyState == 4) {
-                    updatepage(self.xmlHttpReq.responseText, divName);
-                }
-            }
-            self.xmlHttpReq.send(getquerystring(offset));
         }
-
-        function getquerystring(offset) {
-            qstr = 'cat=510&max=10&offset=' + escape(offset);  // NOTE: no '?' before querystring
-            return qstr;
-        }
-
-        function updatepage(str, divName) {
-            document.getElementById(divName).innerHTML = str;
-        }
-
-        function rateProduct(id) {
-            var xmlHttpReq = false;
-            var self = this;
-            // Mozilla/Safari
-            if (window.XMLHttpRequest) {
-                self.xmlHttpReq = new XMLHttpRequest();
-            }
-            // IE
-            else if (window.ActiveXObject) {
-                self.xmlHttpReq = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            strURL = "https://www.phomuaban.vn/ajax/i_rate_product.php?action=post&amp;rate=max&amp;id=" + id;
-            self.xmlHttpReq.open('https://www.phomuaban.vn/POST', strURL, true);
-            self.xmlHttpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            self.xmlHttpReq.onreadystatechange = function () {
-                if (self.xmlHttpReq.readyState == 4) {
-                    alert(self.xmlHttpReq.responseText);
-                }
-            }
-            self.xmlHttpReq.send();
-        }
-
-        var togglerCatMenu = document.getElementsByClassName("caret");
-        var i;
-
-        for (i = 0; i < togglerCatMenu.length; i++) {
-            togglerCatMenu[i].addEventListener("click", function () {
-                this.parentElement.querySelector(".nested").classList.toggle("active");
-                this.classList.toggle("caret-down");
-            });
-        }
+    </style>
+    <script type="text/javascript">
+        var siteUrl = "index.html";
     </script>
-    <div id="footer">
-    </div>
-    <div>
-        <div style="margin:0px; background-color:#f7f7f7 ; color:#003366; text-align:center; border-top:0px solid #ffcc00;">
-            <div style="margin:20px auto; max-width:960px ">
-                <div style="float:right; margin:3px 5px ">
+</head>
 
-                    <a id="scrollup" href="#"
-                       style=" border:1px solid #cccccc; color:#ffcc00; padding:8px 10px; font-size:13px; text-decoration:none ; margin-right:11px ; "><i
-                                class="fa fa-arrow-up" style="color:#cccccc	 "></i>
-                    </a>
-                </div>
-                <div style="float:right; margin-right:10px ">
-                    <i class="fa fa-user-circle-o" style="color:#ffcc00; font-size:14px; margin-right:3px "></i>
-                    <a href="https://www.phomuaban.vn/index.php?page=login">Đăng nhập</a>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div style="  padding:0px;  background-color:#f7f7f7; color:#333333; text-align:left; ">
-            <div style="margin:0px auto ;  ">
-
-                <div class="w3-round"
-                     style="margin:0px; margin-top:0px; margin-bottom:0px;  padding:36px; padding-left:19px; padding-bottom:19px; color:#333333; border:0px solid #ffcc00; text-align:left; ">
-                    <center>
-                        <div style="max-width:940px; text-align:left ">
-                            <div style="color:#c60000; font-size:16px; margin-bottom:10px; font-weight:bold "><i
-                                        class="fa fa-lightbulb-o"
-                                        style="font-size:20px; color:#c60000; margin-right:10px "></i> Bí quyết để giao
-                                dịch an toàn
+<body class="">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH7SMDT" height="0" width="0"
+                  style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="body">
+    <div class="content-wrapper">
+        <div id="fix-menu">
+            <div id="promo-banner">
+                <div class="promo-banner-content clearfix">
+                    <div class="container">
+                        <div class="row promo-detail">
+                            <div class="col-md-2">
                             </div>
-                            <li>Tuân thủ chính sách phòng chống dịch bệnh của cơ quan chức năng</li>
-                            <li>Không nên chuyển tiền trước khi nhận hàng</li>
-                            <li>Không nên đặt cọc nếu chưa biết rõ người bán</li>
-                            <li>Đi đến địa chỉ người bán cùng với 1 người có kinh nghiệm để thẩm định sản phẩm</li>
-                            <li>Chọn giao hàng ship COD (thanh toán khi nhận hàng). Nếu khối lượng hàng hóa quá nặng thì
-                                người mua có thể thỏa thuận đặt cọc trước để người bán chuyển hàng
-                            </li>
-                        </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-
-        <div style="  padding:0px;  background-color:#f7f7f7; color:#333333; text-align:left; ">
-            <div style="margin:0px auto ;  ">
-
-                <div class="w3-round"
-                     style="margin:0px; margin-top:0px; margin-bottom:0px;  padding:36px; padding-left:19px; padding-bottom:19px; color:#333333; border:0px solid #ffcc00; text-align:left; ">
-                    <center>
-                        <div style="max-width:940px; text-align:left ">
-                            <div class="w3-row">
-                                <div style="color:#c60000; font-size:16px; margin-bottom:10px;font-weight:bold "><i
-                                            class="fa fa-shield"
-                                            style="font-size:20px; color:#c60000; margin-right:10px "></i> Chính sách và
-                                    quy định chung
-                                </div>
-                                <li><a class="arial" href="https://www.phomuaban.vn/?mod=news&amp;id=343"
-                                       style="color:#0092BE; text-decoration:underline ">Quy chế hoạt động</a></li>
-                                <li><a class="arial" href="https://www.phomuaban.vn/?mod=news&amp;id=344"
-                                       style="color:#0092BE; text-decoration:underline ">Quy trình giải quyết tranh
-                                        chấp</a></li>
-                                <li><a class="arial" href="https://www.phomuaban.vn/?mod=news&amp;id=342"
-                                       style="color:#0092BE; text-decoration:underline ">Chính sách bảo mật thông
-                                        tin</a></li>
-                            </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-
-        <div style="  padding:0px;  background-color:#f7f7f7; color:#333333; text-align:left; ">
-            <div style="margin:0px auto ;  ">
-
-                <div class="w3-round"
-                     style="margin:0px; margin-top:0px; margin-bottom:0px;  padding:36px; padding-left:19px; padding-bottom:0px; color:#333333; border:0px solid #ffcc00; text-align:left; ">
-                    <center>
-                        <div style="max-width:940px; text-align:left ">
-                            <div style="color:#c60000; font-size:16px; margin-bottom:10px; font-weight:bold "><i
-                                        class="fa fa-info-circle"
-                                        style="font-size:20px; color:#c60000; margin-right:10px "></i> Thông tin trang
-                                web
-                            </div>
-                            <div class="arial"
-                                 style="font-size:13px; border-bottom:1px solid #EEEEEE; padding-bottom:20px ">Trang web
-                                Phố Mua Bán cung cấp dịch vụ đăng tải bản tin mua bán rao vặt đồ sưu tập. Người đăng bản
-                                tin chịu mọi trách nhiệm về nội dung đã đăng và giao dịch mua bán
-                            </div>
-                            <div class="arial"
-                                 style="padding-top:20px; border-bottom:1px solid #EEEEEE; padding-bottom:20px;font-size:13px  ">
-                                Để liên lạc với người bán, Quý khách vui lòng xem thông tin liên lạc của người bán trong
-                                nội dung bản tin. Thông tin liên lạc ở trong mục dưới đây là của Ban quản lý trang web
-                                và không dùng cho mục đích mua bán.
-                            </div>
-                        </div>
-                    </center>
-                </div>
-            </div>
-        </div>
-
-
-        <div style="padding:0px; margin-bottom:0px;">
-
-            <script language="javascript">
-
-                $(document).ready(function () {
-//var servertime = parseFloat( $("input#servertime").val() ) * 1000;
-//$("#clock").clock({"timestamp":servertime});
-                });
-
-            </script>
-
-            <div style="background-color:#f7f7f7;  color:#333333;  padding:36px; padding-left:19px ; padding-top:20px; border-top:0px solid #ffffff;  border-bottom:0px solid #DEDEDE; ">
-                <div class="arial" style="margin:0px auto;max-width:940px; font-size:13px ">
-
-
-                    Quản lý trang web: <span style="color:#333; font-weight:normal; font-size:13px">HKD Cổng Phố</span>
-                    (chỉ quản lý website, không bán hàng) -
-                    ĐKKD số: 41D8009456 do UBND Quận 4, TP Hồ Chí Minh cấp ngày 05 tháng 10 năm 2017 -
-                    Địa chỉ: S41, Tầng 1, Chung cư H3, 384 Hoàng Diệu, Phường 6, Quận 4, Tp Hồ Chí Minh<br>
-                    <div style="border-top:0px solid #559299; padding-left:0px; margin-top:10px; padding-top:5px; padding-bottom:0px; font-size:13px ">
-
-                        Liên hệ hỗ trợ, quảng cáo: Trần Thanh Sang
-
-
-                        - Điện thoại: <img src="https://www.phomuaban.vn/images/pmbphone1.png" width="74" height="19"
-                                           style=" margin-top:4px;"> (không bán hàng) -
-
-
-                        Email hỗ trợ: <img src="https://www.phomuaban.vn/images/pmbemail.png" width="186" height="21"
-                                           style="margin-top:4px ">
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div style="  padding:0px;  background-color:#ffffcc; color:#2B2A28; text-align:left; ">
-                <div style="margin:0px auto ;  ">
-
-                    <div class="w3-round"
-                         style="margin:0px; margin-top:0px; margin-bottom:0px;  padding:36px; padding-left:19px; padding-top:10px; padding-bottom:10px; color:#333333; border:0px solid #ffcc00; text-align:left; ">
-                        <center>
-                            <div style="max-width:940px; text-align:left ">
-                                <a class="arial nobr" href="https://www.phomuaban.vn/?page=aboutus"
-                                   style="color:#c60000;text-decoration:underline  ">Giới thiệu</a>&nbsp;&nbsp;&nbsp;
-                                <a class="arial nobr" href="https://www.phomuaban.vn/?mod=newslist"
-                                   style="color:#c60000;text-decoration:underline  ">Hướng dẫn</a>&nbsp;&nbsp;&nbsp;
-                                <a class="arial nobr" href="https://www.phomuaban.vn/?mod=news&amp;id=346"
-                                   style="color:#c60000;text-decoration:underline ">Bảng giá</a>&nbsp;&nbsp;&nbsp;
-                                <a class="arial nobr" href="https://www.phomuaban.vn/index.php?mod=list-member"
-                                   style="color:#c60000;text-decoration:underline  ">Thành viên</a>&nbsp;&nbsp;&nbsp;
-                                <a class="arial nobr" style="color:#c60000;text-decoration:underline  "
-                                   href="https://www.phomuaban.vn/?page=register">Đăng ký</a>&nbsp;&nbsp;&nbsp;
-                                <a class="arial nobr" href="https://www.phomuaban.vn/?page=lienhe"
-                                   style="color:#c60000;text-decoration:underline  ">Liên hệ</a>
-
-                                <div style="margin-top:10px;  ">
-                                    <a href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=38382"
-                                       target="_blank"><img alt="" title=""
-                                                            src="https://static.pmbvn.com//images/icon/X1WcKj2c0ubH3g6sgMsjwg==.jpg"
-                                                            width="180px" height="68px"/></a>
-                                </div>
-
-                                <div style="margin-top:10px; ">
-                                    <div style="font-size:13px; font-style:normal; margin-top:10px; color:#555 ">
-                                        Trang web hoạt động tốt nhất với trình duyệt <a class="arial"
-                                                                                        href="https://www.google.com/chrome/"
-                                                                                        target="_blank"
-                                                                                        style="font-size:13px; color:#0092BE; ">Google
-                                            Chrome</a> và Safari
-                                    </div>
-                                    <div style="margin-top:0px ">
-                                        <div style=" color:#CCCCCC; padding-bottom:5px; border:0px solid #FFCCCC; text-align:left ">
-                                            Bạn cần đăng nhập lại để có thể truy cập giao diện cũ
+                            <div class="col-md-8">
+                                <div id="hotNews" class="carousel slide vertical" data-ride="carousel">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="detail item active">
+                                            <a style="color:#318f8f;" href="nha-thiet-ke/elise.html" title="">DOIDO.com - Đồng gi&aacute; chỉ từ 99K  - <span>MUA NGAY</span></a>
                                         </div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <!--<a class="carousel-control left" href="#hotNews" data-slide="prev">‹</a>-->
+                                    <a class="carousel-control right" href="#hotNews" data-slide="next">›</a>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="site-heading-area-v2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5 col-md-4 col-lg-3 visible-md-block hidden-md visible-sm-block hidden-sm visible-xs-block hidden-xs">
+                            <a href="{{asset('/')}}" rel="nofollow"><img class="lazyload logo-RENDER" style="background: none; width: 140px;margin-bottom: 2px;" data-src="images/logo1.png" /></a>
+                        </div>
 
+                        <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 col-lg-offset-3 col-md-offset-0">
+                            <div class="site-heading-right">
+                                <div class="top-menu">
+                                    <ul>
+                                        <li class="nav--toggle pull-left">
+                                            <span type="button" class="icon-toggle"></span>
+                                        </li>
+
+                                        <li class="visible-lg-block hidden-lg" style="float:left; border:0; margin-left:35px;">
+                                            <a href="index.blade.php"><img class="lazyload"
+                                                                           data-src="upload/files/RENDER%20logo_website.png"
+                                                                           style="max-height:15px;" /></a>
+                                        </li>
+                                        <li class="nav--search-v2">
+                                            <a href="javascript:;" id="btn__toggle_search"><i class="demo-icon RENDERic-search"></i></a>
+                                        </li>
+                                        <li class="form-search-v2">
+                                            <div id="search__form" class="search">
+                                                <form method="GET" action="{{asset('search')}}">
+                                                    <input type="text" id="txtSearch" class="search" name="search"
+                                                           value=""
+                                                           placeholder="Tìm kiếm sản phẩm.." autocomplete="off" />
+                                                    <button class="btnsearch"><i class="demo-icon RENDERic-search"></i></button>
+                                                </form>
+                                            </div>
+                                        </li>
+                                        <li class="btntooltip" id="lstitems" data-toggle="tooltip" data-placement="left" title="Giỏ hàng">
+                                            <a class="btntooltip prod-cart-href" href="cart.blade.php">
+                                                <i class="demo-icon RENDERic-shopping-bag"></i>
+                                                <span class="prod-cart-qty"></span>
+                                            </a>
+                                        </li>
+                                        <li class="btntooltip" id="lstwishlist" data-toggle="tooltip" data-placement="top" title="Yêu thích">
+                                            <a href="wishlist.html">
+                                                <i class="demo-icon RENDERic-stars"></i>
+                                                <span class="prod-wish-qty"></span>
+                                            </a>
+                                        </li>
+                                        <li data-toggle="tooltip" data-placement="left" title="Tài khoản"><a href="signin8ef2.html?url=https://RENDER.vn/signin.html"><i class="demo-icon RENDERic-user-1"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End site heading area -->
+            <div class="mainmenu-area">
+                <div class="container">
+                    <div class="row">
+                        <div id="submenus"></div>
+                        <div class="navbar-collapse collapse">
+                            <div class="menu-left">
+                                <ul class="nav navbar-nav navbar-left">
+                                    <li class=" bg-red" id="sale">
+                                        <a href="{{asset('search/Sale')}}" id="sale_href">SALE</a>
+                                    </li>
+                                    <li class=" " id="new">
+                                        <a href="{{asset('search/HÀNG MỚI')}}" id="new_href">H&Agrave;NG MỚI</a>
+                                    </li>
+                                    <li class=" " id="product">
+                                        <a href="{{asset('search/Hàng trao đổi')}}" id="product_href">Hàng trao đổi</a>
+                                    </li>
+                                    <li class=" " id="collection">
+                                        <a href="{{asset('search/Hàng tặng')}}" id="collection_href">Hàng tặng</a>
+                                    </li>
+                                    <li class=" " id="designer">
+                                        <a href="{{asset('search/SALE')}}" id="designer_href">Nh&agrave; thiết kế</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End mainmenu area -->
+        </div>
+        <div class="box-content">
+        @yield('main')
+            <div class="footer-area">
+                <div class="footer-nav">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 fisrt-box-hide">
+                                <h3 class="heading">Hỗ trợ khách hàng</h3>
+                                <ul>
+                                    <li><a href="lien-he.html">Th&ocirc;ng tin li&ecirc;n hệ</a></li>
+                                    <li><a href="huong-dan-mua-hang.html">Hướng dẫn mua h&agrave;ng</a></li>
+                                    <li><a href="chinh-sach-doi-tra.html">Ch&iacute;nh s&aacute;ch đổi trả</a></li>
+                                    <li><a href="chinh-sach-giao-hang.html">Ch&iacute;nh s&aacute;ch giao h&agrave;ng</a></li>
+                                    <li><a href="chinh-sach-thanh-toan.html">Ch&iacute;nh s&aacute;ch thanh to&aacute;n</a></li>
+                                    <li><a href="size-guide.html">Size Guide</a></li>
+                                    <li><a href="cau-hoi-thuong-gap1.html">FAQs</a></li>
+                                    <li><a href="gift-card.html">Gift Card</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-6 fisrt-box-hide">
+                                <h3 class="heading">DOIDO.com</h3>
+                                <ul>
+                                    <li><a href="ve-chung-toi.html">Về ch&uacute;ng t&ocirc;i</a></li>
+                                    <li><a href="hop-tac-ban-hang.html">Hợp t&aacute;c b&aacute;n h&agrave;ng</a></li>
+                                    <li><a href="http://careers.RENDER.vn/">Tuyển dụng</a></li>
+                                    <li><a href="chinh-sach-bao-mat.html">Ch&iacute;nh s&aacute;ch bảo mật</a></li>
+                                    <li><a href="dieu-kien-dieu-khoan.html">Điều kiện &amp; Điều khoản</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-sm-12 footer-box-center">
+                                <h3 class="heading">Liên hệ chúng tôi</h3>
+                                <p class="margin-top15">
+                                    <a class="icon icon-fb icon-footer" target="_blank"
+                                       href="https://www.facebook.com/"></a>
+                                    <a class="icon icon-youtube icon-footer" target="_blank"
+                                       href="https://www.youtube.com/"></a>
+                                    <a class="icon icon-in icon-footer" target="_blank"
+                                       href="https://www.linkedin.com/"></a>
+                                </p>
+                                <div class="hidden-xs">
+                                    <p class="heading margin-top15" style="letter-spacing: 1px;">ĐĂNG KÝ THÀNH VIÊN NGAY !!!</p>
+                                    <div class="frmReceiveEmail">
+                                        <div class="form-group">
+                                            <!-- <div class="col-lg-4"><label class="control-label">Ảnh đại diện</label></div> -->
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="email" placeholder="Email"
+                                                       id="txtEmail">
+                                                <span class="input-group-btn">
+                                            <button class="btn btn-black btnReceiveEmail" style="min-width: 172px;"
+                                                    type="button">Đăng ký</button>
+                                        </span>
+                                            </div>
+                                            <div class="input-group hide box-label-alert-registerreviceemail"
+                                                 style="padding-top:10px;">
+                                                <p class="small"
+                                                   style="padding: 10px 0; border-top: dashed 1px #f00; color: #F00; border-bottom: dashed 1px #f00;">
+                                                    Quý khách đã đăng nhận bản tin thành công từ www.RENDER.vn!
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
-
+                                <div class="mobile-callus visible-xs">
+                                    <a href="tel:1900636517" class="btn btn-black mobile-callus-btn" style="width: 70%;">Call
+                                        us</a>
+                                </div>
+                                <div class="col-md-8 fisrt-box-hide" style="padding-left:0;">
+                                    <p class="heading margin-top5">Thông tin công ty</p>
+                                    <p>CÔNG TY TNHH DOIDO.COM<br>
+                                        Địa chỉ: Tầng 3, Toà nhà Thăng Long. <br>
+                                        99 Mạc Thái Tổ, Phố Trung Kính, Cầu Giấy, Hà Nội <br>
+                                        P: <a href="tel:+84 24 710 86889">+84 24 710 86889</a> | CSKH: <a href="tel:1900 636 517">1900 636 517</a></p>
+                                </div>
+                                <div class="col-md-4 fisrt-box-hide" style="text-align:left;">
+                                    <p class="heading margin-top5">Được chứng nhận</p>
+                                    <ul class="list-inline">
+                                        <li style="display:inherit;">
+                                            <a target="_blank"
+                                               href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=24501">
+                                                <img class="lazyload" data-src="images/BCT-seal-red.png">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
-
-                        </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3 col-md-5 col-lg-6">
+                                ©2020 DOIDO |
+                            </div>
+                            <div class="col-sm-5 col-md-4 col-lg-3 text-left">
+                            </div>
+                            <div class="col-sm-4 col-md-3 col-lg-3 text-right">
+                                <a href="#" class="card card-visa"></a>
+                                <a href="#" class="card card-mastercard"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End footer area -->
+        </div>
+        <div class="modal fade bs-example-modal-md dlg dlg-notify" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+                        <h4 class="modal-title upcase"></h4>
+                    </div>
+                    <div class="modal-body text-center">
                     </div>
                 </div>
             </div>
-
-            <div style="  padding:0px;  background-color:#FFD41E; color:#333333; text-align:left; ">
-                <div style="margin:0px auto ;  ">
-
-                    <div class="w3-round"
-                         style="margin:0px; margin-top:0px; margin-bottom:0px;  padding:36px; padding-left:19px; padding-top:10px; padding-bottom:10px; color:#333333; border:0px solid #ffcc00; text-align:left; ">
-                        <center>
-                            <div style="max-width:940px; text-align:left ">
-                                <label onMouseDown="javascript:document.getElementById('info').style.display='block';"
-                                       onMouseUp="javascript:document.getElementById('info').style.display='none';">
-
-                                    Bản quyền &copy; 2020 của Phomuaban.vn. Bảo lưu mọi quyền.<br>
-
-                                </label>
-                            </div>
-                        </center>
-                    </div>
-                </div>
-            </div>
-
-
         </div>
 
-        <div style="display:none" id="info">
-            <p align="center">
-                Số người vào hôm nay &nbsp;::
-                Số thành viên ::
-                Thời gian gọi trang 0.8996 giây.</p>
-        </div>
-
-    </div>
-
-</div>
-<!--script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
-</script>
-<script type="text/javascript">
-_uacct = "UA-1751309-1";
-urchinTracker();
-</script-->
-<input type=hidden id="userLoggedIn" name="userLoggedIn" value="0">
-<script language="javascript">
-    doLoginStatus("");
-    var isMobile = false;
-    $("#email").val("");
-    $("#emailHome").val("");
-
-    var didScroll;
-    var lastScrollTop = 0;
-    var delta = 0;
-    var navbarHeight = $('#pageHeader').outerHeight();
-    var fixmeHeight = 0;
-    var fixmeTop = 0;
-
-    /*
-	$(window).scroll(function(event){
-		didScroll = true;
-	});
-
-	setInterval(function() {
-		if (didScroll) {
-			hasScrolled();
-			didScroll = false;
-		}
-	}, 250);
-	*/
-    function hasScrolled() {
-        var isPageHeaderVisible = false;
-        var isScrollUp = true;
-        if (true || isMobile) {
-            var st = $(this).scrollTop();
-
-            // Make sure they scroll more than delta
-            if (Math.abs(lastScrollTop - st) > delta) {
-
-
-                // If they scrolled down and are past the navbar, add class .nav-up.
-                // This is necessary so you never see what is "behind" the navbar.
-                if (st > lastScrollTop && st > navbarHeight) {
-                    // Scroll Down
-                    isScrollUp = false;
-                    $('#pageHeader').css({
-                        position: 'static',
-                        margin: '0px'
-
-
-                    });
-                    $('#pageHeaderSpace').css({
-                        display: 'none'
-                    });
-                } else {
-                    // Scroll Up
-                    isScrollUp = true;
-                    if (st + $(window).height() < $(document).height()) {
-                        isPageHeaderVisible = true;
-                        $('#pageHeader').css({
-                            position: 'fixed',
-                            top: '0',
-                            left: '0',
-                            width: '100%',
-                            margin: '0px', 'z-index': '1'
-
-                        });
-                        $('#pageHeaderSpace').css({
-
-                            display: 'block'
-
-
-                        });
-
-                        $('#pageHeaderSpace').height(navbarHeight + delta);
-                    }
-                }
-
-                lastScrollTop = st;
+        <script>
+            // This is called with the results from from FB.getLoginStatus().
+            /*function statusChangeCallback(response) {
+              console.log('statusChangeCallback');
+              console.log(response);
+              if (response.status === 'connected') {
+                loginAPI();
+              } else if (response.status === 'not_authorized') {
+                console.log('Please log into this app.');
+              } else {
+                console.log('Please log into Facebook.');
+              }
             }
 
-        }
-    }
+            function checkLoginState() {
+              FB.getLoginStatus(function(response) {
+                  statusChangeCallback(response);
+              });
+            }*/
 
-    $(window).scroll(function (event) {
-        didScroll = true;
-    });
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : "344562976437007",
+                    cookie     : true,  // enable cookies to allow the server to access
+                                        // the session
+                    xfbml      : true,  // parse social plugins on this page
+                    version    : 'v2.8' // use graph api version 2.8
+                });
 
+                /*FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+      });*/
+            };
+
+            (function ($) {
+                $( document ).ready(function() {
+                    $("#loginWithFacebook" ).click(function() {
+                        var redirect_url = $(this).data('url');
+                        FB.login(function(response) {
+                            console.log(response);
+                            if (response.status === 'connected') {
+                                loginAPI(redirect_url);
+                            } else if (response.status === 'not_authorized') {
+                                console.log('Please log into this app.');
+                            } else {
+                                console.log('Please log into Facebook.');
+                            }
+                        }, {scope: 'public_profile,email'});
+                    });
+                });
+
+                // Load the SDK asynchronously
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    //js.src = "//connect.facebook.net/en_US/sdk.js";
+                    js.src = '../connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+
+                function loginAPI(redirect_url) {
+                    FB.api('/me?fields=id,name,email,gender', function(response) {
+                        $.ajax({
+                            url: "/registerfb.html",
+                            type: "POST",
+                            cache: false,
+                            contentType: 'application/x-www-form-urlencoded',
+                            dataType: 'json',
+                            data: $.param(response),
+                            success: function(data){
+                                if(data['error'] == 0){
+                                    if(redirect_url) {
+                                        return window.location.href = redirect_url;
+                                    } else {
+                                        return window.location.href = 'index.blade.php';
+                                    }
+                                    //location.reload('/');
+                                }
+                            },error: function(xhr, err) {
+                                console.log("Error Login");
+                                return location.reload('index.blade.php');
+                            }
+                        });
+
+                        console.log(response);
+                    });
+                }
+
+            })(jQuery);
+        </script>
+        <script type="text/javascript">
+            var screenWidth = parseInt($(window).width());
+            if(screenWidth<=990){
+                /*document.getElementById("designer_href").href="javascript:;";
+                document.getElementById("product_href").href="javascript:;";
+                document.getElementById("style_href").href="javascript:;";*/
+            }
+        </script><div class="loading-modal">
+            <!-- Place at bottom of page -->
+        </div>    </div>
+    <!--<a href="tel:1900636517" id="callnowbutton">&nbsp;</a>    -->
+</div>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 876282344;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
 </script>
+<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt"></script>
+<noscript>
+    <div style="display:inline;">
+        <img height="1" width="1" style="border-style:none;" alt=""
+             src="http://googleads.g.doubleclick.net/pagead/viewthroughconversion/876282344/?value=0&amp;guid=ON&amp;script=0" />
+    </div>
+</noscript>
 </body>
-<!-- Mirrored from www.phomuaban.vn/index.php?mod=list&cat=1033 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Apr 2020 16:33:51 GMT -->
+
+
+<!-- Mirrored from RENDER.vn/signin.html?url=https://RENDER.vn by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 18 Mar 2020 17:12:21 GMT -->
 </html>
+
+
+

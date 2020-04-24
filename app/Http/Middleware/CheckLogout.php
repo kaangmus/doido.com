@@ -15,7 +15,7 @@ class CheckLogout
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check()&&Auth::user()->lever==0) {
+        if (Auth::check()) {
             return redirect("admin");
         } else {
             return $next($request);

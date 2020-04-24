@@ -34,19 +34,19 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Add Product</h1>
+            <h1 class="page-header">Thêm sản phẩm</h1>
         </div>
     </div><!--/.row-->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Add Product</div>
+                <div class="panel-heading">Thêm sản phẩm</div>
                 <div class="panel-body">
                     <form method="POST" role="form" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <label>Product category</label>
+                                <label>Danh mục sản phẩm</label>
                                 <select id="boot-multiselect-demo" multiple="multiple" class="form-control" rows="5"
                                         name="idcategory[]">
                                     @foreach($listCate as $itemCate)
@@ -55,27 +55,27 @@
                                 </select>
                             </div>
                             <div class="form-group col-sm-6">
-                                <label>Product name</label>
-                                <input class="form-control" placeholder="Prodcut name" name="title"
+                                <label>Tên sản phẩm</label>
+                                <input class="form-control" placeholder="tên sản phẩm" name="title"
                                        value="{{isset($item->title)?$item->title:''}}">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <label>Product price</label>
-                                <input class="form-control" type="number" placeholder="Prodcut price" name="price"
+                                <label>Giá bán</label>
+                                <input class="form-control" type="number" placeholder="giá bán" name="price"
                                        value="{{isset($item->price)?$item->price:''}}">
                             </div>
                             <div class="form-group col-sm-6">
-                                <label>Product sale</label>
-                                <input class="form-control" type="number" placeholder="Prodcut sale" name="sale"
+                                <label>Giá sale</label>
+                                <input class="form-control" type="number" placeholder="giá sale" name="sale"
                                        value="{{isset($item->sale)?$item->sale:''}}">
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label>#Tag</label>
-                                <input class="form-control" placeholder="Prodcut Tag" name="tag"
+                                <input class="form-control" placeholder="#tag" name="tag"
                                        value="{{isset($item->tag)?$item->tag:''}}">
                             </div>
                             <div class="form-group col-sm-6">
@@ -91,52 +91,52 @@
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <label>Number of product</label>
-                                <input class="form-control" type="number" placeholder="Number of product" name="count"
+                                <label>Số lượng sản phẩm</label>
+                                <input class="form-control" type="number" placeholder="số lượng sản phẩm" name="count"
                                        value="{{isset($item->count)?$item->count:''}}">
                             </div>
                             <div class="form-group col-sm-6">
-                                <label>Product describe</label>
+                                <label>Mô tả ngắn</label>
                                 <br>
                                 <textarea class="form-control" rows="5" name="describe"
-                                          placeholder="Product describe">{{isset($item->describe)?$item->describe:''}}</textarea>
+                                          placeholder="mô tả ngắn">{{isset($item->describe)?$item->describe:''}}</textarea>
                             </div>
                         </div>
                         <div class="form-group col-sm-6">
-                            <label>Product content</label>
+                            <label>Mô tả sản phẩm</label>
                             <br>
                             <textarea class="form-control" rows="5" name="content"
-                                      placeholder="Product content">{{isset($item->content)?$item->content:''}}</textarea>
+                                      placeholder="mô tả">{{isset($item->content)?$item->content:''}}</textarea>
                         </div>
                         <div class="row">
                             <div class="form-group col-sm-6">
-                                <label>Product Img</label>
+                                <label>Ảnh đại diện</label>
                                 <input id="img" type="file" name="coverimg" value="" class="form-control"
                                        onchange="changeImg(this)">
                                 <img id="avatar" class="thumbnail" width="300px"
-                                     src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}">
+                                     src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/img/default.PNG')}}">
                                 <p class="help-block">Ảnh đại diện.</p>
                             </div>
                             <div class="form-group col-sm-6">
-                                <label>Product Img</label>
+                                <label>Hình ảnh sản phẩm</label>
                                 <input multiple type="file" name="media[]" value="" class="form-control">
                             </div>
                         </div>
                         <div class="form-group col-sm-6">
-                            <label>Status</label>
+                            <label>Trạng thái</label>
                             <select id="boot-multiselect-demo" class="form-control" rows="5" name="status">
-                                <option value="1">Show</option>
-                                <option value="0">Hide</option>
+                                <option value="1">Hiện</option>
+                                <option value="0">Ẩn</option>
                             </select>
                         </div>
-                        <button class="btn btn-lg btn-primary">Add</button>
+                        <button class="btn btn-lg btn-primary">Thêm</button>
                     </form>
                 </div>
             </div>
         </div><!-- /.panel-->
     </div><!-- /.col-->
     <div class="col-sm-12">
-        <p class="back-link">Render Theme by <a href="https://kipo.vn">Kipo</a></p>
+        <p class="back-link">DOIDO.COM</p>
     </div>
     </div><!-- /.row -->
 @stop

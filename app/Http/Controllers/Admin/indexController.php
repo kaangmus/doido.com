@@ -35,7 +35,6 @@ class indexController extends Controller
             $remember = false;
         }
         //kiểm tra trường remember có được chọn hay không
-
         if (Auth::attempt($arr)) {
 
             return redirect()->intended('admin');

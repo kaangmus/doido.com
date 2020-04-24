@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Render - Quản trị website</title>
     <base href="{{asset('public/admin')}}/" />
-
-
-
-
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/datepicker3.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -24,6 +18,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+        $('select').picker();
+
+        function changeImg(input) {
+            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                //Sự kiện file đã được load vào website
+                reader.onload = function (e) {
+                    //Thay đổi đường dẫn ảnh
+                    $('#avatar').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $(document).ready(function () {
+            $('#avatar').click(function () {
+                $('#img').click();
+            });
+        });
+    </script>
 </head>
 <body>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -33,7 +49,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="{{asset('/')}}">doido.com</a>
+            <a class="navbar-brand" href="{{asset('/')}}"><img width="50px" src="{{asset('public/img/logo1.png')}}"></a>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                         <em class="fa fa-envelope"></em><span class="label label-danger">15</span>
@@ -108,11 +124,10 @@
         </div>
     </form>
     <ul class="nav menu">
-        <li class="active"><a href="index.blade.php"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+        <li class="active"><a href="{{asset('admin')}}"><em class="fa fa-dashboard">&nbsp;</em>Bảng điều khiển</a></li>
         <li><a href="{{asset('admin/profile')}}"><em class="fa fa-calendar">&nbsp</em>Hồ sơ cá nhân</a></li>
-        <li><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Product</a></li>
-        <li><a href="{{asset('admin/blog')}}"><em class="fa fa-calendar">&nbsp;</em>Blog</a></li>
-        <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
+        <li><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Sản phẩm</a></li>
+        <li><a href="{{asset('admin/profile/user')}}"><em class="fa fa-bar-chart">&nbsp;</em> Danh sách người dùng</a></li>
         <li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>
         <li><a href="panels.html"><em class="fa fa-clone">&nbsp;</em> Alerts &amp; Panels</a></li>
         <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
@@ -120,7 +135,7 @@
             </a>
             <ul class="children collapse" id="sub-item-1">
                 <li><a class="" href="{{asset('admin/category')}}">
-                        <span class="fa fa-arrow-right">&nbsp;</span> Category
+                        <span class="fa fa-arrow-right">&nbsp;</span> Danh mục sản phẩm
                     </a></li>
                 <li><a class="" href="#">
                         <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 2

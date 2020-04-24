@@ -91,7 +91,7 @@
         <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <a href="{{asset('admin/product/add')}}">Add Product</a>
+                    <a href="{{asset('admin/product/add')}}">Thêm sản phẩm</a>
                 </div>
                 <div class="panel-body">
 
@@ -139,7 +139,7 @@
         </div><!-- /.panel-->
     </div><!-- /.col-->
     <div class="col-sm-12">
-        <p class="back-link">Render Theme by <a href="https://kipo.vn">Kipo</a></p>
+        <p class="back-link">DOIDO.COM</p>
     </div>
     </div><!-- /.row -->
 @stop
