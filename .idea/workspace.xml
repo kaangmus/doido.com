@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a82cd3c-ff08-44cd-bca2-64a6f8fcbaa0" name="Default Changelist" comment="louis commit">
+    <list default="true" id="4a82cd3c-ff08-44cd-bca2-64a6f8fcbaa0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/doido.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/doido.com.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/indexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/indexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/productController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/productController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/cartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/cartController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/productModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/productModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_25_171219_create_product_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_25_171219_create_product_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/public/front/css/style2048.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/public/front/css/style2048.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/Base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/Base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/editProduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/editProduct.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/Base.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/Base.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/productDetail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/productDetail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,15 +174,17 @@
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
     </include_path>
   </component>
+  <component name="ProjectId" id="1b9egNpqe0CexSAkPxYXXceaDlK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rendervn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -272,6 +261,7 @@
       <workItem from="1587655599108" duration="1811000" />
       <workItem from="1587657914102" duration="6398000" />
       <workItem from="1587738300708" duration="9666000" />
+      <workItem from="1588048847713" duration="55000" />
     </task>
     <task id="LOCAL-00001" summary="louis commit">
       <created>1585063309002</created>
@@ -350,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587288547425</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="louis commit">
+      <created>1588040601079</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588040601079</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -427,14 +424,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="louis commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1588040083340">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1588040600047">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1588040083340" />
-    <state x="668" y="316" key="git4idea.merge.GitPullDialog" timestamp="1588040069221">
+    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1588040600047" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1588040653161">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="668" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588040069221" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1588040653161" />
+    <state x="668" y="316" key="git4idea.merge.GitPullDialog" timestamp="1588040638534">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="668" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588040638534" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

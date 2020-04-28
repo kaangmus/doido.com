@@ -30,7 +30,7 @@ Route::group(['namespace'=>'Front'],function (){
         Route::get('delete/{id}','cartController@deleteItem');
         Route::get('pay','cartController@pay');
     });
-    Route::group(['prefix'=>'order'],function (){
+    Route::group(['prefix'=>'order','middleware'=>'checklogin'],function (){
         Route::get('/{id}','orderController@showOrder');
         Route::post('/{id}','orderController@addOrder');
     });
