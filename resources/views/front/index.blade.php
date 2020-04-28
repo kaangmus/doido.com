@@ -64,13 +64,18 @@
                                                                                                                                             class="color-black">{{$item1->price}}</span></strike>
                                                                 <br>
                                                                 <span class="color-red">
-                                                                    {{$item1->sale}} VND | Giảm
-                                                                    {{100-($item1->sale/$item1->price)*100}}%</span>
+                                                                    {{$item1->price}} VND</span>
                                                                                                                                 </span>
                                                         </span>
                                                     </div>
                                                 </a>
-                                                <span class="product-new">Hàng bán chạy</span>
+                                                <?php
+                                                $styles = explode(",", $item1->style);
+                                                array_pop($styles);
+                                                ?>
+                                                @foreach($styles as $style)
+                                                <span class="product-new">{{$style}}</span>
+                                                @endforeach
                                             </div>
                                         </div>
                                     @endforeach
@@ -112,6 +117,7 @@
                                                 </span>
                                             </div>
                                         </a>
+
                                         <!-- <span class="status">Exclusive</span> -->
                                     </div>
                                 </div>
@@ -156,13 +162,12 @@
                                                                                                                                             class="color-black">{{$item1->price}}</span></strike>
                                                                 <br>
                                                                 <span class="color-red">
-                                                                    {{$item2->sale}} VND | Giảm
-                                                                    {{100-($item2->sale/$item2->price)*100}}%</span>
+                                                                    {{$item2->price}} VND
+                                                                </span>
                                                                                                                                 </span>
                                                         </span>
                                                     </div>
                                                 </a>
-                                                <span class="product-new">Hàng bán chạy</span>
                                             </div>
                                         </div>
                                     @endforeach

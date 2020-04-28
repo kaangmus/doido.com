@@ -101,13 +101,11 @@
                                 <th>ID</th>
                                 <th>Tên sản phẩm</th>
                                 <th>Hình ảnh</th>
-                                <th>Giá ban đầu( chưa sale)</th>
                                 <th>Giá bán</th>
                                 <th>Loại giao dịch</th>
                                 <th># Tag</th>
                                 <th>Mô tả ngắn</th>
                                 <th>Content</th>
-                                <th>Ghi chú</th>
                                 <th>Trạng thái</th>
                                 <th>Option</th>
                             </tr>
@@ -119,13 +117,11 @@
                                     <td>{{$item->title}}</td>
                                     <td><img class="thumbnail" width="100px" src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}" ></td>
                                     <td>{{$item->price}}</td>
-                                    <td>{{$item->sale}}</td>
                                     <td>{{$item->style}}</td>
                                     <td>{{$item->tag}}</td>
                                     <td>{{$item->describe}}</td>
                                     <td>{{$item->content}}</td>
-                                    <td>{{$item->note}}</td>
-                                    <td>{{$item->status}}</td>
+                                    <td>{{$item->status==1?'Mới':'Cũ'}}</td>
                                     <td>
                                         <a href="{{asset('admin/product/update/'.$item->id)}}">Edit</a>
                                         <a href="{{asset('admin/product/delete/'.$item->id)}}">Delete</a>

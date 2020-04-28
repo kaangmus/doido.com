@@ -5,6 +5,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use DB;
+use Auth; //use thư viện auth
 
 class productModel extends Model
 {
@@ -19,26 +20,30 @@ class productModel extends Model
     public function listAll()
     {
         $item=productModel::orderBy('created_at','DESC')->get();
-
-//        $item = DB::table('product')
-//            ->join('cate_product', 'product.id', '=', 'cate_product.idproduct')
-//            ->join('category', 'category.id', '=', 'cate_product.idcategory')
-//            ->select('product.*', 'category.*', 'product.id as productId','product.title as productTitle')
-//            ->orderByRaw('product.created_at DESC')
-//            ->get();
+        return $item;
+    }
+    public function listProduct()
+    {
+        if(Auth::user()->lever==0)
+        {
+            $item=productModel::orderBy('created_at','DESC')->get();
+        }
+        else
+        {
+            $item=productModel::where('iduser',Auth::user()->id)->orderBy('created_at','DESC')->get();
+        }
         return $item;
     }
     public function addItem(Request $request)
     {
         try{
-            $stringTag='';
             $stringStyle='';
             $item= new productModel();
             $item->title=$request->title;
             $item->price=$request->price;
             $item->describe=$request->describe;
-            $item->sale=$request->sale;
             $item->tag=$request->tag;
+            $item->iduser=Auth::user()->id;
             if(isset($request->style))
             {
                 foreach ($request->style as $itemStyle)
@@ -49,7 +54,6 @@ class productModel extends Model
             }
             $item->count=$request->count;
             $item->content=$request->content;
-            $item->note=$request->note;
             $item->status=$request->status;
             if($request->hasFile('coverimg'))
             {
@@ -59,16 +63,17 @@ class productModel extends Model
                 //$request->coverimg->storeAs('media',$filename);
             }
             $item->save();
-            $this->cate_product->addItem($item->id,$request->idcategory);
+            if(isset($request->idcategory))
+            {
+                $this->cate_product->addItem($item->id,$request->idcategory);
+            }
             $this->media->addItem($request, $item->id,null);
-            return true;
+            return $item->id;
         }
         catch (Exception $ex){
             report($ex);
             return false;
         }
-
-
     }
     public function showItem($id)
     {
@@ -79,13 +84,12 @@ class productModel extends Model
     {
         try{
             $item=productModel::find($id);
-            $stringTag='';
             $stringStyle='';
             $item->title=$request->title;
             $item->price=$request->price;
             $item->describe=$request->describe;
-            $item->sale=$request->sale;
             $item->tag=$request->tag;
+            $item->iduser=Auth::user()->id;
             if(isset($request->style))
             {
                 foreach ($request->style as $itemStyle)
@@ -96,7 +100,6 @@ class productModel extends Model
             }
             $item->count=$request->count;
             $item->content=$request->content;
-            $item->note=$request->note;
             $item->status=$request->status;
             if($request->hasFile('coverimg'))
             {
@@ -106,7 +109,10 @@ class productModel extends Model
                 //$request->coverimg->storeAs('media',$filename);
             }
             $item->save();
-            $this->cate_product->addItem($item->id,$request->idcategory);
+            if(isset($request->idcategory))
+            {
+                $this->cate_product->addItem($item->id,$request->idcategory);
+            }
             $this->media->addItem($request, $item->id);
             return true;
         }catch (Exception $ex)

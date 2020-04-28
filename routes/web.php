@@ -30,6 +30,13 @@ Route::group(['namespace'=>'Front'],function (){
         Route::get('delete/{id}','cartController@deleteItem');
         Route::get('pay','cartController@pay');
     });
+    Route::group(['prefix'=>'order'],function (){
+        Route::get('/{id}','orderController@showOrder');
+        Route::post('/{id}','orderController@addOrder');
+    });
+    Route::group(['prefix'=>'comment'],function(){
+        Route::post('/','commentController@addItem');
+    });
 });
 Route::group(['namespace'=>'Admin'],function(){
    Route::group(['prefix'=>'admin','middleware'=>'checklogin'],function(){
@@ -59,6 +66,9 @@ Route::group(['namespace'=>'Admin'],function(){
             Route::get('update/{id}','productController@updateShow');
             Route::post('update/{id}','productController@updateItem');
             Route::get('delete/{id}','productController@deleteItem');
+       });
+       Route::group(['prefix'=>'messaging'],function (){
+          Route::get('/','messagingController@listAll');
        });
    });
 

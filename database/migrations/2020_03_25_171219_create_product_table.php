@@ -19,13 +19,11 @@ class CreateProductTable extends Migration
             $table->text('describe')->nullable();
             $table->text('tag')->nullable();
             $table->integer('price')->nullable();
-            $table->integer('sale')->nullable();
             $table->text('style')->nullable();
             $table->integer('status')->nullable();
             $table->integer('count')->nullable();
             $table->text('content')->nullable();
             $table->text('coverimg')->nullable();
-            $table->text('note')->nullable();
             $table->timestamps();
         });
     }

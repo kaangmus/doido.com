@@ -18,7 +18,7 @@ class productController extends Controller
     }
     public function listAll()
     {
-        $data['items']=$this->product->listAll();
+        $data['items']=$this->product->listProduct();
         return view('admin.product',$data);
     }
     public function addShow()

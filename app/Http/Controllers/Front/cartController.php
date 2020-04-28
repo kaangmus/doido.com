@@ -31,9 +31,15 @@ class cartController extends Controller
     }
     public function addItem(Request $request)
     {
-        $item=$this->product->showItem($request->id);
-        $this->cartItem->add(['id'=>$request->id,'name'=>$item->title,'price'=>$item->sale,'qty'=>1,'weight'=>1,'options' => ['img' => $item->coverimg,'size'=>$request->size,'color'=>$request->color]]);
-        return redirect('cart');
+        if($request->style=='cho'||$request->style=='tang')
+        {
+            return redirect()->intended('order/'.$request->id);
+        }
+        else{
+            $item=$this->product->showItem($request->id);
+            $this->cartItem->add(['id'=>$request->id,'name'=>$item->title,'price'=>$item->sale,'qty'=>1,'weight'=>1,'options' => ['img' => $item->coverimg,'size'=>$request->size,'color'=>$request->color]]);
+            return redirect('cart');
+        }
     }
     public function deleteAll()
     {

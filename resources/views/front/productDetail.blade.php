@@ -3,11 +3,10 @@
 @section('main')
     <div class="content-area home-content-area top-area">
         <div class="container">
-            {{$item}}
             <div class="navigation margin-top20">
-                <a href="https://ferosh.vn">Trang chủ</a>
-                <a href="https://ferosh.vn/san-pham">Sản phẩm</a>
-                <a href="https://ferosh.vn/san-pham?types=dam-vay-lien">
+                <a href="{{asset('/')}}">Trang chủ</a>
+                <a href="">Sản phẩm</a>
+                <a href="">
                     {{$item->title}}
                 </a>
             </div>
@@ -28,13 +27,13 @@
                                              src="{{asset('public/media/'.$item->coverimg)}}">
                                     </li>
                                     @foreach($itemsMedia as $media)
-                                    <li color-id="22286" class="show">
-                                        <img class="lazyload"
-                                             data-src="{{asset('public/media/'.$media->url)}}"
-                                             data-image="{{asset('public/media/'.$media->url)}}"
-                                             data-zoom-image="{{asset('public/media/'.$media->url)}}"
-                                             src="{{asset('public/media/'.$media->url)}}">
-                                    </li>
+                                        <li color-id="22286" class="show">
+                                            <img class="lazyload"
+                                                 data-src="{{asset('public/media/'.$media->url)}}"
+                                                 data-image="{{asset('public/media/'.$media->url)}}"
+                                                 data-zoom-image="{{asset('public/media/'.$media->url)}}"
+                                                 src="{{asset('public/media/'.$media->url)}}">
+                                        </li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -63,15 +62,19 @@
                                 <div class="desc">
                                     <input type="hidden" id="price" value="780000.0000">
                                     <input type="hidden" id="txtAlias" value="vay-nhun-sat-nach-cotton">
-                                    <strike class="color-red"><span class="color-black">{{$item->price}}
-                                    VND</span></strike>
                                     <br>
                                     <span class="color-red">
-                                {{$item->sale}} VND | Giảm
-                                {{100-($item->sale/$item->price)*100}}%</span>
+                                {{$item->price}} VND</span>
                                 </div>
                             </li>
-
+                            <li>
+                                <div class="upcase">Danh mục sản phẩm</div>
+                                <div id="color" class="content">
+                                        <div style="display: inline-block; margin-right: 10px;">
+                                            <label size-id="1">Váy xịn</label>
+                                        </div>
+                                </div>
+                            </li>
                             <li>
                                 <div class="upcase">Loại giao dịch</div>
                                 <?php
@@ -81,7 +84,8 @@
                                 <div id="size" class="content">
                                     @foreach($styles as $style)
                                         <div style="display: inline-block; margin-right: 10px;">
-                                            <label size-id="1" class="box">{{$style}}</label>
+                                            <label size-id="1" class="box"><input type="radio" name="style"
+                                                                                  value="{{$style}}">{{$style}}</label>
                                         </div>
                                     @endforeach
                                     <div class="clear"></div>
@@ -105,7 +109,7 @@
                             <li>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <button class="btn btn-black btnaddtocart">Đặt mua</button>
+                                        <button class="btn btn-black btnaddtocart">Đặt đồ</button>
                                     </div>
                                 </div>
                             </li>
@@ -150,14 +154,6 @@
                                         chi tiết</a></div>
                             </div>
                         </li>
-                        <!-- <li>
-<div class="upcase share">
-<span>Share</span>
-<a class="icon icon-fb" href="#"></a>
-<a class="icon icon-in" href="#"></a>
-<a class="icon icon-mail" href="#"></a>
-</div>
-</li> -->
                         <li>
                             <ul class="product-other">
                             </ul>
@@ -165,10 +161,175 @@
                     </ul>
                 </div>
             </div>
+            <div class="comment">
+                <h3>Bình luận</h3>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="card card-white post">
+                            <div class="post-heading">
+                                <div class="float-left image">
+                                    <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar"
+                                         alt="user profile image">
+                                </div>
+                            </div>
+                            <div class="post-description">
+                                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap
+                                    css hmtl js framework. Codes for developers and web designers</p>
 
+                            </div>
+                        </div>
+                    </div>
 
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="card card-white post">
+                            <div class="post-heading">
+                                <div class="float-left image">
+                                    <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar"
+                                         alt="user profile image">
+                                </div>
+                            </div>
+                            <div class="post-description">
+                                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap
+                                    css hmtl js framework. Codes for developers and web designers</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        $(".comment button").click(function(){
+                            $.post("{{asset('comment')}}",
+                                {
+                                    comment: $("#comment").val(),
+                                },
+                                function(data,status){
+                                    alert("Data: " + data + "\nStatus: " + status);
+                                });
+                        });
+                    });
+                </script>
+                <form method="post" action="">
+                    {{ csrf_token() }}
+                    <div class="form-group">
+                        <label for="comment">Bình luận:</label>
+                        <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                        <button>Bình luận</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
+<style>
 
+
+    .card-white  .card-heading {
+        color: #333;
+        background-color: #fff;
+        border-color: #ddd;
+        border: 1px solid #dddddd;
+    }
+    .card-white  .card-footer {
+        background-color: #fff;
+        border-color: #ddd;
+    }
+    .card-white .h5 {
+        font-size:14px;
+    //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    .card-white .time {
+        font-size:12px;
+    //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    .post .post-heading {
+        height: 95px;
+        padding: 20px 15px;
+    }
+    .post .post-heading .avatar {
+        width: 60px;
+        height: 60px;
+        display: block;
+        margin-right: 15px;
+    }
+    .post .post-heading .meta .title {
+        margin-bottom: 0;
+    }
+    .post .post-heading .meta .title a {
+        color: black;
+    }
+    .post .post-heading .meta .title a:hover {
+        color: #aaaaaa;
+    }
+    .post .post-heading .meta .time {
+        margin-top: 8px;
+        color: #999;
+    }
+    .post .post-image .image {
+        width: 100%;
+        height: auto;
+    }
+    .post .post-description {
+        padding: 15px;
+    }
+    .post .post-description p {
+        font-size: 14px;
+    }
+    .post .post-description .stats {
+        margin-top: 20px;
+    }
+    .post .post-description .stats .stat-item {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .post .post-description .stats .stat-item .icon {
+        margin-right: 8px;
+    }
+    .post .post-footer {
+        border-top: 1px solid #ddd;
+        padding: 15px;
+    }
+    .post .post-footer .input-group-addon a {
+        color: #454545;
+    }
+    .post .post-footer .comments-list {
+        padding: 0;
+        margin-top: 20px;
+        list-style-type: none;
+    }
+    .post .post-footer .comments-list .comment {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+    }
+    .post .post-footer .comments-list .comment .avatar {
+        width: 35px;
+        height: 35px;
+    }
+    .post .post-footer .comments-list .comment .comment-heading {
+        display: block;
+        width: 100%;
+    }
+    .post .post-footer .comments-list .comment .comment-heading .user {
+        font-size: 14px;
+        font-weight: bold;
+        display: inline;
+        margin-top: 0;
+        margin-right: 10px;
+    }
+    .post .post-footer .comments-list .comment .comment-heading .time {
+        font-size: 12px;
+        color: #aaa;
+        margin-top: 0;
+        display: inline;
+    }
+    .post .post-footer .comments-list .comment .comment-body {
+        margin-left: 50px;
+    }
+    .post .post-footer .comments-list .comment > .comments-list {
+        margin-left: 50px;
+    }
+</style>
 
 @stop

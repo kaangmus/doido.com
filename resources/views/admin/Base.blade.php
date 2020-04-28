@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Render - Quản trị website</title>
+    <title>DoiDo.com - Quản trị website</title>
     <base href="{{asset('public/admin')}}/" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -39,7 +39,11 @@
                 $('#img').click();
             });
         });
+        /*-------------------------------jquey--------------------------->*/
     </script>
+    <style>
+
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -49,7 +53,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="{{asset('/')}}"><img width="50px" src="{{asset('public/img/logo1.png')}}"></a>
+            <a class="navbar-brand" href="{{asset('/')}}"><img width="140px" src="{{asset('public/img/logo1.png')}}"></a>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
                         <em class="fa fa-envelope"></em><span class="label label-danger">15</span>
@@ -128,20 +132,12 @@
         <li><a href="{{asset('admin/profile')}}"><em class="fa fa-calendar">&nbsp</em>Hồ sơ cá nhân</a></li>
         <li><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Sản phẩm</a></li>
         <li><a href="{{asset('admin/profile/user')}}"><em class="fa fa-bar-chart">&nbsp;</em> Danh sách người dùng</a></li>
-        <li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>
-        <li><a href="panels.html"><em class="fa fa-clone">&nbsp;</em> Alerts &amp; Panels</a></li>
         <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-                <em class="fa fa-navicon">&nbsp;</em> Option <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
+                <em class="fa fa-navicon">&nbsp;</em> Tùy chọn <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">
                 <li><a class="" href="{{asset('admin/category')}}">
                         <span class="fa fa-arrow-right">&nbsp;</span> Danh mục sản phẩm
-                    </a></li>
-                <li><a class="" href="#">
-                        <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 2
-                    </a></li>
-                <li><a class="" href="#">
-                        <span class="fa fa-arrow-right">&nbsp;</span> Sub Item 3
                     </a></li>
             </ul>
         </li>

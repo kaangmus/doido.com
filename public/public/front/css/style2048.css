@@ -493,10 +493,6 @@ a.style1:hover {
     border-color: transparent transparent transparent #000
 }
 
-.detail label.box:hover {
-    background-color: #000
-}
-
 .detail label.box:hover a {
     color: #fff;
     text-decoration: none

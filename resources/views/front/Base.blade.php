@@ -50,7 +50,8 @@
             background-size: contain;
             z-index: 9;
         }
-    </style>  <script type='text/javascript' src="js/jquery-2.1.1.mind41d.js?"></script>
+    </style>
+    <script type='text/javascript' src="js/jquery-2.1.1.mind41d.js?"></script>
     <script type='text/javascript' src="js/bootstrap-3.1.1.min.js"></script>
     <script type='text/javascript' src="js/lazyload.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-slider.js"></script>
@@ -74,6 +75,28 @@
 
         ga('create', 'UA-82113589-1', 'auto');
         ga('send', 'pageview');*/
+    </script>
+    <script type="text/javascript">
+        $('select').picker();
+
+        function changeImg(input) {
+            //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                //Sự kiện file đã được load vào website
+                reader.onload = function (e) {
+                    //Thay đổi đường dẫn ảnh
+                    $('#avatar').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $(document).ready(function () {
+            $('#avatar').click(function () {
+                $('#img').click();
+            });
+        });
     </script>
 
     <!-- Google Tag Manager -->
