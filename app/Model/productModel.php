@@ -53,8 +53,9 @@ class productModel extends Model
                 $item->style=$stringStyle;
             }
             $item->count=$request->count;
-            $item->content=$request->content;
+            $item->contents=$request->contents;
             $item->status=$request->status;
+            $item->desiredproducts=$request->desiredproducts;
             if($request->hasFile('coverimg'))
             {
                 $filename=$request->coverimg->getClientOriginalName();
@@ -99,8 +100,9 @@ class productModel extends Model
                 $item->style=$stringStyle;
             }
             $item->count=$request->count;
-            $item->content=$request->content;
+            $item->contents=$request->contents;
             $item->status=$request->status;
+            $item->desiredproducts=$request->desiredproducts;
             if($request->hasFile('coverimg'))
             {
                 $filename=$request->coverimg->getClientOriginalName();

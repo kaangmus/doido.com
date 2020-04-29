@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class cate_productModel extends Model
 {
@@ -36,6 +37,13 @@ class cate_productModel extends Model
     {
         $item=cate_productModel::find($id);
         return $item;
+    }
+    public function listItem($id)
+    {
+        $items=DB::table('cate_product')
+            ->join('category', 'category.id', '=', 'cate_product.idcategory')
+            ->where('idproduct',$id)->get();
+        return $items;
     }
     public function updateItem(Request $request, $id)
     {

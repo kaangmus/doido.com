@@ -38,9 +38,6 @@
                         <button class="btn btn-black" type="submit" id="btnSignin" style="min-width: 184px;">Đăng nhập
                             ngay
                         </button>
-
-                        <a href="javascript:;" class="btn btn-fb" id="loginWithFacebook"
-                           data-url="index.html">Đăng nhập bằng Facebook</a>
                         </div>
                     </form>
                 </div>
@@ -56,13 +53,11 @@
                 <div class="row box-gray relative">
                     <div class="col-md-9">
                         <p class="title">BẠN CHƯA ĐĂNG KÝ TÀI KHOẢN?</p>
-                        <p>Nếu bạn mới đến RENDER, vui lòng chọn “ĐĂNG KÝ NGAY”</p>
+                        <p>Nếu bạn mới đến DoiDo.com, vui lòng chọn “ĐĂNG KÝ NGAY”</p>
                     </div>
-                    <a href="register.html">
+                    <a href="{{asset('register')}}">
                         <button class="btn btn-black" type="button" style="min-width: 184px;">ĐĂNG KÝ NGAY</button>
                     </a>
-                    <a href="javascript:;" class="btn btn-fb" id="loginWithFacebook"
-                       data-url="index.html">Đăng nhập bằng Facebook</a>
                 </div>
             </div>
         </div>

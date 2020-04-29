@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Model\cate_productModel;
 use App\Model\categoryModel;
 use App\Model\productModel;
 use Illuminate\Http\Request;
@@ -10,11 +11,12 @@ use Illuminate\Http\Request;
 class productController extends Controller
 {
     //
-    private $product, $category;
+    private $product, $category,$cate_product;
     public function __construct()
     {
         $this->category= new categoryModel();
         $this->product= new productModel();
+        $this->cate_product= new cate_productModel();
     }
     public function listAll()
     {
@@ -34,7 +36,9 @@ class productController extends Controller
     public function updateShow($id)
     {
         $data['listCate']=$this->category->listAll();
+        $data['itemCatecheck']=$this->cate_product->listItem($id);
         $data['item']=$this->product->showItem($id);
+
         return view('admin.editProduct',$data);
     }
     public function updateItem(Request $request, $id)

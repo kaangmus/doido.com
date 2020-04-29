@@ -31,7 +31,7 @@ class cartController extends Controller
     }
     public function addItem(Request $request)
     {
-        if($request->style=='cho'||$request->style=='tang')
+        if($request->style=='đổi'||$request->style=='tặng')
         {
             return redirect()->intended('order/'.$request->id);
         }

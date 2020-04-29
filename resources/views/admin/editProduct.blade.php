@@ -53,7 +53,7 @@
                                         <span class="caret"></span></button>
                                     <ul class="dropdown-menu" style="color: black !important;">
                                         @foreach($listCate as $itemCate)
-                                        <li><input type="checkbox" value="{{$itemCate->id}}" name="idcategory[]">{{$itemCate->title}}</li>
+                                        <li><input type="checkbox" value="{{$itemCate->id}} " name="idcategory[]" >{{$itemCate->title}}</li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -65,9 +65,8 @@
                                     <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Loại đăng tin
                                         <span class="caret"></span></button>
                                     <ul class="dropdown-menu" style="color: black !important;">
-                                        <li><input type="checkbox" value="ban" name="style[]">Bán</li>
-                                        <li><input type="checkbox" value="doi" name="style[]">Đổi</li>
-                                        <li><input type="checkbox" value="tang" name="style[]">Tặng</li>
+                                        <li><input type="checkbox" value="đổi" name="style[]" checked {{isset($item->style)?(strpos($item->style,'doi')>0?'checked':''):''}}>Đổi</li>
+                                        <li><input type="checkbox" value="tặng" name="style[]" {{isset($item->style)?(strpos($item->style,'tang')>0?'checked':''):''}}>Tặng</li>
                                     </ul>
                                 </div>
                             </div>
@@ -110,18 +109,32 @@
                                 <div class="form-group">
                                     <label>Mô tả sản phẩm</label>
                                     <br>
-                                    <textarea class="form-control" rows="5" name="content"
-                                              placeholder="mô tả">{{isset($item->content)?$item->content:''}}</textarea>
+                                    <textarea class="form-control ckeditor" rows="5" name="contents"
+                                              placeholder="mô tả">{{isset($item->contents)?$item->contents:''}}</textarea>
+                                    <script type="text/javascript">
+                                        var editor = CKEDITOR.replace('contents',{
+                                            language:'vi',
+                                            filebrowserImageBrowseUrl: 'ckfinder/ckfinder.html?Type=Images',
+                                            filebrowserFlashBrowseUrl: 'ckfinder/ckfinder.html?Type=Flash',
+                                            filebrowserImageUploadUrl: 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+                                            filebrowserFlashUploadUrl: 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash',
+                                        });
+                                    </script>
                                 </div>
                                 <div class="form-group">
                                     <label>Trạng thái</label>
                                     <select id="boot-multiselect-demo" class="form-control" rows="5" name="status">
-                                        <option value="1">Mới</option>
-                                        <option value="0">Cũ</option>
+                                        <option value="1" {{isset($item->status)?($item->status==1?'selected':''):''}}>Mới</option>
+                                        <option value="0" {{isset($item->status)?($item->status==0?'selected':''):''}}>Cũ</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label>Sản phẩm mong muốn</label>
+                                    <input class="form-control" type="text" placeholder="sản phẩm cách nhau bởi dấu ," name="desiredproducts"
+                                           value="{{isset($item->desiredproducts)?$item->desiredproducts:''}}">
+                                </div>
                                 <div class="form-group">
                                     <label>Ảnh đại diện</label>
                                     <input id="img" type="file" name="coverimg" value="" class="form-control"

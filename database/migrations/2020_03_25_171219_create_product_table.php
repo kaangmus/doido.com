@@ -22,8 +22,10 @@ class CreateProductTable extends Migration
             $table->text('style')->nullable();
             $table->integer('status')->nullable();
             $table->integer('count')->nullable();
-            $table->text('content')->nullable();
+            $table->text('contents')->nullable();
             $table->text('coverimg')->nullable();
+            $table->text('desiredproducts')->nullable();
+            $table->integer('iduser')->nullable();
             $table->timestamps();
         });
     }

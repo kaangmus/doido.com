@@ -1,5 +1,5 @@
 @extends('front.Base')
-@section('title','Render | Thế giới thời trang Render')
+@section('title','DOIDO.COM | Thế giới đổi đồ')
 @section('main')
     <div class="content-area home-content-area top-area">
         <div class="container">
@@ -71,7 +71,9 @@
                                 <div class="upcase">Danh mục sản phẩm</div>
                                 <div id="color" class="content">
                                         <div style="display: inline-block; margin-right: 10px;">
-                                            <label size-id="1">Váy xịn</label>
+                                            @foreach($itemsCate as $itemcate)
+                                            <label size-id="1">{{$itemcate->title}}</label>
+                                            @endforeach
                                         </div>
                                 </div>
                             </li>
@@ -94,17 +96,13 @@
                             </li>
                             <li>
                                 <div class="upcase">#Tag</div>
-                                <?php
-                                $tagItems = explode(",", $item->tag);
-                                array_pop($tagItems);
-                                ?>
-                                <div id="color" class="content">
-                                    @foreach($tagItems as $tag)
-                                        <div style="display: inline-block; margin-right: 10px;">
-                                            <label size-id="1" class="box">#{{$tag}}</label>
-                                        </div>
-                                    @endforeach
-                                </div>
+                                <label size-id="1" class="box">#{{$item->tag}}</label>
+                            </li>
+                            <li>
+                                <div class="upcase">Mặt hàng muốn đổi</div>
+
+                                <label size-id="1" class="box">{{$item->desiredproducts}}</label>
+
                             </li>
                             <li>
                                 <div class="row">
@@ -118,7 +116,7 @@
                         <li class="collapse-toogle in">
                             <div class="upcase">MÔ TẢ SẢN PHẨM</div>
                             <div class="content product--content">
-                                {{$item->content}}
+                                {!! $item->contents !!}
                             </div>
                         </li>
                         <li class="collapse-toogle">

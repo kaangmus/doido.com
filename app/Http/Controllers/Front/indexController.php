@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Model\blogModel;
+use App\Model\cate_productModel;
 use App\Model\mediaModel;
 use App\Model\productModel;
 use Illuminate\Http\Request;
@@ -11,12 +12,13 @@ use Illuminate\Http\Request;
 class indexController extends Controller
 {
     //
-    private $product,$media,$blog;
+    private $product,$media,$blog,$cate_product;
     public function __construct()
     {
         $this->product= new productModel();
         $this->media= new mediaModel();
         $this->blog= new blogModel();
+        $this->cate_product=new cate_productModel();
     }
     public function indexShow()
     {
@@ -42,6 +44,7 @@ class indexController extends Controller
     public function productDetail($id)
     {
         $data['item']=$this->product->showItem($id);
+        $data['itemsCate']=$this->cate_product->listItem($id);
         $data['itemsMedia']=$this->media->listMedia($id);
         return view('front.productDetail',$data);
     }

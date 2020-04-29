@@ -37,6 +37,7 @@
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="stylesheet" type="text/css" href="../maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/fonts-telo/css/fontello.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <style type="text/css">
         .buyonegetonefree:before {
             content: "";
@@ -258,16 +259,14 @@
                                                 </form>
                                             </div>
                                         </li>
-                                        <li class="btntooltip" id="lstitems" data-toggle="tooltip" data-placement="left" title="Giỏ hàng">
-                                            <a class="btntooltip prod-cart-href" href="cart.blade.php">
-                                                <i class="demo-icon RENDERic-shopping-bag"></i>
-                                                <span class="prod-cart-qty"></span>
+                                        <li class="btntooltip" id="lstitems" data-toggle="tooltip" data-placement="left" title="Tài khoản">
+                                            <a class="btntooltip prod-cart-href" href="{{asset('admin')}}">
+                                                <i class="fa fa-user" aria-hidden="true"></i>
                                             </a>
                                         </li>
-                                        <li class="btntooltip" id="lstwishlist" data-toggle="tooltip" data-placement="top" title="Yêu thích">
+                                        <li class="btntooltip" id="lstwishlist" data-toggle="tooltip" data-placement="top" title="Thông báo">
                                             <a href="wishlist.html">
-                                                <i class="demo-icon RENDERic-stars"></i>
-                                                <span class="prod-wish-qty"></span>
+                                                <i class="fa fa-bell" aria-hidden="true"></i>
                                             </a>
                                         </li>
                                         <li data-toggle="tooltip" data-placement="left" title="Tài khoản"><a href="signin8ef2.html?url=https://RENDER.vn/signin.html"><i class="demo-icon RENDERic-user-1"></i></a></li>

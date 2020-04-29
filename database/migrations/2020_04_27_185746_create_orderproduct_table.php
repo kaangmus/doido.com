@@ -15,13 +15,11 @@ class CreateOrderproductTable extends Migration
     {
         Schema::create('orderproduct', function (Blueprint $table) {
             $table->id();
-            $table->id();
             $table->integer('iduser')->nullable();
             $table->integer('idguest')->nullable();
             $table->integer('idproductex')->nullable();
             $table->integer('idproductre')->nullable();
             $table->string('style')->nullable();
-            $table->timestamps();
             $table->timestamps();
         });
     }
