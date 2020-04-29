@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a82cd3c-ff08-44cd-bca2-64a6f8fcbaa0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/doido.com.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/doido.com.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="4a82cd3c-ff08-44cd-bca2-64a6f8fcbaa0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,7 +257,7 @@
       <workItem from="1587655599108" duration="1811000" />
       <workItem from="1587657914102" duration="6398000" />
       <workItem from="1587738300708" duration="9666000" />
-      <workItem from="1588048847713" duration="55000" />
+      <workItem from="1588048847713" duration="125000" />
     </task>
     <task id="LOCAL-00001" summary="louis commit">
       <created>1585063309002</created>
@@ -347,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588040601079</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="louis commit">
+      <created>1588048925223</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1588048925223</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -424,18 +427,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="louis commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1588040600047">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1588048924297">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1588040600047" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1588040653161">
+    <state x="585" y="119" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1588048924297" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1588048958127">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1588040653161" />
-    <state x="668" y="316" key="git4idea.merge.GitPullDialog" timestamp="1588040638534">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1588048958127" />
+    <state x="668" y="316" key="git4idea.merge.GitPullDialog" timestamp="1588048945425">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="668" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588040638534" />
+    <state x="668" y="316" key="git4idea.merge.GitPullDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1588048945425" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
