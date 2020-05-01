@@ -70,6 +70,9 @@ Route::group(['namespace'=>'Admin'],function(){
        });
        Route::group(['prefix'=>'ordermanger'],function (){
           Route::get('/','orderController@listAll');
+          Route::get('delete/{id}','orderController@deleteItem');
+          Route::get('detail/{id}','orderController@detailItem');
+          Route::get('status/{id}/{status}','orderController@updateStatus');
        });
        Route::group(['prefix'=>'messaging'],function (){
           Route::get('/','messagingController@listAll');

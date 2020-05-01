@@ -20,30 +20,32 @@ class orderController extends Controller
     }
     public function listAll()
     {
-        $items=$this->order->listOrder();
-        return $items;
-        $arrUser=array();
-        $arrProductEx=array();
-        $arrProductRe=array();
-        foreach ($items as $item)
-        {
-            array_push($arrUser,$this->user->showItem($item->iduser));
-            array_push($arrProductEx,$this->product->showItem($item->idproductex));
-            array_push($arrProductRe,$this->user->showItem($item->idproductre));
-//            echo '<pre>';
-//            print_r($item);
-//            echo '</pre>';
-        }
-//        echo 'mag user';
-//        foreach ($arrUser as $user)
-//        {
-//            echo $user->username;
-//        }
-        $data['productex']=$arrProductEx;
-        $data['guest']=$arrUser;
-        $data['productre']=$arrProductRe;
-        return $data['guest'];
-        //print_r($arrUser);
+        $data['items']=$this->order->listOrder();
         return view('admin.order',$data);
+    }
+    public function deleteItem($id)
+    {
+        $this->order->deleteItem($id);
+        return back();
+    }
+    public function detailItem($id)
+    {
+        $data['productexItem']=$this->order->productEx($id);
+        //return $data['productexItem'];
+        $data['productreItem']=$this->order->productRe($id);
+        $data['guestItem']=$this->order->orderUser($id);
+        $data['order']=$this->order->showItem($id);
+       return view('admin.orderDetail',$data);
+    }
+    public function updateStatus($id,$status)
+    {
+        $check=$this->order->updateStatus($id,$status);
+        if($check)
+        {
+            return redirect()->intended('admin/ordermanger');
+        }
+        else{
+            return dd('loi update');
+        }
     }
 }

@@ -24,42 +24,37 @@
                     <a href="{{asset('admin/product/add')}}">Quản lý giao dịch</a>
                 </div>
                 <div class="panel-body">
-                    {{$productex}}
-                    {{$guest}}
-                    {{$productre}}
                     <table id="tb1" class="table table-striped">
                         <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>* Mã sản phẩm</th>
+                            <th>Mã giao dịch</th>
                             <th>* Tên sản phẩm</th>
                             <th>* Hình ảnh</th>
-                            <th>Loại giao dịch</th>
+                            <th>* Loại giao dịch</th>
+                            <th>* Trạng thái sản phẩm</th>
+                            <th>* Họ tên người giao dịch</th>
                             <th>Mã sản phẩm</th>
-                            <th>Tên sản phẩm</th>
-                            <th>Hình ảnh</th>
-                            <th>Trạng thái</th>
+                            <th>Trạng thái sản phẩm</th>
                             <th>Tùy chọn</th>
                         </tr>
                         </thead>
                         <tbody>
-                        {{--@foreach($items as $item)--}}
-                            {{--<tr class="onRow">--}}
-                                {{--<td scope="row">{{$item->id}}</td>--}}
-                                {{--<td>{{$item->title}}</td>--}}
-                                {{--<td><img class="thumbnail" width="100px" src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}" ></td>--}}
-                                {{--<td>{{$item->price}}</td>--}}
-                                {{--<td>{{$item->style}}</td>--}}
-                                {{--<td>{{$item->statustype==0?'Hết hàng':'Còn hàng'}}</td>--}}
-                                {{--<td>{{$item->tag}}</td>--}}
-                                {{--<td>{{$item->describe}}</td>--}}
-                                {{--<td>{{$item->status==1?'Mới':'Cũ'}}</td>--}}
-                                {{--<td>--}}
-                                    {{--<a href="{{asset('admin/product/update/'.$item->id)}}">Edit</a>--}}
-                                    {{--<a href="{{asset('admin/product/delete/'.$item->id)}}">Delete</a>--}}
-                                {{--</td>--}}
-                            {{--</tr>--}}
-                        {{--@endforeach--}}
+                        @foreach($items as $item)
+                            <tr class="onRow">
+                                <td scope="row">{{$item->idOrder}}</td>
+                                <td>{{$item->title}}</td>
+                                <td><img class="thumbnail" width="100px" src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}" ></td>
+                                <td>{{$item->orderType}}</td>
+                                <td>{{$item->status==0?'Cũ':'Mới'}}</td>
+                                <td>{{$item->username}}</td>
+                                <td>{{$item->idproductex}}</td>
+                                <td>{{$item->orderStatus==1?'Đã đổi':'Chưa đổi'}}</td>
+                                <td>
+                                    <a href="{{asset('admin/ordermanger/detail/'.$item->idOrder)}}">Chi tiết</a>
+                                    <a href="{{asset('admin/ordermanger/delete/'.$item->idOrder)}}">Xóa</a>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
