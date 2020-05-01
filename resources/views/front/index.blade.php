@@ -208,8 +208,8 @@
                         </div>
                         <div class="item">
                             <a href="{{asset('search/Đồ dùng cá nhân')}}">
-                                <img src="images/dovanphong.jpg" alt="Đồ dùng cá nhân"
-                                     srcset="images/dovanphong.jpg 1080w"
+                                <img src="images/dodungcanhan.jpg" alt="Đồ dùng cá nhân"
+                                     srcset="images/dodungcanhan.jpg 1080w"
                                      sizes="50vw"/>
                             </a>
                             <div class="description">
@@ -222,8 +222,8 @@
                         </div>
                         <div class="item">
                             <a href="{{asset('search/Đồ điện tử')}}">
-                                <img src="images/dovanphong.jpg" alt="Đồ điện tử"
-                                     srcset="images/dovanphong.jpg 1080w"
+                                <img src="images/dodientu.png" alt="Đồ điện tử"
+                                     srcset="images/dodientu.png 1080w"
                                      sizes="50vw"/>
                             </a>
                             <div class="description">
@@ -235,13 +235,13 @@
                             </div>
                         </div>
                         <div class="item">
-                            <a href="{{asset('search/Cho tặng miễn phí')}}">
-                                <img src="images/dovanphong.jpg" alt="Cho tặng miễn phí"
-                                     srcset="images/dovanphong.jpg 1080w"
+                            <a href="{{asset('search/tặng')}}">
+                                <img src="images/tangmienphi.jpg" alt="Cho tặng miễn phí"
+                                     srcset="images/tangmienphi.jpg 1080w"
                                      sizes="50vw"/>
                             </a>
                             <div class="description">
-                                <a href="{{asset('search/Cho tặng miễn phí')}}">
+                                <a href="{{asset('search/tặng')}}">
                                     <h3>
                                         <span class="upcase up-case">Cho tặng miễn phí</span>
                                     </h3>

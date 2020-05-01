@@ -3,7 +3,8 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Auth; //use thư viện auths
+use DB;
 class orderModel extends Model
 {
     //
@@ -31,6 +32,11 @@ class orderModel extends Model
         }
 
 
+    }
+    public function listOrder()
+    {
+        $items=DB::table('orderproduct')->where('iduser',Auth::user()->id)->get();
+        return $items;
     }
     public function showItem($id)
     {

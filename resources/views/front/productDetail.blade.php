@@ -161,58 +161,42 @@
             </div>
             <div class="comment">
                 <h3>Bình luận</h3>
+                @foreach($listComment as $itemComment)
                 <div class="row">
                     <div class="col-8">
                         <div class="card card-white post">
                             <div class="post-heading">
                                 <div class="float-left image">
-                                    <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar"
+                                    <img src="{{isset($itemComment->img)?asset('public/media/'.$itemComment->img):'images/user_1.jpg'}}" class="img-circle avatar"
                                          alt="user profile image">
                                 </div>
                             </div>
                             <div class="post-description">
-                                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap
-                                    css hmtl js framework. Codes for developers and web designers</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-8">
-                        <div class="card card-white post">
-                            <div class="post-heading">
-                                <div class="float-left image">
-                                    <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar"
-                                         alt="user profile image">
-                                </div>
-                            </div>
-                            <div class="post-description">
-                                <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap
-                                    css hmtl js framework. Codes for developers and web designers</p>
-
+                                <p>{{$itemComment->comment}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <script>
-                    $(document).ready(function(){
-                        $(".comment button").click(function(){
-                            $.post("{{asset('comment')}}",
-                                {
-                                    comment: $("#comment").val(),
-                                },
-                                function(data,status){
-                                    alert("Data: " + data + "\nStatus: " + status);
-                                });
-                        });
-                    });
-                </script>
+                @endforeach
+                {{--<script>--}}
+                    {{--$(document).ready(function(){--}}
+                        {{--$(".comment button").click(function(){--}}
+                            {{--$.post("{{asset('comment')}}",--}}
+                                {{--{--}}
+                                    {{--comment: $("#comment").val(),--}}
+                                {{--},--}}
+                                {{--function(data,status){--}}
+                                    {{--alert("Data: " + data + "\nStatus: " + status);--}}
+                                {{--});--}}
+                        {{--});--}}
+                    {{--});--}}
+                {{--</script>--}}
                 <form method="post" action="">
-                    {{ csrf_token() }}
+                    {{ csrf_field()}}
                     <div class="form-group">
                         <label for="comment">Bình luận:</label>
+                        <input name="iduser" hidden value="{{isset(Auth::user()->id)?Auth::user()->id:-1}}">
+                        <input name="idproduct" hidden value="{{$item->id}}">
                         <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
                         <button>Bình luận</button>
                     </div>

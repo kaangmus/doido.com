@@ -131,6 +131,7 @@
         <li class="active"><a href="{{asset('admin')}}"><em class="fa fa-dashboard">&nbsp;</em>Bảng điều khiển</a></li>
         <li><a href="{{asset('admin/profile')}}"><em class="fa fa-calendar">&nbsp</em>Hồ sơ cá nhân</a></li>
         <li><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Sản phẩm</a></li>
+        <li><a href="{{asset('admin/ordermanger')}}"><em class="fa fa-calendar"></em> Quản lý giao dịch</a></li>
         <li><a href="{{asset('admin/profile/user')}}"><em class="fa fa-bar-chart">&nbsp;</em> Danh sách người dùng</a></li>
         <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
                 <em class="fa fa-navicon">&nbsp;</em> Tùy chọn <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>

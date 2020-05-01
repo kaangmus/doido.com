@@ -90,9 +90,11 @@
                                        value="{{isset($item->price)?$item->price:''}}">
                             </div>
                             <div class="form-group col-sm-6">
-                                <label>Số lượng sản phẩm</label>
-                                <input class="form-control" type="number" placeholder="số lượng sản phẩm" name="count"
-                                       value="{{isset($item->count)?$item->count:''}}">
+                                <label>Trạng thái sản phẩm</label>
+                                <select name="statustype" class="form-control">
+                                    <option value="1" selected {{isset($item->statustype)?($item->statustype==1?'selected':''):''}}>Còn</option>
+                                    <option value="0" {{isset($item->statustype)?($item->statustype==0?'selected':''):''}}>Hết</option>
+                                </select>
                             </div>
                         </div>
                         <div class="row">

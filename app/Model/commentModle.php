@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use DB;
 class commentModle extends Model
 {
     //
@@ -20,5 +21,12 @@ class commentModle extends Model
         $item->title=$request->title;
         $item->comment=$request->comment;
         $item->save();
+    }
+    public function listComment($id)
+    {
+        $items=DB::table('comment')
+            ->join('users', 'users.id', '=', 'comment.iduser')
+            ->where('idproduct',$id)->get();
+        return $items;
     }
 }

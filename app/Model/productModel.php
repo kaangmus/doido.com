@@ -52,7 +52,7 @@ class productModel extends Model
                 }
                 $item->style=$stringStyle;
             }
-            $item->count=$request->count;
+            $item->statustype=$request->statustype;
             $item->contents=$request->contents;
             $item->status=$request->status;
             $item->desiredproducts=$request->desiredproducts;
@@ -99,7 +99,7 @@ class productModel extends Model
                 }
                 $item->style=$stringStyle;
             }
-            $item->count=$request->count;
+            $item->statustype=$request->statustype;
             $item->contents=$request->contents;
             $item->status=$request->status;
             $item->desiredproducts=$request->desiredproducts;
@@ -150,9 +150,9 @@ class productModel extends Model
             ->join('cate_product', 'product.id', '=', 'cate_product.idproduct')
             ->join('category', 'category.id', '=', 'cate_product.idcategory')
             ->where('product.title', 'like', '%'.$search.'%')
-            ->select('product.*')
+            ->select('product.*','product.id')
             ->get();
-        if(is_array($items)==false)
+        if(!isset($items))
         {
             $items=$this->searchCategoryProduct($search);
         }

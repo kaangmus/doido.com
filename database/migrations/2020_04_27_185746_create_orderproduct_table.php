@@ -20,6 +20,7 @@ class CreateOrderproductTable extends Migration
             $table->integer('idproductex')->nullable();
             $table->integer('idproductre')->nullable();
             $table->string('style')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

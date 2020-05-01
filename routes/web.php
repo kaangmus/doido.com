@@ -22,8 +22,9 @@ Route::group(['namespace'=>'Front'],function (){
     Route::get('search','indexController@getsearch');
     Route::get('product','indexController@product');
     Route::get('product-{id}','indexController@productDetail');
-    Route::get('list-product-render-{id}','indexController@listProduct');
-    Route::get('blog-{id}','indexController@blog');
+    Route::post('product-{id}','indexController@addComment');
+    //Route::get('list-product-render-{id}','indexController@listProduct');
+    //Route::get('blog-{id}','indexController@blog');
     Route::group(['prefix'=>'cart'],function (){
         Route::get('/','cartController@cartShow');
         Route::post('/','cartController@addItem');
@@ -66,6 +67,9 @@ Route::group(['namespace'=>'Admin'],function(){
             Route::get('update/{id}','productController@updateShow');
             Route::post('update/{id}','productController@updateItem');
             Route::get('delete/{id}','productController@deleteItem');
+       });
+       Route::group(['prefix'=>'ordermanger'],function (){
+          Route::get('/','orderController@listAll');
        });
        Route::group(['prefix'=>'messaging'],function (){
           Route::get('/','messagingController@listAll');

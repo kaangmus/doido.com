@@ -38,6 +38,7 @@
     <link rel="stylesheet" type="text/css" href="../maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/fonts-telo/css/fontello.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
     <style type="text/css">
         .buyonegetonefree:before {
             content: "";
@@ -252,8 +253,7 @@
                                         <li class="form-search-v2">
                                             <div id="search__form" class="search">
                                                 <form method="GET" action="{{asset('search')}}">
-                                                    <input type="text" id="txtSearch" class="search" name="search"
-                                                           value=""
+                                                    <input type="text" id="txtSearch" class="search" name="search" value=""
                                                            placeholder="Tìm kiếm sản phẩm.." autocomplete="off" />
                                                     <button class="btnsearch"><i class="demo-icon RENDERic-search"></i></button>
                                                 </form>

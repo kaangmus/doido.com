@@ -34,8 +34,8 @@ class orderController extends Controller
         else{
             $idproductnew=$this->product->addItem($request);
         }
-        $idguest=$this->product->showItem($idproduct);
-        $arr=array("iduser"=>Auth::user()->id,"idguest"=>$idguest->iduser,"idproductex"=>$idproduct,"idproductre"=>$idproductnew,"style"=>$style);
+        $iduser=$this->product->showItem($idproduct);
+        $arr=array("iduser"=>$iduser->iduser,"idguest"=>Auth::user()->id,"idproductex"=>$idproduct,"idproductre"=>$idproductnew,"style"=>$style);
         $this->order->addItem($arr);
         return view('front.thankyou');
     }

@@ -21,7 +21,7 @@ class CreateProductTable extends Migration
             $table->integer('price')->nullable();
             $table->text('style')->nullable();
             $table->integer('status')->nullable();
-            $table->integer('count')->nullable();
+            $table->integer('statustype')->nullable();
             $table->text('contents')->nullable();
             $table->text('coverimg')->nullable();
             $table->text('desiredproducts')->nullable();
