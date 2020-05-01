@@ -74,8 +74,11 @@ Route::group(['namespace'=>'Admin'],function(){
           Route::get('detail/{id}','orderController@detailItem');
           Route::get('status/{id}/{status}','orderController@updateStatus');
        });
-       Route::group(['prefix'=>'messaging'],function (){
+       Route::group(['prefix'=>'messenger'],function (){
           Route::get('/','messagingController@listAll');
+          Route::post('new','messagingController@addItem');
+          Route::get('chat/{id}','messagingController@chatItem');
+          Route::post('chat/{id}','messagingController@addChat');
        });
    });
 

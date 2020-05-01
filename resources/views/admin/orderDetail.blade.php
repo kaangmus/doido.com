@@ -36,7 +36,7 @@
                                     <span>Email: {{$guestItem[0]->email}}</span><br/>
                                 </div>
                                 <div class="col-sm-4">
-                                    <a  class="btn btn-info" href="{{asset('admin/messaging')}}"><i class="fa fa-commenting-o"
+                                    <a  class="btn btn-info" href="{{asset('admin/messenger/chat/'.$guestItem[0]->id)}}"><i class="fa fa-commenting-o"
                                                                               aria-hidden="true"></i> Nhắn tin</a>
                                 </div>
                             </div>

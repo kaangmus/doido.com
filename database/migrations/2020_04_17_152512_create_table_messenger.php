@@ -13,11 +13,12 @@ class CreateTableMessenger extends Migration
      */
     public function up()
     {
-        Schema::create('mesenger', function (Blueprint $table) {
+        Schema::create('messenger', function (Blueprint $table) {
             $table->id();
             $table->integer('idguest')->nullable();
+            $table->integer('iduser')->nullable();
             $table->text('title')->nullable();
-            $table->text('content')->nullable();
+            $table->text('contents')->nullable();
             $table->timestamps();
         });
     }

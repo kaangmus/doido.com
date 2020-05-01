@@ -109,6 +109,10 @@
                                     <div class="col-md-6">
                                         <button class="btn btn-black btnaddtocart">Đặt đồ</button>
                                     </div>
+                                    <div class="col-md-6">
+                                        <a  class="btn btn-info" href="{{asset('admin/messenger/chat/'.$item->iduser)}}"><i class="fa fa-commenting-o"
+                                                                                                        aria-hidden="true"></i> Nhắn tin</a>
+                                    </div>
                                 </div>
                             </li>
                         </form>

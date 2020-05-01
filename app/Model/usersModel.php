@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use DB;
 class usersModel extends Model
 {
     //
@@ -41,6 +42,11 @@ class usersModel extends Model
         }
 
 
+    }
+    public function getIdEmail($email)
+    {
+        $item=DB::table('users')->where('email',$email)->get();
+        return $item;
     }
     public function showItem($id)
     {
