@@ -3469,7 +3469,7 @@
       <path value="$PROJECT_DIR$/vendor/bumbummen99/shoppingcart" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="263" />
     <option name="y" value="29" />
     <option name="width" value="1107" />
@@ -3676,7 +3676,7 @@
       <workItem from="1588229574324" duration="8325000" />
       <workItem from="1588260473230" duration="9940000" />
       <workItem from="1588277893416" duration="471000" />
-      <workItem from="1588315844704" duration="670000" />
+      <workItem from="1588315844704" duration="1225000" />
     </task>
     <task id="LOCAL-00001" summary="louis commit">
       <created>1585063309002</created>
@@ -3787,7 +3787,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19770000" />
+    <option name="totallyTimeSpent" value="20325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
