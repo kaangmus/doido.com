@@ -48,31 +48,44 @@
                 <div class="row prod-list">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-sm-3 prod-list-option prod-list-filter">
-                                <div class="filter-tab-content">
-                                    <div class="product-type" id="product-type-tab">
+                            <div class="col-sm-3">
+                                <div class="">
+                                    <div class="product-type1">
+                                        <div class="row">
+                                            <div class="col-xs-9 heading" style="font-weight: bolder;font-size: 14px;text-transform: uppercase;">Danh mục</div>
+                                        </div>
                                         <ul>
                                             <li>
-                                                <a class="" type-id="ao" href="#">Đồ điện tử</a>
+                                                <a class="" href="{{asset('search/Đồ điện tử')}}">Đồ điện tử</a>
                                             </li>
-                                            <li><a class="" type-id="ao-dai" href="#">Đồ văn phòng</a>
-                                                 </li>
-                                            <li><a class="" type-id="bo" href="#">Đồ dùng cá nhân</a>
+                                            <li><a class="" href="{{asset('search/Đồ văn phòng')}}">Đồ văn phòng</a>
                                             </li>
-                                            <li><a class="" type-id="chan-vay" href="#">Tặng miễn phí</a>
+                                            <li><a class="" href="{{asset('search/Đồ dùng cá nhân')}}">Đồ dùng cá
+                                                    nhân</a>
+                                            </li>
+                                            <li><a class="" href="{{asset('search/Đồ giải trí')}}">Giải trí, thể
+                                                    thao</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="product-price" id="product-price-tab">
-                                        <div class="row">
-                                            <div class="col-xs-9 heading">Giá</div>
-                                            <div class="col-xs-3 delete">Xóa</div>
-                                        </div>
-                                        <div id="lblPrice"></div>
-                                        <input id="txtPrice" type="text" style="width:100%" data-slider-handle="square"
-                                               data-slider-min="0" data-slider-max="180000000"
-                                               data-slider-tooltip="hide" data-slider-step="100000"
-                                               data-slider-value="[0,60000000]"/>
+                                        <form method="get" action="{{asset('searchprice')}}">
+                                            <div class="row">
+                                                <div class="col-xs-9 heading">Giá</div>
+                                                <div class="col-xs-3 delete">Xóa</div>
+                                            </div>
+                                            <div id="lblPrice"></div>
+                                            <p>Min</p>
+                                            <input class="form-control" type="number" name="min" value="1000">
+                                            <p>Max</p>
+                                            <input class="form-control" type="number" name="max" value="100000">
+                                            <br>
+                                            <button class="btn">Lọc</button>
+                                            {{--<input id="txtPrice" type="text" style="width:100%" data-slider-handle="square"--}}
+                                            {{--data-slider-min="0" data-slider-max="180000000"--}}
+                                            {{--data-slider-tooltip="hide" data-slider-step="100000"--}}
+                                            {{--data-slider-value="[0,60000000]"/>--}}
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -98,7 +111,7 @@
                                                     <div class="title"><span>{{$item->title}}</span></div>
                                                     <div class="desc"><span>{{$item->describe}}s<br>
                                                     <span class="color-red">
-                                                        {{$item->price}} VND
+                                                        {{number_format($item->price,0,',','.')}} VND
                                                         </span>
                                                                                                         </span>
                                                         </span>
@@ -113,39 +126,7 @@
                             </div>
                         </div>
                         <div class="text-right paging-bottom" id="pagging-ajax">
-                            <ul class="pagination">
-                                <li class="disabled"><span>&laquo;</span></li>
-                                <li class="active"><span>1</span></li>
-                                <li>
-                                    <a href="san-phamf26b.html?route=product&amp;category_id=4&amp;cat_new_id=2&amp;tag=collection&amp;page=2">2</a>
-                                </li>
-                                <li>
-                                    <a href="san-phamc9a4.html?route=product&amp;category_id=4&amp;cat_new_id=2&amp;tag=collection&amp;page=3">3</a>
-                                </li>
-                                <li class="disabled"><span>...</span></li>
-                                <li>
-                                    <a href="san-pham19ac.html?route=product&amp;category_id=4&amp;cat_new_id=2&amp;tag=collection&amp;page=65">65</a>
-                                </li>
-                                <li>
-                                    <a href="san-pham333f.html?route=product&amp;category_id=4&amp;cat_new_id=2&amp;tag=collection&amp;page=66">66</a>
-                                </li>
-                                <li>
-                                    <a href="san-phamf26b.html?route=product&amp;category_id=4&amp;cat_new_id=2&amp;tag=collection&amp;page=2"
-                                       rel="next">&raquo;</a></li>
-                            </ul>
-
-                            <!-- <ul class="pagination">
-                                <li class="disabled"><span></span></li>
-                                <li class="active"><span>1</span></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">...</a></li>
-                                <li><a href="#">20</a></li>
-                                <li><a href="#" rel="next"></a></li>
-                            </ul> -->
-                            <a href="#" class="gotop">Lên đầu trang</a>
+                        {{ $items->links() }}
                         </div>
                         <script>
                             dataLayer.push({
@@ -582,3 +563,12 @@
         </div><!-- End content area -->
     </div>
 @stop
+<style>
+    .product-type1 li{
+        padding: 5px 0;
+    }.product-type1 ul{
+             list-style: none;
+             padding: 0;
+             margin: 0;
+    }
+</style>

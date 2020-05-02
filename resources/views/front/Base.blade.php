@@ -212,7 +212,7 @@
                                     <!-- Carousel items -->
                                     <div class="carousel-inner">
                                         <div class="detail item active">
-                                            <a style="color:#318f8f;" href="nha-thiet-ke/elise.html" title="">DOIDO.com - Đồng gi&aacute; chỉ từ 99K  - <span>MUA NGAY</span></a>
+                                            <a style="color:#318f8f;" href="{{asset('/')}}" title="">DOIDO.com - Đổi hàng miễn phí  - <span>SỬ DỤNG NGAY</span></a>
                                         </div>
                                     </div>
                                     <!-- Carousel nav -->
@@ -264,9 +264,9 @@
                                                 <i class="fa fa-user" aria-hidden="true"></i>
                                             </a>
                                         </li>
-                                        <li class="btntooltip" id="lstwishlist" data-toggle="tooltip" data-placement="top" title="Thông báo">
-                                            <a href="wishlist.html">
-                                                <i class="fa fa-bell" aria-hidden="true"></i>
+                                        <li class="btntooltip" id="lstwishlist" data-toggle="tooltip" data-placement="top" title="Tin nhắn">
+                                            <a href="{{asset('admin/messenger')}}">
+                                                <i class="fa fa-comment" aria-hidden="true"></i>
                                             </a>
                                         </li>
                                         <li data-toggle="tooltip" data-placement="left" title="Tài khoản"><a href="signin8ef2.html?url=https://RENDER.vn/signin.html"><i class="demo-icon RENDERic-user-1"></i></a></li>
@@ -287,19 +287,19 @@
                             <div class="menu-left">
                                 <ul class="nav navbar-nav navbar-left">
                                     <li class=" bg-red" id="sale">
-                                        <a href="{{asset('search/Sale')}}" id="sale_href">SALE</a>
+                                        <a href="{{asset('search/hàng mới')}}" id="sale_href">HÀNG MỚI</a>
                                     </li>
                                     <li class=" " id="new">
-                                        <a href="{{asset('search/HÀNG MỚI')}}" id="new_href">H&Agrave;NG MỚI</a>
+                                        <a href="{{asset('search/đồ điện tử')}}" id="new_href">ĐỒ ĐIỆN TỬ</a>
                                     </li>
                                     <li class=" " id="product">
-                                        <a href="{{asset('search/Hàng trao đổi')}}" id="product_href">Hàng trao đổi</a>
+                                        <a href="{{asset('search/giải trí thể thao')}}" id="product_href">GIẢI TRÍ, THỂ THAO</a>
                                     </li>
                                     <li class=" " id="collection">
-                                        <a href="{{asset('search/Hàng tặng')}}" id="collection_href">Hàng tặng</a>
+                                        <a href="{{asset('search/đồ văn phòng')}}" id="collection_href">ĐỒ VĂN PHÒNG</a>
                                     </li>
                                     <li class=" " id="designer">
-                                        <a href="{{asset('search/SALE')}}" id="designer_href">Nh&agrave; thiết kế</a>
+                                        <a href="{{asset('search/đồ dùng cá nhân')}}" id="designer_href">ĐỒ DÙNG CÁ NHÂN</a>
                                     </li>
                                 </ul>
                             </div>
@@ -315,37 +315,37 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3 col-sm-6 fisrt-box-hide">
-                                <h3 class="heading">Hỗ trợ khách hàng</h3>
+                                <h3 class="heading">DANH MỤC SẢN PHẨM</h3>
                                 <ul>
-                                    <li><a href="lien-he.html">Th&ocirc;ng tin li&ecirc;n hệ</a></li>
-                                    <li><a href="huong-dan-mua-hang.html">Hướng dẫn mua h&agrave;ng</a></li>
-                                    <li><a href="chinh-sach-doi-tra.html">Ch&iacute;nh s&aacute;ch đổi trả</a></li>
-                                    <li><a href="chinh-sach-giao-hang.html">Ch&iacute;nh s&aacute;ch giao h&agrave;ng</a></li>
-                                    <li><a href="chinh-sach-thanh-toan.html">Ch&iacute;nh s&aacute;ch thanh to&aacute;n</a></li>
-                                    <li><a href="size-guide.html">Size Guide</a></li>
-                                    <li><a href="cau-hoi-thuong-gap1.html">FAQs</a></li>
-                                    <li><a href="gift-card.html">Gift Card</a></li>
+                                    <li><a href="{{asset('search/xe cộ')}}">Xe cộ</a></li>
+                                    <li><a href="{{asset('search/đồ điện tử')}}">Đồ điện tử</a></li>
+                                    <li><a href="{{asset('search/thú cưng')}}">Thú cưng</a></li>
+                                    <li><a href="{{asset('search/tủ lạnh máy giặt')}}">Tủ lạnh, máy lạnh, máy giặt</a></li>
+                                    <li><a href="{{asset('search/đồ dùng gia đình')}}">Đồ dùng gia đình</a></li>
+                                    <li><a href="{{asset('search/thời trang')}}">Thời trang</a></li>
+                                    <li><a href="{{asset('search/đồ dùng cá nhân')}}">Đồ dùng cá nhân</a></li>
+                                    <li><a href="{{asset('search/giải trí thể thao')}}">Giải trí, thể thao</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-3 col-sm-6 fisrt-box-hide">
                                 <h3 class="heading">DOIDO.com</h3>
                                 <ul>
-                                    <li><a href="ve-chung-toi.html">Về ch&uacute;ng t&ocirc;i</a></li>
-                                    <li><a href="hop-tac-ban-hang.html">Hợp t&aacute;c b&aacute;n h&agrave;ng</a></li>
-                                    <li><a href="http://careers.RENDER.vn/">Tuyển dụng</a></li>
-                                    <li><a href="chinh-sach-bao-mat.html">Ch&iacute;nh s&aacute;ch bảo mật</a></li>
-                                    <li><a href="dieu-kien-dieu-khoan.html">Điều kiện &amp; Điều khoản</a></li>
+                                    <li><a href="#">Về ch&uacute;ng t&ocirc;i</a></li>
+                                    <li><a href="#">Hợp t&aacute;c b&aacute;n h&agrave;ng</a></li>
+                                    <li><a href="#">Tuyển dụng</a></li>
+                                    <li><a href="#">Ch&iacute;nh s&aacute;ch bảo mật</a></li>
+                                    <li><a href="#">Điều kiện &amp; Điều khoản</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-6 col-sm-12 footer-box-center">
                                 <h3 class="heading">Liên hệ chúng tôi</h3>
                                 <p class="margin-top15">
                                     <a class="icon icon-fb icon-footer" target="_blank"
-                                       href="https://www.facebook.com/"></a>
+                                       href="https://www.facebook.com/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
                                     <a class="icon icon-youtube icon-footer" target="_blank"
-                                       href="https://www.youtube.com/"></a>
+                                       href="https://www.youtube.com/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
                                     <a class="icon icon-in icon-footer" target="_blank"
-                                       href="https://www.linkedin.com/"></a>
+                                       href="https://www.linkedin.com/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                                 </p>
                                 <div class="hidden-xs">
                                     <p class="heading margin-top15" style="letter-spacing: 1px;">ĐĂNG KÝ THÀNH VIÊN NGAY !!!</p>
@@ -353,11 +353,8 @@
                                         <div class="form-group">
                                             <!-- <div class="col-lg-4"><label class="control-label">Ảnh đại diện</label></div> -->
                                             <div class="input-group">
-                                                <input type="text" class="form-control" name="email" placeholder="Email"
-                                                       id="txtEmail">
                                                 <span class="input-group-btn">
-                                            <button class="btn btn-black btnReceiveEmail" style="min-width: 172px;"
-                                                    type="button">Đăng ký</button>
+                                            <a href="{{asset('register')}}" class="btn btn-black" style="min-width: 172px;">Đăng ký</a>
                                         </span>
                                             </div>
                                             <div class="input-group hide box-label-alert-registerreviceemail"

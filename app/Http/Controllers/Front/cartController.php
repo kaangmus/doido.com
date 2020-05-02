@@ -31,15 +31,16 @@ class cartController extends Controller
     }
     public function addItem(Request $request)
     {
-        if($request->style=='đổi'||$request->style=='tặng')
-        {
-            return redirect()->intended('order/'.$request->id);
-        }
-        else{
-            $item=$this->product->showItem($request->id);
-            $this->cartItem->add(['id'=>$request->id,'name'=>$item->title,'price'=>$item->sale,'qty'=>1,'weight'=>1,'options' => ['img' => $item->coverimg,'size'=>$request->size,'color'=>$request->color]]);
-            return redirect('cart');
-        }
+        return redirect()->intended('order/'.$request->id);
+//        if($request->style=='đổi'||$request->style=='tặng')
+//        {
+//            return redirect()->intended('order/'.$request->id);
+//        }
+//        else{
+//            $item=$this->product->showItem($request->id);
+//            $this->cartItem->add(['id'=>$request->id,'name'=>$item->title,'price'=>$item->sale,'qty'=>1,'weight'=>1,'options' => ['img' => $item->coverimg,'size'=>$request->size,'color'=>$request->color]]);
+//            return redirect('cart');
+//        }
     }
     public function deleteAll()
     {

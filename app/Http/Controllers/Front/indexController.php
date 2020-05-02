@@ -18,17 +18,17 @@ class indexController extends Controller
     {
         $this->product= new productModel();
         $this->media= new mediaModel();
-        $this->blog= new blogModel();
+       // $this->blog= new blogModel();
         $this->cate_product=new cate_productModel();
         $this->comment=new commentModle();
     }
     public function indexShow()
     {
         $data['items1']=$this->product->listAll();
-        $data['items2']=$this->product->listAll();
-        $data['items3']=$this->product->listAll();
-        $data['items4']=$this->product->listAll();
-        $data['items5']=$this->product->listAll();
+        $data['items2']=$this->product->searchCategoryProduct('Đồ điện tử');
+        $data['items3']=$this->product->searchCategoryProduct('Đồ dùng cá nhân');
+        $data['items4']=$this->product->searchCategoryProduct('Giải trí');
+      //  $data['items5']=$this->product->listAll();
         return view('front.index',$data);
     }
     public function searchItem($search)
@@ -41,6 +41,12 @@ class indexController extends Controller
     {
         $key= str_replace(' ', '%', $request->search);
         $data['items']=$this->product->searchItem($key);
+       // return $data['items'];
+        return view('front.sanpham',$data);
+    }
+    public function searchPrice(Request $request)
+    {
+        $data['items']=$this->product->searchPrice($request->min,$request->max);
         return view('front.sanpham',$data);
     }
     public function productDetail($id)

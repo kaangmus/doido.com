@@ -20,6 +20,7 @@ Route::group(['namespace'=>'Front'],function (){
     Route::get('/','indexController@indexShow');
     Route::get('search/{search}','indexController@searchItem');
     Route::get('search','indexController@getsearch');
+    Route::get('searchprice','indexController@searchPrice');
     Route::get('product','indexController@product');
     Route::get('product-{id}','indexController@productDetail');
     Route::post('product-{id}','indexController@addComment');

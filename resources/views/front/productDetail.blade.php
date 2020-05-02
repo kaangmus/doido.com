@@ -78,31 +78,15 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="upcase">Loại giao dịch</div>
-                                <?php
-                                $styles = explode(",", $item->style);
-                                array_pop($styles);
-                                ?>
-                                <div id="size" class="content">
-                                    @foreach($styles as $style)
-                                        <div style="display: inline-block; margin-right: 10px;">
-                                            <label size-id="1" class="box"><input type="radio" name="style"
-                                                                                  value="{{$style}}">{{$style}}</label>
-                                        </div>
-                                    @endforeach
-                                    <div class="clear"></div>
-                                </div>
-                                <div class="validator hide">Vui lòng chọn kích thước trước khi đặt mua</div>
+                            <li>
+                                <div class="upcase">Mặt hàng muốn đổi</div>
+                                <label size-id="1" class="box">{{$item->desiredproducts}}</label>
+
+                            </li>
                             </li>
                             <li>
                                 <div class="upcase">#Tag</div>
                                 <label size-id="1" class="box">#{{$item->tag}}</label>
-                            </li>
-                            <li>
-                                <div class="upcase">Mặt hàng muốn đổi</div>
-
-                                <label size-id="1" class="box">{{$item->desiredproducts}}</label>
-
                             </li>
                             <li>
                                 <div class="row">

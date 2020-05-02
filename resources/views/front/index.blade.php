@@ -59,23 +59,12 @@
                                                     <div class="desc">
                                                     	<span>
                                                             {{$item1->content}}
-                                                                                                                            <br>
-                                                                                                                                <strike class="color-red"><span
-                                                                                                                                            class="color-black">{{$item1->price}}</span></strike>
                                                                 <br>
                                                                 <span class="color-red">
-                                                                    {{$item1->price}} VND</span>
-                                                                                                                                </span>
+                                                                    {{isset($item1->price)?number_format($item1->price,0,',','.'):0 }} VND</span>
                                                         </span>
                                                     </div>
                                                 </a>
-                                                <?php
-                                                $styles = explode(",", $item1->style);
-                                                array_pop($styles);
-                                                ?>
-                                                @foreach($styles as $style)
-                                                <span class="product-new">{{$style}}</span>
-                                                @endforeach
                                             </div>
                                         </div>
                                     @endforeach
@@ -92,28 +81,28 @@
             <div class="container">
                 <div class="text-center mtb-30">
                     <h3>
-                        <span class="upcase up-case box-title">HÀNG BÁN</span>
+                        <span class="upcase up-case box-title">ĐỒ ĐIỆN TỬ</span>
                     </h3>
                 </div>
 
                 <div class="row prod-list">
                     <div class="col-md-12">
                         <div class="row">
-                            @foreach($items5->slice(0, 8) as $item5)
+                            @foreach($items2->slice(0, 8) as $item2)
                                 <div class="col-sm-3 col-xs-6">
                                     <div class="prod-img1">
-                                        <a href="{{asset('product-'.$item5->id)}}"
+                                        <a href="{{asset('product-'.$item2->id)}}"
                                            class="">
-                                            <img data-src="{{asset('public/media/'.$item5->coverimg)}}"/>
-                                            <img data-src="{{asset('public/media/'.$item5->coverimg)}}" class="lazyload" style="display: block !important;"/>
+                                            <img data-src="{{asset('public/media/'.$item2->coverimg)}}"/>
+                                            <img data-src="{{asset('public/media/'.$item2->coverimg)}}" class="lazyload" style="display: block !important;"/>
                                         </a>
                                     </div>
                                     <div
                                             class="content ">
-                                        <a href="{{asset('product-'.$item5->id)}}">
-                                            <div class="title"><span>{{$item5->title}}</span></div>
+                                        <a href="{{asset('product-'.$item2->id)}}">
+                                            <div class="title"><span>{{$item2->title}}</span></div>
                                             <div class="desc">
-                                                <span>{{$item5->content}}<br>{{$item5->price}} VND </span>
+                                                <span>{{$item2->describe}}<br>{{isset($item2->price)?number_format($item2->price,0,',','.'):0 }} VND </span>
                                                 </span>
                                             </div>
                                         </a>
@@ -135,7 +124,7 @@
             <div class="container">
                 <div class="text-center mtb-30">
                     <h3>
-                        <span class="upcase up-case box-title">TRAO ĐỔI HÀNG HÓA</span>
+                        <span class="upcase up-case box-title">ĐỒ DÙNG CÁ NHÂN</span>
                     </h3>
                 </div>
                 <div class="row prod_bestsale">
@@ -143,26 +132,23 @@
                         <div class="row">
                             <div class="products--wrapper">
                                 <div class="bestsale-carousel">
-                                    @foreach($items2 as $item2)
+                                    @foreach($items3->slice(0, 4) as $item3)
                                         <div class="prod-item">
                                             <div class="prod-img1">
-                                                <a href="{{asset('product-'.$item2->id)}}" class="">
+                                                <a href="{{asset('product-'.$item3->id)}}" class="">
                                                     <img class="owl-lazy"
-                                                         data-src="{{asset('public/media/'.$item2->coverimg)}}"/>
+                                                         data-src="{{asset('public/media/'.$item3->coverimg)}}"/>
                                                 </a>
                                             </div>
                                             <div class="content productnew">
-                                                <a href="{{asset('product-'.$item2->id)}}">
-                                                    <div class="title"><span>{{$item2->title}}</span></div>
+                                                <a href="{{asset('product-'.$item3->id)}}">
+                                                    <div class="title"><span>{{$item3->title}}</span></div>
                                                     <div class="desc">
                                                     	<span>
-                                                            {{$item2->content}}
-                                                                                                                            <br>
-                                                                                                                                <strike class="color-red"><span
-                                                                                                                                            class="color-black">{{$item1->price}}</span></strike>
+                                                            {{$item3->describe}}<br>
                                                                 <br>
                                                                 <span class="color-red">
-                                                                    {{$item2->price}} VND
+                                                                    {{isset($item3->price)?number_format($item3->price,0,',','.'):0 }} VND
                                                                 </span>
                                                                                                                                 </span>
                                                         </span>
@@ -235,15 +221,15 @@
                             </div>
                         </div>
                         <div class="item">
-                            <a href="{{asset('search/tặng')}}">
-                                <img src="images/tangmienphi.jpg" alt="Cho tặng miễn phí"
-                                     srcset="images/tangmienphi.jpg 1080w"
+                            <a href="{{asset('search/Đồ giải trí')}}">
+                                <img src="images/giaitri.jpg" alt="Đồ giải trí"
+                                     srcset="images/giaitri.jpg 1080w"
                                      sizes="50vw"/>
                             </a>
                             <div class="description">
-                                <a href="{{asset('search/tặng')}}">
+                                <a href="{{asset('search/Đồ giải trí')}}">
                                     <h3>
-                                        <span class="upcase up-case">Cho tặng miễn phí</span>
+                                        <span class="upcase up-case">Đồ giải trí</span>
                                     </h3>
                                 </a>
                             </div>
@@ -255,7 +241,7 @@
                 <div class="prod-collection-highlight">
                     <div class="container">
                         <div class="">
-                            <a href="bo-suu-tap/bst-tui-xach-2020.html">
+                            <a href="{{asset('product')}}">
                                 <img class="lazyload" data-src="images/bannermain.jpg"
                                      title="" alt=""/>
                             </a>
@@ -270,28 +256,27 @@
             <div class="container">
                 <div class="text-center mtb-30">
                     <h3>
-                        <span class="upcase up-case box-title">HÀNG TẶNG</span>
+                        <span class="upcase up-case box-title">Giải trí, thể thao</span>
                     </h3>
                 </div>
-
                 <div class="row prod-list">
                     <div class="col-md-12">
                         <div class="row">
-                            @foreach($items5->slice(0, 8) as $item5)
+                            @foreach($items4->slice(0, 8) as $item4)
                             <div class="col-sm-3 col-xs-6">
                                 <div class="prod-img1">
-                                    <a href="{{asset('product-'.$item5->id)}}"
+                                    <a href="{{asset('product-'.$item4->id)}}"
                                        class="">
-                                        <img data-src="{{asset('public/media/'.$item5->coverimg)}}"/>
-                                        <img data-src="{{asset('public/media/'.$item5->coverimg)}}" class="lazyload" style="display: block !important;"/>
+                                        <img data-src="{{asset('public/media/'.$item4->coverimg)}}"/>
+                                        <img data-src="{{asset('public/media/'.$item4->coverimg)}}" class="lazyload" style="display: block !important;"/>
                                     </a>
                                 </div>
                                 <div
                                         class="content ">
-                                    <a href="{{asset('product-'.$item5->id)}}">
-                                        <div class="title"><span>{{$item5->title}}</span></div>
+                                    <a href="{{asset('product-'.$item4->id)}}">
+                                        <div class="title"><span>{{$item4->title}}</span></div>
                                         <div class="desc">
-                                            	<span>{{$item5->content}}<br>{{$item5->price}} VND </span>
+                                            	<span>{{isset($item4->price)?number_format($item4->price,0,',','.'):0 }} VND </span>
                                             </span>
                                         </div>
                                     </a>

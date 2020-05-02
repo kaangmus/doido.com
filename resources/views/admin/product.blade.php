@@ -102,7 +102,6 @@
                                 <th>Tên sản phẩm</th>
                                 <th>Hình ảnh</th>
                                 <th>Giá bán</th>
-                                <th>Loại giao dịch</th>
                                 <th>Tình trạng sản phẩm</th>
                                 <th># Tag</th>
                                 <th>Mô tả ngắn</th>
@@ -117,7 +116,6 @@
                                     <td>{{$item->title}}</td>
                                     <td><img class="thumbnail" width="100px" src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}" ></td>
                                     <td>{{$item->price}}</td>
-                                    <td>{{$item->style}}</td>
                                     <td>{{$item->statustype==0?'Hết hàng':'Còn hàng'}}</td>
                                     <td>{{$item->tag}}</td>
                                     <td>{{$item->describe}}</td>

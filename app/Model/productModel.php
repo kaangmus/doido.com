@@ -44,14 +44,14 @@ class productModel extends Model
             $item->describe=$request->describe;
             $item->tag=$request->tag;
             $item->iduser=Auth::user()->id;
-            if(isset($request->style))
-            {
-                foreach ($request->style as $itemStyle)
-                {
-                    $stringStyle=$stringStyle.$itemStyle.",";
-                }
-                $item->style=$stringStyle;
-            }
+//            if(isset($request->style))
+//            {
+//                foreach ($request->style as $itemStyle)
+//                {
+//                    $stringStyle=$stringStyle.$itemStyle.",";
+//                }
+//                $item->style=$stringStyle;
+//            }
             $item->statustype=$request->statustype;
             $item->contents=$request->contents;
             $item->status=$request->status;
@@ -91,14 +91,14 @@ class productModel extends Model
             $item->describe=$request->describe;
             $item->tag=$request->tag;
             $item->iduser=Auth::user()->id;
-            if(isset($request->style))
-            {
-                foreach ($request->style as $itemStyle)
-                {
-                    $stringStyle=$stringStyle.$itemStyle.",";
-                }
-                $item->style=$stringStyle;
-            }
+//            if(isset($request->style))
+//            {
+//                foreach ($request->style as $itemStyle)
+//                {
+//                    $stringStyle=$stringStyle.$itemStyle.",";
+//                }
+//                $item->style=$stringStyle;
+//            }
             $item->statustype=$request->statustype;
             $item->contents=$request->contents;
             $item->status=$request->status;
@@ -138,21 +138,21 @@ class productModel extends Model
     public function product()
     {
         $items = DB::table('product')
-            ->join('cate_product', 'product.id', '=', 'cate_product.idproduct')
-            ->join('category', 'category.id', '=', 'cate_product.idcategory')
             ->select('product.*')
-            ->get();
+            ->paginate(9);
+//            ->get();
         return $items;
     }
     public function searchItem($search)
     {
         $items = DB::table('product')
-            ->join('cate_product', 'product.id', '=', 'cate_product.idproduct')
-            ->join('category', 'category.id', '=', 'cate_product.idcategory')
+//            ->join('cate_product', 'product.id', '=', 'cate_product.idproduct')
+//            ->join('category', 'category.id', '=', 'cate_product.idcategory')
             ->where('product.title', 'like', '%'.$search.'%')
+            ->orwhere('product.tag', 'like', '%'.$search.'%')
             ->select('product.*','product.id')
-            ->get();
-        if(!isset($items))
+            ->paginate(9);
+        if(count($items)==0)
         {
             $items=$this->searchCategoryProduct($search);
         }
@@ -165,6 +165,14 @@ class productModel extends Model
             ->join('category', 'category.id', '=', 'cate_product.idcategory')
             ->where('category.title', 'like', '%'.$search.'%')
             ->select('product.*')
+            ->paginate(9);
+        return $items;
+    }
+    public function searchPrice($min,$max)
+    {
+        $items = DB::table('product')
+            ->select('product.*','product.id')
+            ->whereBetween('price', [$min, $max])
             ->get();
         return $items;
     }
