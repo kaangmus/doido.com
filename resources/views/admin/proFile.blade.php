@@ -26,13 +26,8 @@
     </div><!--/.row-->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">ProFile</h1>
-        </div>
-    </div><!--/.row-->
-    <div class="row">
-        <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Create Category</div>
+                <div class="panel-heading">Tạo mới người dùng</div>
                 <div class="panel-body">
                     <form method="POST" enctype="multipart/form-data">
                         {{csrf_field()}}

@@ -85,20 +85,11 @@ class productModel extends Model
     {
         try {
             $item = productModel::find($id);
-            $stringStyle = '';
             $item->title = $request->title;
             $item->price = $request->price;
             $item->describe = $request->describe;
             $item->tag = $request->tag;
             $item->iduser = Auth::user()->id;
-//            if(isset($request->style))
-//            {
-//                foreach ($request->style as $itemStyle)
-//                {
-//                    $stringStyle=$stringStyle.$itemStyle.",";
-//                }
-//                $item->style=$stringStyle;
-//            }
             $item->statustype = $request->statustype;
             $item->contents = $request->contents;
             $item->status = $request->status;
@@ -111,9 +102,13 @@ class productModel extends Model
             }
             $item->save();
             if (isset($request->idcategory)) {
+                $this->cate_product->deleteID($id);
                 $this->cate_product->addItem($item->id, $request->idcategory);
             }
-            $this->media->addItem($request, $item->id);
+            if (isset($request->media)) {
+                $this->media->deleteID($id);
+                $this->media->addItem($request, $item->id);
+            }
             return true;
         } catch (Exception $ex) {
             report($ex);

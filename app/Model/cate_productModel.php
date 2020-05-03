@@ -42,7 +42,9 @@ class cate_productModel extends Model
     {
         $items=DB::table('cate_product')
             ->join('category', 'category.id', '=', 'cate_product.idcategory')
-            ->where('idproduct',$id)->get();
+            ->where('idproduct',$id)
+            ->select('*','category.id as idca')
+            ->get();
         return $items;
     }
     public function updateItem(Request $request, $id)
@@ -59,6 +61,11 @@ class cate_productModel extends Model
             return false;
         }
 
+    }
+    public function deleteID($id)
+    {
+        DB::table('cate_product')->where('cate_product.idproduct', $id)->delete();
+        return true;
     }
     public function deleteItem($id)
     {

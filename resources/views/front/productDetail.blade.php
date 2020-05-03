@@ -3,7 +3,8 @@
 @section('main')
     <style>
         .comment_comment{
-            border: 1px solid #e3e3e3;
+            border-top: 1px solid #e3e3e3;
+            border-bottom: 1px solid #e3e3e3;
             /* width: 200px; */
             height: 250px;
             overflow-x: hidden;
@@ -76,9 +77,6 @@
                                 <input type="hidden" id="product_id" name="id" value="{{$item->id}}">
                                 <h3><span id="product_name">{{$item->title}}</span></h3>
                                 <div class="desc">
-                                    <input type="hidden" id="price" value="780000.0000">
-                                    <input type="hidden" id="txtAlias" value="vay-nhun-sat-nach-cotton">
-                                    <br>
                                     <span class="color-red">
                                 {{isset($item->price)?number_format($item->price,0,',','.'):0 }} VND</span>
                                 </div>
@@ -88,17 +86,16 @@
                                 <div id="color" class="content">
                                     <div style="display: inline-block; margin-right: 10px;">
                                         @foreach($itemsCate as $itemcate)
-                                            <label size-id="1">{{$itemcate->title}}</label>
+                                            <label size-id="1">{{$itemcate->title}},</label>
                                         @endforeach
                                     </div>
                                 </div>
                             </li>
                             <li>
-                            <li>
                                 <div class="upcase">Mặt hàng muốn đổi</div>
-                                <label size-id="1" class="box">{{$item->desiredproducts}}</label>
+                                <br>
+                                <label size-id="1">{{$item->desiredproducts}}</label>
 
-                            </li>
                             </li>
                             <li>
                                 <div class="upcase">#Tag</div>
@@ -195,7 +192,8 @@
                             <input name="iduser" hidden value="{{isset(Auth::user()->id)?Auth::user()->id:-1}}">
                             <input name="idproduct" hidden value="{{$item->id}}">
                             <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
-                            <button>Bình luận</button>
+                            <br>
+                            <button class="btn">Bình luận</button>
                         </div>
                     </form>
                 </div>

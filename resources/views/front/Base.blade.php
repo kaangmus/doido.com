@@ -243,8 +243,8 @@
                                         </li>
 
                                         <li class="visible-lg-block hidden-lg" style="float:left; border:0; margin-left:35px;">
-                                            <a href="index.blade.php"><img class="lazyload"
-                                                                           data-src="upload/files/RENDER%20logo_website.png"
+                                            <a href="{{asset('/')}}"><img class="lazyload"
+                                                                           data-src="images/logo1.png"
                                                                            style="max-height:15px;" /></a>
                                         </li>
                                         <li class="nav--search-v2">

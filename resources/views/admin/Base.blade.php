@@ -56,12 +56,9 @@
             <a class="navbar-brand" href="{{asset('/')}}"><img width="140px" src="{{asset('public/img/logo1.png')}}"></a>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown"><a class=" count-info" href="{{asset('admin/messenger')}}">
-                        <em class="fa fa-envelope"></em><span class="label label-danger">15</span>
+                        <em class="fa fa-envelope"></em><span class="label label-danger"></span>
                     </a>
                 </li>
-                <li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-                        <em class="fa fa-bell"></em><span class="label label-info">5</span>
-                    </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         <li><a href="#">
                                 <div><em class="fa fa-envelope"></em> 1 New Message
@@ -86,36 +83,31 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <div class="profile-sidebar">
         <div class="profile-userpic">
-            <img src="http://placehold.it/50/30a5ff/fff" class="img-responsive" alt="">
+            <img src="{{asset('public/media/'.Auth::user()->img)}}" class="img-responsive" alt="">
         </div>
         <div class="profile-usertitle">
-            <div class="profile-usertitle-name">Username</div>
+            <div class="profile-usertitle-name">{{Auth::user()->username}}</div>
             <div class="profile-usertitle-status"><span class="indicator label-success"></span>Online</div>
         </div>
         <div class="clear"></div>
     </div>
     <div class="divider"></div>
-    <form role="search">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-        </div>
-    </form>
     <ul class="nav menu">
-        <li class="active"><a href="{{asset('admin')}}"><em class="fa fa-dashboard">&nbsp;</em>Bảng điều khiển</a></li>
-        <li><a href="{{asset('admin/profile')}}"><em class="fa fa-calendar">&nbsp</em>Hồ sơ cá nhân</a></li>
-        <li><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Sản phẩm</a></li>
-        <li><a href="{{asset('admin/ordermanger')}}"><em class="fa fa-calendar"></em> Quản lý giao dịch</a></li>
-        <li><a href="{{asset('admin/profile/user')}}"><em class="fa fa-bar-chart">&nbsp;</em> Danh sách người dùng</a></li>
-        <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
+        <li class="{{ (request()->is('admin/admin')) ? 'active' : '' }}"><a href="{{asset('admin')}}"><em class="fa fa-dashboard">&nbsp;</em>Bảng điều khiển</a></li>
+        <li class="{{ (request()->is('admin/profile')) ? 'active' : '' }}"><a href="{{asset('admin/profile')}}"><em class="fa fa-calendar"></em> Hồ sơ cá nhân</a></li>
+        <li class="{{ (request()->is('admin/product')) ? 'active' : '' }}"><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Sản phẩm</a></li>
+        <li class="{{ (request()->is('admin/ordermanger')) ? 'active' : '' }}"><a href="{{asset('admin/ordermanger')}}"><em class="fa fa-calendar"></em> Quản lý giao dịch</a></li>
+        <li class="{{ (request()->is('admin/profile/user')) ? 'active' : '' }}"><a href="{{asset('admin/profile/user')}}"><em class="fa fa-bar-chart">&nbsp;</em> Danh sách người dùng</a></li>
+        <li class="parent"><a data-toggle="collapse" href="#sub-item-1">
                 <em class="fa fa-navicon">&nbsp;</em> Tùy chọn <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">
-                <li><a class="" href="{{asset('admin/category')}}">
+                <li class="{{ (request()->is('admin/category')) ? 'active' : '' }}"><a class="" href="{{asset('admin/category')}}">
                         <span class="fa fa-arrow-right">&nbsp;</span> Danh mục sản phẩm
                     </a></li>
             </ul>
         </li>
-        <li><a href="{{asset('logout')}}"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+        <li><a href="{{asset('logout')}}"><em class="fa fa-power-off">&nbsp;</em> Đăng xuất</a></li>
     </ul>
 </div><!--/.sidebar-->
 

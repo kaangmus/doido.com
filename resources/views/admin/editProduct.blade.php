@@ -50,12 +50,25 @@
                                 <br>
                                 <div class="dropdown">
                                     <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Danh mục
-                                        sản phẩm
-                                        <span class="caret"></span></button>
+                                        sản phẩm <span class="caret"></span></button>
                                     <ul class="dropdown-menu" style="color: black !important;">
                                         @foreach($listCate as $itemCate)
-                                            <li><input type="checkbox" value="{{$itemCate->id}} "
-                                                       name="idcategory[]">{{$itemCate->title}}</li>
+                                            <?php $check = 0?>
+                                            @if(isset($itemCatecheck))
+                                                @foreach($itemCatecheck as $itemCheck)
+                                                    @if($itemCate->id==$itemCheck->idca)
+                                                        <?php $check = 1;?>
+                                                        <li><input type="checkbox" value="{{$itemCate->id}}"
+                                                                   checked="checked"
+                                                                   name="idcategory[]">{{$itemCate->title}}</li>
+                                                        @break
+                                                    @endif
+                                                @endforeach
+                                            @endif
+                                            @if($check==0)
+                                                <li><input type="checkbox" value="{{$itemCate->id}}"
+                                                           name="idcategory[]">{{$itemCate->title}}</li>
+                                            @endif
                                         @endforeach
                                     </ul>
                                 </div>
@@ -129,6 +142,21 @@
                                 </div>
                             </div>
                             <div class="col-sm-6">
+                                <script>
+                                    function preview_image()
+                                    {
+                                        var total_file=document.getElementById("upload_file").files.length;
+                                        for(var i=0;i<total_file;i++)
+                                        {
+                                            $('#image_preview').append("<img class='col-sm-3 click-hide' src='"+URL.createObjectURL(event.target.files[i])+"'>");
+                                        }
+                                    }
+                                    $(document).ready(function(){
+                                        $("#upload_file").click(function(){
+                                            $(".click-hide").hide();
+                                        });
+                                    });
+                                </script>
                                 <div class="form-group">
                                     <label>Sản phẩm mong muốn</label>
                                     <input class="form-control" type="text" placeholder="sản phẩm cách nhau bởi dấu ,"
@@ -145,7 +173,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Hình ảnh sản phẩm</label>
-                                    <input multiple type="file" name="media[]" value="" class="form-control">
+                                    <input id="upload_file" multiple type="file" name="media[]" onchange="preview_image();" value="" class="form-control">
+                                    <div id="image_preview" class="row">
+                                        @if(isset($media))
+                                            @foreach($media as $mediaItem)
+                                                <img class='col-sm-3 click-hide' src='{{asset('public/media/'.$mediaItem->url)}}'>
+                                            @endforeach
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>

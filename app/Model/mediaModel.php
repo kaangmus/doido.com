@@ -4,6 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use DB;
 
 class mediaModel extends Model
 {
@@ -48,6 +49,18 @@ class mediaModel extends Model
             report ($ex);
             return false;
         }
+    }
+    public function listItem($id)
+    {
+        $items=DB::table('media')
+            ->where('idproduct',$id)
+            ->get();
+        return $items;
+    }
+    public function deleteID($id)
+    {
+        DB::table('media')->where('idproduct', $id)->delete();
+        return true;
     }
     public function listMedia($id)
     {

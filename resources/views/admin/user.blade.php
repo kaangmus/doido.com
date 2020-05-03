@@ -29,7 +29,6 @@
                             <th>Hình ảnh</th>
                             <th>Email</th>
                             <th>Chức vụ</th>
-                            <th>Trạng thái</th>
                             <th>Option</th>
                         </tr>
                         </thead>
@@ -39,12 +38,10 @@
                                 <td scope="row">{{$item->id}}</td>
                                 <td>{{$item->username}}</td>
                                 <td><img class="thumbnail" width="100px"
-                                         src="{{isset($item->img)?asset('public/media/'.$item->img):asset('public/images/shirt-render.jpg')}}">
+                                         src="{{isset($item->img)?asset('public/media/'.$item->img):asset('public/img/default.PNG')}}">
                                 </td>
                                 <td>{{$item->email}}</td>
-                                <td>{{$item->sale}}</td>
                                 <td>{{$item->lever==0?'Admin':'Khách hàng'}}</td>
-                                <td>{{$item->status==1?'Đã kích hoạt':'Ngừng kích hoạt'}}</td>
                                 <td>
                                     <a href="{{asset('admin/profile/update/'.$item->id)}}">Edit</a>
                                     <a href="{{asset('admin/profile/delete/'.$item->id)}}">Delete</a>
