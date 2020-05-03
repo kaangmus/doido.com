@@ -1,6 +1,22 @@
 @extends('front.Base')
 @section('title','DOIDO.COM | Thế giới đổi đồ')
 @section('main')
+    <style>
+        .comment_comment{
+            border: 1px solid #e3e3e3;
+            /* width: 200px; */
+            height: 250px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        .card-white
+        {
+            border-bottom: 1px solid #e3e3e3;
+        }
+        .inline-comment{
+            display: inline-block !important;
+        }
+    </style>
     <div class="content-area home-content-area top-area">
         <div class="container">
             <div class="navigation margin-top20">
@@ -64,17 +80,17 @@
                                     <input type="hidden" id="txtAlias" value="vay-nhun-sat-nach-cotton">
                                     <br>
                                     <span class="color-red">
-                                {{$item->price}} VND</span>
+                                {{isset($item->price)?number_format($item->price,0,',','.'):0 }} VND</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="upcase">Danh mục sản phẩm</div>
                                 <div id="color" class="content">
-                                        <div style="display: inline-block; margin-right: 10px;">
-                                            @foreach($itemsCate as $itemcate)
+                                    <div style="display: inline-block; margin-right: 10px;">
+                                        @foreach($itemsCate as $itemcate)
                                             <label size-id="1">{{$itemcate->title}}</label>
-                                            @endforeach
-                                        </div>
+                                        @endforeach
+                                    </div>
                                 </div>
                             </li>
                             <li>
@@ -94,8 +110,9 @@
                                         <button class="btn btn-black btnaddtocart">Đặt đồ</button>
                                     </div>
                                     <div class="col-md-6">
-                                        <a  class="btn btn-info" href="{{asset('admin/messenger/chat/'.$item->iduser)}}"><i class="fa fa-commenting-o"
-                                                                                                        aria-hidden="true"></i> Nhắn tin</a>
+                                        <a class="btn btn-info" href="{{asset('admin/messenger/chat/'.$item->iduser)}}"><i
+                                                    class="fa fa-commenting-o"
+                                                    aria-hidden="true"></i> Nhắn tin</a>
                                     </div>
                                 </div>
                             </li>
@@ -149,157 +166,174 @@
             </div>
             <div class="comment">
                 <h3>Bình luận</h3>
-                @foreach($listComment as $itemComment)
-                <div class="row">
-                    <div class="col-8">
-                        <div class="card card-white post">
-                            <div class="post-heading">
-                                <div class="float-left image">
-                                    <img src="{{isset($itemComment->img)?asset('public/media/'.$itemComment->img):'images/user_1.jpg'}}" class="img-circle avatar"
-                                         alt="user profile image">
+                <div class="comment_comment">
+                    @foreach($listComment as $itemComment)
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="card card-white post">
+                                    <div class="post-heading">
+                                        <div class="float-left image">
+                                            <img src="{{isset($itemComment->img)?asset('public/media/'.$itemComment->img):'images/user_1.jpg'}}"
+                                                 class="img-circle avatar inline-comment"
+                                                 alt="user profile image">
+                                            <span class="inline-comment">{{$itemComment->comment}}</span>
+                                        </div>
+                                    </div>
+                                    {{--<div class="post-description">--}}
+                                        {{--<p>{{$itemComment->comment}}</p>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
-                            <div class="post-description">
-                                <p>{{$itemComment->comment}}</p>
-                            </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-                @endforeach
-                {{--<script>--}}
-                    {{--$(document).ready(function(){--}}
-                        {{--$(".comment button").click(function(){--}}
-                            {{--$.post("{{asset('comment')}}",--}}
-                                {{--{--}}
-                                    {{--comment: $("#comment").val(),--}}
-                                {{--},--}}
-                                {{--function(data,status){--}}
-                                    {{--alert("Data: " + data + "\nStatus: " + status);--}}
-                                {{--});--}}
-                        {{--});--}}
-                    {{--});--}}
-                {{--</script>--}}
-                <form method="post" action="">
-                    {{ csrf_field()}}
-                    <div class="form-group">
-                        <label for="comment">Bình luận:</label>
-                        <input name="iduser" hidden value="{{isset(Auth::user()->id)?Auth::user()->id:-1}}">
-                        <input name="idproduct" hidden value="{{$item->id}}">
-                        <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
-                        <button>Bình luận</button>
-                    </div>
-                </form>
+                <br>
+                    <form method="post" action="">
+                        {{ csrf_field()}}
+                        <div class="form-group">
+                            <label for="comment">Bình luận:</label>
+                            <input name="iduser" hidden value="{{isset(Auth::user()->id)?Auth::user()->id:-1}}">
+                            <input name="idproduct" hidden value="{{$item->id}}">
+                            <textarea class="form-control" rows="5" id="comment" name="comment"></textarea>
+                            <button>Bình luận</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-<style>
+        <style>
 
 
-    .card-white  .card-heading {
-        color: #333;
-        background-color: #fff;
-        border-color: #ddd;
-        border: 1px solid #dddddd;
-    }
-    .card-white  .card-footer {
-        background-color: #fff;
-        border-color: #ddd;
-    }
-    .card-white .h5 {
-        font-size:14px;
-    //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    }
-    .card-white .time {
-        font-size:12px;
-    //font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    }
-    .post .post-heading {
-        height: 95px;
-        padding: 20px 15px;
-    }
-    .post .post-heading .avatar {
-        width: 60px;
-        height: 60px;
-        display: block;
-        margin-right: 15px;
-    }
-    .post .post-heading .meta .title {
-        margin-bottom: 0;
-    }
-    .post .post-heading .meta .title a {
-        color: black;
-    }
-    .post .post-heading .meta .title a:hover {
-        color: #aaaaaa;
-    }
-    .post .post-heading .meta .time {
-        margin-top: 8px;
-        color: #999;
-    }
-    .post .post-image .image {
-        width: 100%;
-        height: auto;
-    }
-    .post .post-description {
-        padding: 15px;
-    }
-    .post .post-description p {
-        font-size: 14px;
-    }
-    .post .post-description .stats {
-        margin-top: 20px;
-    }
-    .post .post-description .stats .stat-item {
-        display: inline-block;
-        margin-right: 15px;
-    }
-    .post .post-description .stats .stat-item .icon {
-        margin-right: 8px;
-    }
-    .post .post-footer {
-        border-top: 1px solid #ddd;
-        padding: 15px;
-    }
-    .post .post-footer .input-group-addon a {
-        color: #454545;
-    }
-    .post .post-footer .comments-list {
-        padding: 0;
-        margin-top: 20px;
-        list-style-type: none;
-    }
-    .post .post-footer .comments-list .comment {
-        display: block;
-        width: 100%;
-        margin: 20px 0;
-    }
-    .post .post-footer .comments-list .comment .avatar {
-        width: 35px;
-        height: 35px;
-    }
-    .post .post-footer .comments-list .comment .comment-heading {
-        display: block;
-        width: 100%;
-    }
-    .post .post-footer .comments-list .comment .comment-heading .user {
-        font-size: 14px;
-        font-weight: bold;
-        display: inline;
-        margin-top: 0;
-        margin-right: 10px;
-    }
-    .post .post-footer .comments-list .comment .comment-heading .time {
-        font-size: 12px;
-        color: #aaa;
-        margin-top: 0;
-        display: inline;
-    }
-    .post .post-footer .comments-list .comment .comment-body {
-        margin-left: 50px;
-    }
-    .post .post-footer .comments-list .comment > .comments-list {
-        margin-left: 50px;
-    }
-</style>
+            .card-white .card-heading {
+                color: #333;
+                background-color: #fff;
+                border-color: #ddd;
+                border: 1px solid #dddddd;
+            }
+
+            .card-white .card-footer {
+                background-color: #fff;
+                border-color: #ddd;
+            }
+
+            .card-white .h5 {
+                font-size: 14px;
+            / / font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+
+            .card-white .time {
+                font-size: 12px;
+            / / font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            }
+
+            .post .post-heading {
+                height: 95px;
+                padding: 20px 15px;
+            }
+
+            .post .post-heading .avatar {
+                width: 60px;
+                height: 60px;
+                display: block;
+                margin-right: 15px;
+            }
+
+            .post .post-heading .meta .title {
+                margin-bottom: 0;
+            }
+
+            .post .post-heading .meta .title a {
+                color: black;
+            }
+
+            .post .post-heading .meta .title a:hover {
+                color: #aaaaaa;
+            }
+
+            .post .post-heading .meta .time {
+                margin-top: 8px;
+                color: #999;
+            }
+
+            .post .post-image .image {
+                width: 100%;
+                height: auto;
+            }
+
+            .post .post-description {
+                padding: 15px;
+            }
+
+            .post .post-description p {
+                font-size: 14px;
+            }
+
+            .post .post-description .stats {
+                margin-top: 20px;
+            }
+
+            .post .post-description .stats .stat-item {
+                display: inline-block;
+                margin-right: 15px;
+            }
+
+            .post .post-description .stats .stat-item .icon {
+                margin-right: 8px;
+            }
+
+            .post .post-footer {
+                border-top: 1px solid #ddd;
+                padding: 15px;
+            }
+
+            .post .post-footer .input-group-addon a {
+                color: #454545;
+            }
+
+            .post .post-footer .comments-list {
+                padding: 0;
+                margin-top: 20px;
+                list-style-type: none;
+            }
+
+            .post .post-footer .comments-list .comment {
+                display: block;
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            .post .post-footer .comments-list .comment .avatar {
+                width: 35px;
+                height: 35px;
+            }
+
+            .post .post-footer .comments-list .comment .comment-heading {
+                display: block;
+                width: 100%;
+            }
+
+            .post .post-footer .comments-list .comment .comment-heading .user {
+                font-size: 14px;
+                font-weight: bold;
+                display: inline;
+                margin-top: 0;
+                margin-right: 10px;
+            }
+
+            .post .post-footer .comments-list .comment .comment-heading .time {
+                font-size: 12px;
+                color: #aaa;
+                margin-top: 0;
+                display: inline;
+            }
+
+            .post .post-footer .comments-list .comment .comment-body {
+                margin-left: 50px;
+            }
+
+            .post .post-footer .comments-list .comment > .comments-list {
+                margin-left: 50px;
+            }
+        </style>
 
 @stop

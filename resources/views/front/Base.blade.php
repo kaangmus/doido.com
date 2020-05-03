@@ -287,7 +287,7 @@
                             <div class="menu-left">
                                 <ul class="nav navbar-nav navbar-left">
                                     <li class=" bg-red" id="sale">
-                                        <a href="{{asset('search/hàng mới')}}" id="sale_href">HÀNG MỚI</a>
+                                        <a href="{{asset('product')}}" id="sale_href">HÀNG MỚI</a>
                                     </li>
                                     <li class=" " id="new">
                                         <a href="{{asset('search/đồ điện tử')}}" id="new_href">ĐỒ ĐIỆN TỬ</a>

@@ -1631,18 +1631,6 @@ a.style1:hover {
     position: relative;
     padding: 0 16px
 }
-
-.card::before {
-    content: "";
-    background-repeat: no-repeat;
-    width: 32px;
-    height: 20px;
-    position: absolute;
-    left: 0;
-    top: -4px;
-    background-image: url("../images/icon-card.png")
-}
-
 .card-visa::before {
     background-position: 0 0
 }

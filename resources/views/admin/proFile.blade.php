@@ -1,6 +1,21 @@
 @extends('admin.Base')
 @section('title','Danh mục sản phẩm')
 @section('main')
+    <style>
+        .pass{
+            display: none;
+        }
+        .changepass{
+            border: 1px solid;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".changepass").click(function(){
+                $(".pass").toggle();
+            });
+        });
+    </script>
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#">
@@ -30,7 +45,8 @@
                             </div>
                             <div class="form-group">
                                 <label>Mật khẩu</label>
-                                <input class="form-control" type="password" placeholder="Mật khẩu" name="password">
+                                <span class="btn changepass">Đổi mật khẩu</span>
+                                <input class="form-control pass" type="password" placeholder="Mật khẩu" name="password">
                             </div>
                             <div class="form-group">
                                 <label>Họ và tên</label>

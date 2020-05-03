@@ -63,7 +63,10 @@ class usersModel extends Model
             $item->city=$request->city;
             $item->describe=$request->describe;
             $item->address=$request->address;
-            $item->password=bcrypt($request->password);
+            if($request->password!=null)
+            {
+                $item->password=bcrypt($request->password);
+            }
             $item->lever=isset($request->lever)?1:0;
             $item->status=$request->status;
             if($request->hasFile('img'))
