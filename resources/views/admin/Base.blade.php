@@ -97,8 +97,8 @@
         <li class="{{ (request()->is('admin/profile')) ? 'active' : '' }}"><a href="{{asset('admin/profile')}}"><em class="fa fa-calendar"></em> Hồ sơ cá nhân</a></li>
         <li class="{{ (request()->is('admin/product')) ? 'active' : '' }}"><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Sản phẩm</a></li>
         <li class="{{ (request()->is('admin/ordermanger')) ? 'active' : '' }}"><a href="{{asset('admin/ordermanger')}}"><em class="fa fa-calendar"></em> Quản lý giao dịch</a></li>
-        <li class="{{ (request()->is('admin/profile/user')) ? 'active' : '' }}"><a href="{{asset('admin/profile/user')}}"><em class="fa fa-bar-chart">&nbsp;</em> Danh sách người dùng</a></li>
-        <li class="parent"><a data-toggle="collapse" href="#sub-item-1">
+        @if(Auth::user()->lever==0)<li class="{{ (request()->is('admin/profile/user')) ? 'active' : '' }}"><a href="{{asset('admin/profile/user')}}"><em class="fa fa-bar-chart">&nbsp;</em> Danh sách người dùng</a></li>@endif
+        @if(Auth::user()->lever==0) <li class="parent"><a data-toggle="collapse" href="#sub-item-1">
                 <em class="fa fa-navicon">&nbsp;</em> Tùy chọn <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">
@@ -106,7 +106,7 @@
                         <span class="fa fa-arrow-right">&nbsp;</span> Danh mục sản phẩm
                     </a></li>
             </ul>
-        </li>
+        </li>@endif
         <li><a href="{{asset('logout')}}"><em class="fa fa-power-off">&nbsp;</em> Đăng xuất</a></li>
     </ul>
 </div><!--/.sidebar-->
