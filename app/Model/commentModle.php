@@ -22,6 +22,11 @@ class commentModle extends Model
         $item->comment=$request->comment;
         $item->save();
     }
+    public function listAll()
+    {
+        $item=commentModle::orderBy('created_at','DESC')->get();
+        return $item;
+    }
     public function listComment($id)
     {
         $items=DB::table('comment')
