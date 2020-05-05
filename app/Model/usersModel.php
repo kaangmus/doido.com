@@ -95,4 +95,15 @@ class usersModel extends Model
             return false;
         }
     }
+    public function countMonth()
+    {
+        $item = DB::select('SELECT 
+    (MONTH(created_at)) AS month, COUNT(*) AS so
+FROM
+    `users`
+GROUP BY month(created_at)
+ORDER BY month DESC
+LIMIT 2');
+        return $item;
+    }
 }

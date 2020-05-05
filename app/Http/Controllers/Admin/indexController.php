@@ -23,6 +23,11 @@ class indexController extends Controller
     }
     public function indexShow()
     {
+        $data['countcomment']=$this->comment->countMonth();
+        $data['countorder']=$this->order->countMonth();
+        $data['countproduct']=$this->product->countMonth();
+        $data['countuser']=$this->user->countMonth();
+      //  return $data['countcomment'];
         $data['users']=$this->user->listAll();
         $data['product']=$this->product->listAll();
         $data['comment']=$this->comment->listAll();
@@ -78,5 +83,13 @@ class indexController extends Controller
             return redirect()->intended('admin');
         }
 
+    }
+    public function forgetPassword()
+    {
+        return view('front.forgetpassword');
+    }
+    public function getPassword(Request $request)
+    {
+        return $request->email;
     }
 }

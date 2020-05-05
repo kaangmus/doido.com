@@ -15,7 +15,7 @@
                         </div>
                     </a>
                 </div>
-                <!-- <div class="img" style="background-image: url('https://RENDER.vn/upload/files/W2-10-NA-2000X668-02.jpg')">
+                <!-- <div class="img" style="background-image: url('https://Doido.com/upload/files/W2-10-NA-2000X668-02.jpg')">
         <div class="row">
             <div class="col-md-6 col-md-offset-1">
                 <div class="slide-content">

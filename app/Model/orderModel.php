@@ -111,4 +111,15 @@ class orderModel extends Model
             ->get();
         return $item;
     }
+    public function countMonth()
+    {
+        $item = DB::select('SELECT 
+    (MONTH(created_at)) AS month, COUNT(*) AS so
+FROM
+    `orderproduct`
+GROUP BY month(created_at)
+ORDER BY month DESC
+LIMIT 2');
+        return $item;
+    }
 }

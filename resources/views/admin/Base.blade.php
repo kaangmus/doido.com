@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DoiDo.com - Quản trị website</title>
     <base href="{{asset('public/admin')}}/" />
+    <link rel="icon" href="{{asset('public/front/images/logo1.png')}}">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/datepicker3.css" rel="stylesheet">
