@@ -53,7 +53,7 @@
 		</div>
 		<div class="row">
 			<div class=" col-md-12">
-				<p><b>Thống kê so sánh từ tháng {{$countproduct[1]->month}} đến tháng {{$countproduct[0]->month}}</b></p>
+				<p><b>Thống kê so sánh từ tháng {{isset($countproduct[1]->month)?$countproduct[1]->month:''}} đến tháng {{isset($countproduct[0]->month)?$countproduct[0]->month:''}}</b></p>
 			</div>
 			<div class="col-xs-6 col-md-3">
 				<div class="panel panel-default">
