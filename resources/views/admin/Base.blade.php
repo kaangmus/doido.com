@@ -94,7 +94,7 @@
     </div>
     <div class="divider"></div>
     <ul class="nav menu">
-        <li class="{{ (request()->is('admin/admin')) ? 'active' : '' }}"><a href="{{asset('admin')}}"><em class="fa fa-dashboard">&nbsp;</em>Bảng điều khiển</a></li>
+        @if(Auth::user()->lever==0)<li class="{{ (request()->is('admin/admin')) ? 'active' : '' }}"><a href="{{asset('admin')}}"><em class="fa fa-dashboard">&nbsp;</em>Bảng điều khiển</a></li>@endif
         <li class="{{ (request()->is('admin/profile')) ? 'active' : '' }}"><a href="{{asset('admin/profile')}}"><em class="fa fa-calendar"></em> Hồ sơ cá nhân</a></li>
         <li class="{{ (request()->is('admin/product')) ? 'active' : '' }}"><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Sản phẩm</a></li>
         <li class="{{ (request()->is('admin/ordermanger')) ? 'active' : '' }}"><a href="{{asset('admin/ordermanger')}}"><em class="fa fa-calendar"></em> Quản lý giao dịch</a></li>

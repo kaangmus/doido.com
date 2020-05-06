@@ -11,7 +11,6 @@ class messagingController extends Controller
 {
     //
     private $mess, $user;
-
     public function __construct()
     {
         $this->user= new usersModel();
@@ -20,6 +19,7 @@ class messagingController extends Controller
     public function listAll()
     {
         $data['items']=$this->mess->listAll();
+        //$data['items2']=$this->mess->listAll2();
         return view('admin.messenger',$data);
     }
     public function addItem(Request $request)

@@ -7,6 +7,7 @@ use App\Model\orderModel;
 use App\Model\productModel;
 use App\Model\usersModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class orderController extends Controller
 {
@@ -21,6 +22,7 @@ class orderController extends Controller
     public function listAll()
     {
         $data['items']=$this->order->listOrder();
+        $data['items2']=$this->order->listOrderGuest();
         return view('admin.order',$data);
     }
     public function deleteItem($id)
@@ -31,10 +33,16 @@ class orderController extends Controller
     public function detailItem($id)
     {
         $data['productexItem']=$this->order->productEx($id);
-        //return $data['productexItem'];
         $data['productreItem']=$this->order->productRe($id);
-        $data['guestItem']=$this->order->orderUser($id);
         $data['order']=$this->order->showItem($id);
+        if($data['order']->idguest==Auth::user()->id)
+        {
+            $data['guestItem']=$this->order->orderUser2($id);
+        }
+        else
+        {
+            $data['guestItem']=$this->order->orderUser($id);
+        }
        return view('admin.orderDetail',$data);
     }
     public function updateStatus($id,$status)

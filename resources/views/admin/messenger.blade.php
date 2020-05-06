@@ -29,6 +29,23 @@
                             </div>
                         </div>
                     @endforeach
+                    {{--@if(isset($items2))--}}
+                        {{--@foreach($items2 as $item)--}}
+                            {{--<div class="chat_list active_chat">--}}
+                                {{--<div class="chat_people">--}}
+                                    {{--<a href="{{asset('admin/messenger/chat/'.$item->iduser)}}">--}}
+                                        {{--<div class="chat_img"><img--}}
+                                                    {{--src="{{isset($item->img)?(asset('public/media/'.$item->img)):'img/user-profile.png'}}"--}}
+                                                    {{--alt="sunil"></div>--}}
+                                        {{--<div class="chat_ib">--}}
+                                            {{--<h5>{{$item->username}}</h5>--}}
+                                            {{--<p>Nội dung tin nhắn...</p>--}}
+                                        {{--</div>--}}
+                                    {{--</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--@endforeach--}}
+                    {{--@endif--}}
                 </div>
             </div>
             @if(isset($itemDetail))

@@ -36,6 +36,16 @@ class messengerModel extends Model
             ->get();
         return $items;
     }
+//    public function listAll2()
+//    {
+//        $items = DB::table('messenger')
+//            ->join('users', 'users.id', '=', 'messenger.idguest')
+//            ->where('messenger.idguest',Auth::user()->id)
+//            ->groupBy('messenger.iduser','username','img')
+//            ->select('messenger.idguest','username','img')
+//            ->get();
+//        return $items;
+//    }
     public function chatItem($id)
     {
         $items = DB::table('messenger')

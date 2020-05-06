@@ -43,7 +43,9 @@
                             <tr class="onRow">
                                 <td scope="row">{{$item->idOrder}}</td>
                                 <td>{{$item->title}}</td>
-                                <td><img class="thumbnail" width="100px" src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}" ></td>
+                                <td><img class="thumbnail" width="100px"
+                                         src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}">
+                                </td>
                                 <td>{{$item->orderType}}</td>
                                 <td>{{$item->status==0?'Cũ':'Mới'}}</td>
                                 <td>{{$item->username}}</td>
@@ -55,6 +57,26 @@
                                 </td>
                             </tr>
                         @endforeach
+                        @if($items2!=null)
+                            @foreach($items2 as $item)
+                                <tr class="onRow">
+                                    <td scope="row">{{$item->idOrder}}</td>
+                                    <td>{{$item->title}}</td>
+                                    <td><img class="thumbnail" width="100px"
+                                             src="{{isset($item->coverimg)?asset('public/media/'.$item->coverimg):asset('public/images/shirt-render.jpg')}}">
+                                    </td>
+                                    <td>{{$item->orderType}}</td>
+                                    <td>{{$item->status==0?'Cũ':'Mới'}}</td>
+                                    <td>{{$item->username}}</td>
+                                    <td>{{$item->idproductre}}</td>
+                                    <td>{{$item->orderStatus==1?'Đã đổi':'Chưa đổi'}}</td>
+                                    <td>
+                                        <a href="{{asset('admin/ordermanger/detail/'.$item->idOrder)}}">Chi tiết</a>
+                                        <a href="{{asset('admin/ordermanger/delete/'.$item->idOrder)}}">Xóa</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            @endif
                         </tbody>
                     </table>
                 </div>

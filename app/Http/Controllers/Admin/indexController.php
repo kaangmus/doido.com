@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Model\categoryModel;
 use App\Model\commentModle;
 use App\Model\orderModel;
 use App\Model\productModel;
@@ -13,39 +14,47 @@ use Auth; //use thư viện auth
 class indexController extends Controller
 {
     //
-    private $user, $product,$comment,$order;
+    private $user, $product, $comment, $order, $category;
+
     public function __construct()
     {
-        $this->user=new usersModel();
-        $this->product=new productModel();
-        $this->comment=new commentModle();
-        $this->order=new orderModel();
+        $this->user = new usersModel();
+        $this->product = new productModel();
+        $this->comment = new commentModle();
+        $this->order = new orderModel();
+        $this->category = new categoryModel();
     }
+
     public function indexShow()
     {
-        //return count($this->user->countMonth());
-        if(count($this->comment->countMonth())<2&&count($this->order->countMonth())<2&count($this->product->countMonth())<2&&count($this->user->countMonth())<2)
-        {
-            $data['checkcount']=false;
+        if (Auth::user()->lever != 0) {
+            return redirect()->intended('admin/profile');
+        } else {
+
+            if (count($this->comment->countMonth()) < 2 && count($this->order->countMonth()) < 2 & count($this->product->countMonth()) < 2 && count($this->user->countMonth()) < 2) {
+                $data['checkcount'] = false;
+            } else {
+                $data['checkcount'] = true;
+                $data['countcomment'] = $this->comment->countMonth();
+                $data['countorder'] = $this->order->countMonth();
+                $data['countproduct'] = $this->product->countMonth();
+                $data['countuser'] = $this->user->countMonth();
+            }
+            //  return $data['countcomment'];
+            $data['users'] = $this->user->listAll();
+            $data['product'] = $this->product->listAll();
+            $data['comment'] = $this->comment->listAll();
+            $data['order'] = $this->order->listAll();
+            $data['itemsCategory'] = $this->category->listAll();
+            return view('admin.index', $data);
         }
-        else{
-            $data['checkcount']=true;
-            $data['countcomment']=$this->comment->countMonth();
-            $data['countorder']=$this->order->countMonth();
-            $data['countproduct']=$this->product->countMonth();
-            $data['countuser']=$this->user->countMonth();
-        }
-      //  return $data['countcomment'];
-        $data['users']=$this->user->listAll();
-        $data['product']=$this->product->listAll();
-        $data['comment']=$this->comment->listAll();
-        $data['order']=$this->order->listAll();
-        return view('admin.index',$data);
     }
+
     public function showLogin()
     {
         return view('front.login');
     }
+
     public function checkLogin(Request $request)
     {
         $arr = [
@@ -66,15 +75,18 @@ class indexController extends Controller
             return redirect()->intended('login');
         }
     }
+
     public function logout()
     {
         Auth::logout();
         Return redirect()->intended('login');
     }
+
     public function showRegister()
     {
         return view('front.register');
     }
+
     public function register(Request $request)
     {
         $this->user->addItem($request);
@@ -83,19 +95,19 @@ class indexController extends Controller
             'password' => $request->password,
         ];
         Auth::attempt($arr);
-        if(Auth::user()->lever==1)
-        {
+        if (Auth::user()->lever == 1) {
             return redirect()->intended('/');
-        }
-        else{
+        } else {
             return redirect()->intended('admin');
         }
 
     }
+
     public function forgetPassword()
     {
         return view('front.forgetpassword');
     }
+
     public function getPassword(Request $request)
     {
         return $request->email;
