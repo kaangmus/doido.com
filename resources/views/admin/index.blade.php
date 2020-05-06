@@ -59,7 +59,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body easypiechart-panel">
 						<h4>Sản phẩm mới</h4>
-						<div class="easypiechart" id="easypiechart-blue" data-percent="{{(($countproduct[0]->so-$countproduct[1]->so)/$countproduct[1]->so)*100}}" ><span class="percent">{{(($countproduct[0]->so-$countproduct[1]->so)/$countproduct[1]->so)*100}}%</span></div>
+						<div class="easypiechart" id="easypiechart-blue" data-percent="{{isset($countproduct[0]->so)?(($countproduct[0]->so-$countproduct[1]->so)/$countproduct[1]->so)*100:''}}" ><span class="percent">{{isset($countproduct[0]->so)?(($countproduct[0]->so-$countproduct[1]->so)/$countproduct[1]->so)*100:''}}%</span></div>
 					</div>
 				</div>
 			</div>
@@ -67,7 +67,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body easypiechart-panel">
 						<h4>Bình luận</h4>
-						<div class="easypiechart" id="easypiechart-orange" data-percent="{{(($countcomment[0]->so-$countcomment[1]->so)/$countcomment[1]->so)*100}}" ><span class="percent">{{(($countcomment[0]->so-$countcomment[1]->so)/$countcomment[1]->so)*100}}%</span></div>
+						<div class="easypiechart" id="easypiechart-orange" data-percent="{{isset($countcomment[0]->so)?(($countcomment[0]->so-$countcomment[1]->so)/$countcomment[1]->so)*100:''}}" ><span class="percent">{{isset($countcomment[0]->so)?(($countcomment[0]->so-$countcomment[1]->so)/$countcomment[1]->so)*100:''}}%</span></div>
 					</div>
 				</div>
 			</div>
@@ -75,7 +75,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body easypiechart-panel">
 						<h4>Tài khoản mới</h4>
-						<div class="easypiechart" id="easypiechart-teal" data-percent="{{(($countuser[0]->so-$countuser[1]->so)/$countuser[1]->so)*100}}" ><span class="percent">{{(($countuser[0]->so-$countuser[1]->so)/$countuser[1]->so)*100}}%</span></div>
+						<div class="easypiechart" id="easypiechart-teal" data-percent="{{isset($countuser[0]->so)?(($countuser[0]->so-$countuser[1]->so)/$countuser[1]->so)*100:''}}" ><span class="percent">{{isset($countuser[0]->so)?(($countuser[0]->so-$countuser[1]->so)/$countuser[1]->so)*100:''}}%</span></div>
 					</div>
 				</div>
 			</div>
@@ -83,7 +83,7 @@
 				<div class="panel panel-default">
 					<div class="panel-body easypiechart-panel">
 						<h4>Giao dịch</h4>
-						<div class="easypiechart" id="easypiechart-red" data-percent="{{(($countorder[0]->so-$countorder[1]->so)/$countorder[1]->so)*100}}" ><span class="percent">{{(($countorder[0]->so-$countorder[1]->so)/$countorder[1]->so)*100}}%</span></div>
+						<div class="easypiechart" id="easypiechart-red" data-percent="{{isset($countorder[0]->so)?(($countorder[0]->so-$countorder[1]->so)/$countorder[1]->so)*100:''}}" ><span class="percent">{{isset($countorder[0]->so)?(($countorder[0]->so-$countorder[1]->so)/$countorder[1]->so)*100:''}}%</span></div>
 					</div>
 				</div>
 			</div>
