@@ -23,10 +23,18 @@ class indexController extends Controller
     }
     public function indexShow()
     {
-        $data['countcomment']=$this->comment->countMonth();
-        $data['countorder']=$this->order->countMonth();
-        $data['countproduct']=$this->product->countMonth();
-        $data['countuser']=$this->user->countMonth();
+        //return count($this->user->countMonth());
+        if(count($this->comment->countMonth())<2&&count($this->order->countMonth())<2&count($this->product->countMonth())<2&&count($this->user->countMonth())<2)
+        {
+            $data['checkcount']=false;
+        }
+        else{
+            $data['checkcount']=true;
+            $data['countcomment']=$this->comment->countMonth();
+            $data['countorder']=$this->order->countMonth();
+            $data['countproduct']=$this->product->countMonth();
+            $data['countuser']=$this->user->countMonth();
+        }
       //  return $data['countcomment'];
         $data['users']=$this->user->listAll();
         $data['product']=$this->product->listAll();

@@ -52,133 +52,55 @@
 			</div><!--/.row-->
 		</div>
 		<div class="row">
-			<div class="col-md-12">
-				<p><b>Thống kê so sánh từ tháng {{isset($countproduct[1]->month)?$countproduct[1]->month:''}} đến tháng {{isset($countproduct[0]->month)?$countproduct[0]->month:''}}</b></p>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Sản phẩm mới</h4>
-						<div class="easypiechart" id="easypiechart-blue" data-percent="{{isset($countproduct[0]->so)?(($countproduct[0]->so-$countproduct[1]->so)/$countproduct[1]->so)*100:''}}" ><span class="percent">{{isset($countproduct[0]->so)?(($countproduct[0]->so-$countproduct[1]->so)/$countproduct[1]->so)*100:''}}%</span></div>
+			@if($checkcount==false)
+				<div class="col-md-12">
+					<p><b>Không đủ dữ liệu so sánh</b></p>
+				</div>
+				@else
+				<div class="col-md-12">
+					<p><b>Thống kê so sánh từ tháng {{$countproduct[1]->month}} đến tháng {{$countproduct[0]->month}}</b></p>
+				</div>
+				<div class="col-xs-6 col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-body easypiechart-panel">
+							<h4>Sản phẩm mới</h4>
+							<div class="easypiechart" id="easypiechart-blue" data-percent="{{(($countproduct[0]->so-$countproduct[1]->so)/$countproduct[1]->so)*100}}" ><span class="percent">{{(($countproduct[0]->so-$countproduct[1]->so)/$countproduct[1]->so)*100}}%</span></div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Bình luận</h4>
-						<div class="easypiechart" id="easypiechart-orange" data-percent="{{isset($countcomment[0]->so)?(($countcomment[0]->so-$countcomment[1]->so)/$countcomment[1]->so)*100:''}}" ><span class="percent">{{isset($countcomment[0]->so)?(($countcomment[0]->so-$countcomment[1]->so)/$countcomment[1]->so)*100:''}}%</span></div>
+				<div class="col-xs-6 col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-body easypiechart-panel">
+							<h4>Bình luận</h4>
+							<div class="easypiechart" id="easypiechart-orange" data-percent="{{(($countcomment[0]->so-$countcomment[1]->so)/$countcomment[1]->so)*100}}" ><span class="percent">{{(($countcomment[0]->so-$countcomment[1]->so)/$countcomment[1]->so)*100}}%</span></div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Tài khoản mới</h4>
-						<div class="easypiechart" id="easypiechart-teal" data-percent="{{isset($countuser[0]->so)?(($countuser[0]->so-$countuser[1]->so)/$countuser[1]->so)*100:''}}" ><span class="percent">{{isset($countuser[0]->so)?(($countuser[0]->so-$countuser[1]->so)/$countuser[1]->so)*100:''}}%</span></div>
+				<div class="col-xs-6 col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-body easypiechart-panel">
+							<h4>Tài khoản mới</h4>
+							<div class="easypiechart" id="easypiechart-teal" data-percent="{{(($countuser[0]->so-$countuser[1]->so)/$countuser[1]->so)*100}}" ><span class="percent">{{(($countuser[0]->so-$countuser[1]->so)/$countuser[1]->so)*100}}%</span></div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-xs-6 col-md-3">
-				<div class="panel panel-default">
-					<div class="panel-body easypiechart-panel">
-						<h4>Giao dịch</h4>
-						<div class="easypiechart" id="easypiechart-red" data-percent="{{isset($countorder[0]->so)?(($countorder[0]->so-$countorder[1]->so)/$countorder[1]->so)*100:''}}" ><span class="percent">{{isset($countorder[0]->so)?(($countorder[0]->so-$countorder[1]->so)/$countorder[1]->so)*100:''}}%</span></div>
+				<div class="col-xs-6 col-md-3">
+					<div class="panel panel-default">
+						<div class="panel-body easypiechart-panel">
+							<h4>Giao dịch</h4>
+							<div class="easypiechart" id="easypiechart-red" data-percent="{{(($countorder[0]->so-$countorder[1]->so)/$countorder[1]->so)*100}}" ><span class="percent">{{(($countorder[0]->so-$countorder[1]->so)/$countorder[1]->so)*100}}%</span></div>
+						</div>
 					</div>
 				</div>
-			</div>
+				@endif
+
 		</div><!--/.row-->
 
 		<div class="row">
 			<div class="col-md-6">
-				<div class="panel panel-default chat">
-					<div class="panel-heading">
-						Chat
-						<ul class="pull-right panel-settings panel-button-tab-right">
-							<li class="dropdown"><a class="pull-right dropdown-toggle" data-toggle="dropdown" href="#">
-								<em class="fa fa-cogs"></em>
-							</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li>
-										<ul class="dropdown-settings">
-											<li><a href="#">
-												<em class="fa fa-cog"></em> Settings 1
-											</a></li>
-											<li class="divider"></li>
-											<li><a href="#">
-												<em class="fa fa-cog"></em> Settings 2
-											</a></li>
-											<li class="divider"></li>
-											<li><a href="#">
-												<em class="fa fa-cog"></em> Settings 3
-											</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
-					<div class="panel-body">
-						<ul>
-							<li class="left clearfix"><span class="chat-img pull-left">
-								<img src="http://placehold.it/60/30a5ff/fff" alt="User Avatar" class="img-circle" />
-								</span>
-								<div class="chat-body clearfix">
-									<div class="header"><strong class="primary-font">John Doe</strong> <small class="text-muted">32 mins ago</small></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ante turpis, rutrum ut ullamcorper sed, dapibus ac nunc.</p>
-								</div>
-							</li>
-							<li class="right clearfix"><span class="chat-img pull-right">
-								<img src="http://placehold.it/60/dde0e6/5f6468" alt="User Avatar" class="img-circle" />
-								</span>
-								<div class="chat-body clearfix">
-									<div class="header"><strong class="pull-left primary-font">Jane Doe</strong> <small class="text-muted">6 mins ago</small></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ante turpis, rutrum ut ullamcorper sed, dapibus ac nunc.</p>
-								</div>
-							</li>
-							<li class="left clearfix"><span class="chat-img pull-left">
-								<img src="http://placehold.it/60/30a5ff/fff" alt="User Avatar" class="img-circle" />
-								</span>
-								<div class="chat-body clearfix">
-									<div class="header"><strong class="primary-font">John Doe</strong> <small class="text-muted">32 mins ago</small></div>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ante turpis, rutrum ut ullamcorper sed, dapibus ac nunc.</p>
-								</div>
-							</li>
-						</ul>
-					</div>
-					<div class="panel-footer">
-						<div class="input-group">
-							<input id="btn-input" type="text" class="form-control input-md" placeholder="Type your message here..." /><span class="input-group-btn">
-								<button class="btn btn-primary btn-md" id="btn-chat">Send</button>
-						</span></div>
-					</div>
-				</div>
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						To-do List
-						<ul class="pull-right panel-settings panel-button-tab-right">
-							<li class="dropdown"><a class="pull-right dropdown-toggle" data-toggle="dropdown" href="#">
-								<em class="fa fa-cogs"></em>
-							</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									<li>
-										<ul class="dropdown-settings">
-											<li><a href="#">
-												<em class="fa fa-cog"></em> Settings 1
-											</a></li>
-											<li class="divider"></li>
-											<li><a href="#">
-												<em class="fa fa-cog"></em> Settings 2
-											</a></li>
-											<li class="divider"></li>
-											<li><a href="#">
-												<em class="fa fa-cog"></em> Settings 3
-											</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
+						Danh mục sản phẩm
 						<span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
 					<div class="panel-body">
 						<ul class="todo-list">
