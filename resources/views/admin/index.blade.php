@@ -52,7 +52,7 @@
 			</div><!--/.row-->
 		</div>
 		<div class="row">
-			<div class=" col-md-12">
+			<div class="col-md-12">
 				<p><b>Thống kê so sánh từ tháng {{$countproduct[1]->month}} đến tháng {{$countproduct[0]->month}}</b></p>
 			</div>
 			<div class="col-xs-6 col-md-3">
