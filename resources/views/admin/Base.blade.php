@@ -84,7 +84,7 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <div class="profile-sidebar">
         <div class="profile-userpic">
-            <img src="{{asset('public/media/'.Auth::user()->img)}}" class="img-responsive" alt="">
+            <img src="{{isset(Auth::user()->img)?asset('public/media/'.Auth::user()->img):'img/user-profile.png'}}" class="img-responsive" alt="">
         </div>
         <div class="profile-usertitle">
             <div class="profile-usertitle-name">{{Auth::user()->username}}</div>

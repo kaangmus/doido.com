@@ -36,10 +36,22 @@ class commentModle extends Model
     {
         $items = DB::table('comment')
             ->join('users', 'users.id', '=', 'comment.iduser')
-            ->where('idproduct', $id)->get();
+            ->where('idproduct', $id)
+            ->select('*','comment.id as idcomment')
+        ->get();
         return $items;
     }
-
+    public function deleteItem($id)
+    {
+        try{
+            commentModle::destroy($id);
+            return true;
+        }catch (Exception $ex)
+        {
+            report ($ex);
+            return false;
+        }
+    }
     public function countMonth()
     {
         $item = DB::select('SELECT 

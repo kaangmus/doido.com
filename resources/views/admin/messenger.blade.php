@@ -29,23 +29,6 @@
                             </div>
                         </div>
                     @endforeach
-                    {{--@if(isset($items2))--}}
-                        {{--@foreach($items2 as $item)--}}
-                            {{--<div class="chat_list active_chat">--}}
-                                {{--<div class="chat_people">--}}
-                                    {{--<a href="{{asset('admin/messenger/chat/'.$item->iduser)}}">--}}
-                                        {{--<div class="chat_img"><img--}}
-                                                    {{--src="{{isset($item->img)?(asset('public/media/'.$item->img)):'img/user-profile.png'}}"--}}
-                                                    {{--alt="sunil"></div>--}}
-                                        {{--<div class="chat_ib">--}}
-                                            {{--<h5>{{$item->username}}</h5>--}}
-                                            {{--<p>Nội dung tin nhắn...</p>--}}
-                                        {{--</div>--}}
-                                    {{--</a>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--@endforeach--}}
-                    {{--@endif--}}
                 </div>
             </div>
             @if(isset($itemDetail))
@@ -53,22 +36,26 @@
                     <div class="msg_history">
                         @foreach($itemDetail as $chat)
                             @if($chat->iduser==Auth::user()->id)
-                                <div class="outgoing_msg">
-                                    <div class="sent_msg">
-                                        <p>{{$chat->contents}}</p>
-                                        <span class="time_date"> {{$chat->created_at}}</span></div>
-                                </div>
-                            @else
-                                <div class="incoming_msg">
-                                    <div class="incoming_msg_img"><img
-                                                src="{{isset($infoguest->img)?asset('public/media/'.$infoguest->img):'img/user-profile.png'}}"
-                                                alt="sunil"></div>
-                                    <div class="received_msg">
-                                        <div class="received_withd_msg">
+                                @if(isset($chat->contents))
+                                    <div class="outgoing_msg">
+                                        <div class="sent_msg">
                                             <p>{{$chat->contents}}</p>
                                             <span class="time_date"> {{$chat->created_at}}</span></div>
                                     </div>
-                                </div>
+                                @endif
+                            @else
+                                @if(isset($chat->contents))
+                                    <div class="incoming_msg">
+                                        <div class="incoming_msg_img"><img
+                                                    src="{{isset($infoguest->img)?asset('public/media/'.$infoguest->img):'img/user-profile.png'}}"
+                                                    alt="sunil"></div>
+                                        <div class="received_msg">
+                                            <div class="received_withd_msg">
+                                                <p>{{$chat->contents}}</p>
+                                                <span class="time_date"> {{$chat->created_at}}</span></div>
+                                        </div>
+                                    </div>
+                                @endif
                             @endif
                         @endforeach
                     </div>

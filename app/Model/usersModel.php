@@ -84,6 +84,11 @@ class usersModel extends Model
         }
 
     }
+    public function checkEmail($email)
+    {
+        $item=usersModel::where('email',$email)->get();
+        return $item;
+    }
     public function deleteItem($id)
     {
         try{

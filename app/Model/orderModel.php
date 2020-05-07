@@ -10,13 +10,16 @@ class orderModel extends Model
 {
     //
     protected $table = 'orderproduct';
-
+    public $product;
+    public function __construct()
+    {
+        $this->product=new productModel();
+    }
     public function listAll()
     {
         $item = orderModel::orderBy('created_at', 'DESC')->get();
         return $item;
     }
-
     public function addItem($request)
     {
         try {
@@ -32,10 +35,7 @@ class orderModel extends Model
             report($ex);
             return false;
         }
-
-
     }
-
     public function listOrder()
     {
         $items = DB::table('orderproduct')
@@ -66,6 +66,16 @@ class orderModel extends Model
 
     public function updateStatus($id, $status)
     {
+        $idproduct=orderModel::find($id);
+        if($status==0)
+        {
+            $this->product->updateStatus($idproduct['idproductex'],1);
+            $this->product->updateStatus($idproduct['idproductre'],1);
+        }
+        else{
+            $this->product->updateStatus($idproduct['idproductex'],0);
+            $this->product->updateStatus($idproduct['idproductre'],0);
+        }
         $item = orderModel::find($id);
         $item->status = $status;
         $item->save();

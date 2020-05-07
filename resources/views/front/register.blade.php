@@ -1,18 +1,18 @@
 @extends('front.Base')
-@section('title','Đăng ký | Thời trang cao cấp Render')
+@section('title','Đăng ký | Thời trang cao cấp DoiDo.com')
 @section('main')
     <div class="content-area home-content-area top-area">
         <div class="container">
             <div class="navigation margin-top20">
-                <a href="#">Trang chủ</a> &gt; <a href="">Đăng ký</a>
+                <a href="{{asset('/')}}">Trang chủ</a> &gt; <a href="{{asset('register')}}">Đăng ký</a>
             </div>
             <div>
                 <p class="text-center upcase size-20 times-new-roman">ĐĂNG KÝ</p>
                 <div class="row box-gray">
                     <div class="col-xs-12">
-                        <p class="title">MỞ TÀI KHOẢN VỚI RENDER</p>
-                        <p>Trở thành thành viên của RENDER nhận các tin tức thời trang trong nước và quốc tế, các chương
-                            trình khuyến mại duy nhất chỉ dành cho các thành viên của RENDER hay là những người đầu tiên
+                        <p class="title">MỞ TÀI KHOẢN VỚI DoiDo.com</p>
+                        <p>Trở thành thành viên của DoiDo.com nhận các tin tức thời trang trong nước và quốc tế, các chương
+                            trình khuyến mại duy nhất chỉ dành cho các thành viên của DoiDo.com hay là những người đầu tiên
                             được thông báo khi có sản phẩm thiết kế mới. Bạn còn chờ gì nữa?</p>
                         <p>*Thông tin bắt buộc</p>
                     </div>
@@ -23,6 +23,10 @@
                                 <div class="relative row-control form-group">
                                     <label>Email *</label><input class="form-control" name="email" type="text" value=""
                                                                  id="txtEmail" data-bv-field="email">
+                                    @if ( Session::has('error') )
+                                        <small data-bv-validator="notEmpty" data-bv-validator-for="email" class="help-block" style="color: red;">Email đã đăng ký
+                                        </small>
+                                        @endif
                                     <small data-bv-validator="notEmpty" data-bv-validator-for="email" class="help-block"
                                            style="display: none;">Hòm thư bắt buộc phải nhập
                                     </small>

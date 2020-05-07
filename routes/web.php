@@ -24,8 +24,6 @@ Route::group(['namespace'=>'Front'],function (){
     Route::get('product','indexController@product');
     Route::get('product-{id}','indexController@productDetail');
     Route::post('product-{id}','indexController@addComment');
-    //Route::get('list-product-render-{id}','indexController@listProduct');
-    //Route::get('blog-{id}','indexController@blog');
     Route::group(['prefix'=>'cart'],function (){
         Route::get('/','cartController@cartShow');
         Route::post('/','cartController@addItem');
@@ -37,7 +35,7 @@ Route::group(['namespace'=>'Front'],function (){
         Route::post('/{id}','orderController@addOrder');
     });
     Route::group(['prefix'=>'comment'],function(){
-        Route::post('/','commentController@addItem');
+        Route::get('delete/{id}','commentController@deleteItem');
     });
 });
 Route::group(['namespace'=>'Admin'],function(){

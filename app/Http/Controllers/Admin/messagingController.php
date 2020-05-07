@@ -19,7 +19,6 @@ class messagingController extends Controller
     public function listAll()
     {
         $data['items']=$this->mess->listAll();
-        //$data['items2']=$this->mess->listAll2();
         return view('admin.messenger',$data);
     }
     public function addItem(Request $request)
@@ -32,7 +31,7 @@ class messagingController extends Controller
             return back();
         }
         else{
-
+            return back();
         }
     }
     public function chatItem($id)

@@ -15,15 +15,22 @@ class messengerModel extends Model
     public function __construct()
     {
     }
-
     public function addItem(Request $request,$iduser)
     {
+        if(count(messengerModel::where('idguest',$iduser)->where('iduser',Auth::user()->id)->get())==0)
+        {
+            $item = new messengerModel();
+            $item->idguest = Auth::user()->id ;
+            $item->iduser =$iduser;
+            $item->save();
+        }
         $item = new messengerModel();
         $item->idguest = $iduser;
         $item->iduser = Auth::user()->id;
         $item->title = $request->title;
         $item->contents = $request->contents;
         $item->save();
+
     }
 
     public function listAll()

@@ -41,15 +41,15 @@
                         </div>
                     </form>
                 </div>
-                <div class="row box-gray relative">
-                    <div class="col-md-9">
-                        <p class="title">QUÊN MẬT KHẨU?</p>
-                        <p>Nếu bạn quên mật khẩu, vui lòng chọn “ĐỐI MẬT KHẨU” và làm theo hướng dẫn.</p>
-                    </div>
-                    <a class="btn btn-black" id="btnChangePass" style="min-width: 184px;"
-                       href="{{asset('forget')}}">ĐỔI MẬT
-                        KHẨU</a>
-                </div>
+                {{--<div class="row box-gray relative">--}}
+                    {{--<div class="col-md-9">--}}
+                        {{--<p class="title">QUÊN MẬT KHẨU?</p>--}}
+                        {{--<p>Nếu bạn quên mật khẩu, vui lòng chọn “ĐỐI MẬT KHẨU” và làm theo hướng dẫn.</p>--}}
+                    {{--</div>--}}
+                    {{--<a class="btn btn-black" id="btnChangePass" style="min-width: 184px;"--}}
+                       {{--href="{{asset('forget')}}">ĐỔI MẬT--}}
+                        {{--KHẨU</a>--}}
+                {{--</div>--}}
                 <div class="row box-gray relative">
                     <div class="col-md-9">
                         <p class="title">BẠN CHƯA ĐĂNG KÝ TÀI KHOẢN?</p>

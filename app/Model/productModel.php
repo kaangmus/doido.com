@@ -80,6 +80,12 @@ class productModel extends Model
         $item = productModel::find($id);
         return $item;
     }
+    public function updateStatus($id,$statustype)
+    {
+        $item = productModel::find($id);
+        $item->statustype = $statustype;
+        $item->save();
+    }
 
     public function updateItem(Request $request, $id)
     {

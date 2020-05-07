@@ -10,6 +10,7 @@ use App\Model\productModel;
 use App\Model\usersModel;
 use Illuminate\Http\Request;
 use Auth; //use thư viện auth
+use Session;
 
 class indexController extends Controller
 {
@@ -89,18 +90,23 @@ class indexController extends Controller
 
     public function register(Request $request)
     {
-        $this->user->addItem($request);
-        $arr = [
-            'email' => $request->email,
-            'password' => $request->password,
-        ];
-        Auth::attempt($arr);
-        if (Auth::user()->lever == 1) {
-            return redirect()->intended('/');
+        $checkEmail = $this->user->checkEmail($request->email);
+        if (count($checkEmail) == 0) {
+            $this->user->addItem($request);
+            $arr = [
+                'email' => $request->email,
+                'password' => $request->password,
+            ];
+            Auth::attempt($arr);
+            if (Auth::user()->lever == 0) {
+                return redirect()->intended('admin');
+            } else {
+                return redirect()->intended('/');
+            }
         } else {
-            return redirect()->intended('admin');
+            Session::flash('error', 'Email đã tồn tại!');
+            return redirect()->intended('register');
         }
-
     }
 
     public function forgetPassword()

@@ -64,6 +64,7 @@
                                                                     {{isset($item1->price)?number_format($item1->price,0,',','.'):0 }} VND</span>
                                                         </span>
                                                     </div>
+                                                    <span class="product-new">{{$item1->statustype==0?'Hàng đã đổi':'Hàng chưa đổi'}}</span>
                                                 </a>
                                             </div>
                                         </div>

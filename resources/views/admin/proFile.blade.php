@@ -75,7 +75,7 @@
                                 <input id="img" type="file" name="img" value="" class="form-control"
                                        onchange="changeImg(this)">
                                 <img id="avatar" class="thumbnail" width="300px"
-                                     src="{{isset($item->img)?asset('public/media/'.$item->img):asset('public/img/default.PNG')}}">
+                                     src="{{isset($item->img)?asset('public/media/'.$item->img):'img/user-profile.png'}}">
                                 <p class="help-block">Ảnh đại diện.</p>
                             </div>
                         </div>
