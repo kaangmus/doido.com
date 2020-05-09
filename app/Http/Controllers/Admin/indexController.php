@@ -32,10 +32,10 @@ class indexController extends Controller
             return redirect()->intended('admin/profile');
         } else {
 
-            if (count($this->comment->countMonth()) < 2 && count($this->order->countMonth()) < 2 & count($this->product->countMonth()) < 2 && count($this->user->countMonth()) < 2) {
+            if (count($this->comment->countMonth()) < 2 && count($this->order->countMonth()) < 2 && count($this->product->countMonth()) < 2 && count($this->user->countMonth()) < 2) {
                 $data['checkcount'] = false;
             } else {
-                $data['checkcount'] = false;
+                $data['checkcount'] = true;
                 $data['countcomment'] = $this->comment->countMonth();
                 $data['countorder'] = $this->order->countMonth();
                 $data['countproduct'] = $this->product->countMonth();
