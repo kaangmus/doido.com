@@ -17,8 +17,12 @@ class orderModel extends Model
     }
     public function listAll()
     {
-        $item = orderModel::orderBy('created_at', 'DESC')->get();
-        return $item;
+       // $item = orderModel::orderBy('created_at', 'DESC')->get();
+        $items=DB::select('SELECT t.id, t.status, t.idproductex,t.idproductre,ls.id userid1,le.id userid2, ls.username username1, le.username username2 FROM orderproduct t JOIN users ls
+ON      ls.id = t.iduser
+JOIN    users le
+ON      le.id = t.idguest');
+        return $items;
     }
     public function addItem($request)
     {

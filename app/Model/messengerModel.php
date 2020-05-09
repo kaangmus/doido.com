@@ -22,6 +22,7 @@ class messengerModel extends Model
             $item = new messengerModel();
             $item->idguest = Auth::user()->id ;
             $item->iduser =$iduser;
+            $item->status =1;
             $item->save();
         }
         $item = new messengerModel();
@@ -29,10 +30,9 @@ class messengerModel extends Model
         $item->iduser = Auth::user()->id;
         $item->title = $request->title;
         $item->contents = $request->contents;
+        $item->status =1;
         $item->save();
-
     }
-
     public function listAll()
     {
         $items = DB::table('messenger')
@@ -41,6 +41,22 @@ class messengerModel extends Model
             ->groupBy('messenger.idguest','username','img')
             ->select('messenger.idguest','username','img')
             ->get();
+        return $items;
+    }
+    public function checkStatus()
+    {
+        $items = DB::table('messenger')
+            ->join('users', 'users.id', '=', 'messenger.idguest')
+            ->where('messenger.iduser',Auth::user()->id)
+            ->orwhere('messenger.idguest',Auth::user()->id)
+            ->groupBy('messenger.idguest','username','img','messenger.status','messenger.iduser')
+            ->select('messenger.idguest','username','img','messenger.status','messenger.iduser')
+            ->get();
+        return $items;
+    }
+    public function updateStatus($id)
+    {
+        $items=DB::update('UPDATE messenger SET status = 0 WHERE (iduser='.$id.' and idguest='.Auth::user()->id.') or ('.'iduser='.Auth::user()->id.' and idguest='.$id.')');
         return $items;
     }
 //    public function listAll2()

@@ -19,6 +19,7 @@ class CreateTableMessenger extends Migration
             $table->integer('iduser')->nullable();
             $table->text('title')->nullable();
             $table->text('contents')->nullable();
+            $table->integer('status')->nullable();
             $table->timestamps();
         });
     }

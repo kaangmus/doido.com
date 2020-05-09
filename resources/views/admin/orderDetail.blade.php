@@ -67,7 +67,7 @@
                             </div>
                         @else
                             <div class="col-sm-6">
-                                <h4>Thông tin người đổi</h4>
+                                <h4>Thông tin {{Auth::user()->lever==0?'người đổi 1':'người đổi'}}</h4>
                                 <hr>
                                 <div class="row">
                                     <div class="col-sm-8">
@@ -95,7 +95,23 @@
                                 <span>Tình trạng sản phẩm: {{$productexItem[0]->status==0?'Cũ':'Mới'}}</span><br/>
                             </div>
                             <div class="col-sm-6">
-                                <h4>Thông tin sản phẩm của tôi</h4>
+                                <h4>Thông tin sản phẩm {{Auth::user()->lever==0?'người đổi 2':'của tôi'}}</h4>
+                                @if(Auth::user()->lever==0)
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <span>Họ tên: {{$guestItem2[0]->username}}</span><br/>
+                                            <span>Địa chỉ: {{$guestItem2[0]->address}}</span><br/>
+                                            <span>Số điện thoại: {{$guestItem2[0]->phone}}</span><br/>
+                                            <span>Email: {{$guestItem2[0]->email}}</span><br/>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <a class="btn btn-info"
+                                               href="{{asset('admin/messenger/chat/'.$guestItem2[0]->id)}}"><i
+                                                        class="fa fa-commenting-o"
+                                                        aria-hidden="true"></i> Nhắn tin</a>
+                                        </div>
+                                    </div>
+                                @endif
                                 <hr>
                                 <span>Mã sản phẩm: {{$productreItem[0]->idproductre}}</span><br/>
                                 <span>Tên sản phẩm: {{$productreItem[0]->title}}</span><br/>

@@ -1,7 +1,9 @@
 @extends('admin.Base')
 @section('title','Tin nhắn')
 @section('main')
+    {{--{{$items2}}--}}
     <h3 class=" text-center">Tin nhắn</h3>
+    {{--{{$items}}--}}
     <div class="messaging">
         <div class="inbox_msg">
             <div class="inbox_people">
@@ -15,8 +17,8 @@
                 </div>
                 <div class="inbox_chat">
                     @foreach($items as $item)
-                        <div class="chat_list active_chat">
-                            <div class="chat_people">
+                        <div class="chat_list active_chat row">
+                            <div class="chat_people col-sm-10">
                                 <a href="{{asset('admin/messenger/chat/'.$item->idguest)}}">
                                     <div class="chat_img"><img
                                                 src="{{isset($item->img)?(asset('public/media/'.$item->img)):'img/user-profile.png'}}"
@@ -27,6 +29,14 @@
                                     </div>
                                 </a>
                             </div>
+                            @if(isset($items2))
+                                @foreach($items2 as $item2)
+                                    @if($item2->status==1&&$item->idguest==$item2->iduser)
+                                        <span class="indicator label-danger col-sm-2">
+                                        </span>
+                                    @endif
+                                @endforeach
+                            @endif
                         </div>
                     @endforeach
                 </div>
@@ -78,6 +88,9 @@
                             <div class="form-group">
                                 <input class="form-control" type="email" name="email"
                                        placeholder="Email người nhận ...">
+                                @if ( Session::has('error') )
+                                    <span style="color: red">{{session('error')}}</span>
+                                @endif
                             </div>
                             <div class="input_msg_write">
                                 <input type="text" class="write_msg" name="contents" placeholder="Viết tin nhắn ..."/>

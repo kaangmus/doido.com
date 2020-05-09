@@ -23,6 +23,7 @@ class orderController extends Controller
     {
         $data['items']=$this->order->listOrder();
         $data['items2']=$this->order->listOrderGuest();
+        $data['itemsManager']=$this->order->listAll();
         return view('admin.order',$data);
     }
     public function deleteItem($id)
@@ -38,10 +39,12 @@ class orderController extends Controller
         if($data['order']->idguest==Auth::user()->id)
         {
             $data['guestItem']=$this->order->orderUser2($id);
+            $data['guestItem2']=$this->order->orderUser($id);
         }
         else
         {
             $data['guestItem']=$this->order->orderUser($id);
+            $data['guestItem2']=$this->order->orderUser2($id);
         }
        return view('admin.orderDetail',$data);
     }
