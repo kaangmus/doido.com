@@ -32,8 +32,9 @@
                             @if(isset($items2))
                                 @foreach($items2 as $item2)
                                     @if($item2->status==1&&$item->idguest==$item2->iduser)
-                                        <span class="indicator label-danger col-sm-2">
-                                        </span>
+                                        <div class="col-sm-2">
+                                            <span class="indicator label-danger"></span>
+                                        </div>
                                     @endif
                                 @endforeach
                             @endif
