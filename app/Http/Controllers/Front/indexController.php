@@ -8,12 +8,13 @@ use App\Model\cate_productModel;
 use App\Model\commentModle;
 use App\Model\mediaModel;
 use App\Model\productModel;
+use App\Model\rateModel;
 use Illuminate\Http\Request;
 
 class indexController extends Controller
 {
     //
-    private $product,$media,$blog,$cate_product,$comment;
+    private $product,$media,$blog,$cate_product,$comment,$rate;
     public function __construct()
     {
         $this->product= new productModel();
@@ -21,6 +22,7 @@ class indexController extends Controller
        // $this->blog= new blogModel();
         $this->cate_product=new cate_productModel();
         $this->comment=new commentModle();
+        $this->rate=new rateModel();
     }
     public function indexShow()
     {
@@ -51,6 +53,7 @@ class indexController extends Controller
     }
     public function productDetail($id)
     {
+        $data['rate']=ceil($this->rate->avgItem($id));
         $data['item']=$this->product->showItem($id);
         $data['itemsCate']=$this->cate_product->listItem($id);
         $data['itemsMedia']=$this->media->listMedia($id);

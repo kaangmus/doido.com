@@ -79,11 +79,12 @@ Route::group(['namespace'=>'Admin'],function(){
           Route::get('chat/{id}','messagingController@chatItem');
           Route::post('chat/{id}','messagingController@addChat');
        });
+       Route::group(['prefix'=>'rate'],function (){
+            Route::get('/','rateController@addItem');
+       });
    });
-
    Route::get('forget','indexController@forgetPassword');
    Route::post('forget','indexController@getPassword');
-
    //-------------------------------------------
    Route::group(['prefix'=>'login','middleware'=>'checklogout'],function(){
        Route::get('/','indexController@showLogin');

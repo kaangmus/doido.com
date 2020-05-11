@@ -40,20 +40,6 @@
     <link rel="stylesheet" type="text/css" href="css/fonts-telo/css/fontello.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
-    <style type="text/css">
-        .buyonegetonefree:before {
-            content: "";
-            width: 80px;
-            height: 80px;
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background-image: url('upload/files/tag-buy1-get1%20(1.html).png');
-            background-repeat: no-repeat;
-            background-size: contain;
-            z-index: 9;
-        }
-    </style>
     <script type='text/javascript' src="js/jquery-2.1.1.mind41d.js?"></script>
     <script type='text/javascript' src="js/bootstrap-3.1.1.min.js"></script>
     <script type='text/javascript' src="js/lazyload.min.js"></script>
@@ -189,9 +175,6 @@
             }
         }
     </style>
-    <script type="text/javascript">
-        var siteUrl = "index.html";
-    </script>
 </head>
 
 <body class="">
