@@ -11,18 +11,28 @@ class productModel extends Model
 {
     //
     protected $table = 'product';
-    protected $cate_product, $media;
+    protected $cate_product, $media,$rate;
 
     public function __construct()
     {
         $this->cate_product = new cate_productModel();
         $this->media = new mediaModel();
+        $this->rate=new rateModel();
     }
 
     public function listAll()
     {
-        $item = productModel::orderBy('created_at', 'DESC')->get();
-        return $item;
+//        $item = productModel::orderBy('created_at', 'DESC')
+//            ->join('contacts', 'users.id', '=', 'contacts.user_id')
+//            ->select('*','AVG(rate.rating)')->get();
+//        $items=DB::table('rate')
+//            ->join('product', 'product.id', '=', 'rate.idproduct')
+//            ->select('product.id')
+//            ->avg('rate.rating')
+//            ->groupBy('product.id')
+//            ->get();
+        $items=DB::select('SELECT product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser,AVG(rate.rating) as diem FROM product,rate WHERE product.id=rate.idproduct GROUP BY product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser');
+        return $items;
     }
 
     public function listProduct()
@@ -38,21 +48,12 @@ class productModel extends Model
     public function addItem(Request $request)
     {
         try {
-            $stringStyle = '';
             $item = new productModel();
             $item->title = $request->title;
             $item->price = $request->price;
             $item->describe = $request->describe;
             $item->tag = $request->tag;
             $item->iduser = Auth::user()->id;
-//            if(isset($request->style))
-//            {
-//                foreach ($request->style as $itemStyle)
-//                {
-//                    $stringStyle=$stringStyle.$itemStyle.",";
-//                }
-//                $item->style=$stringStyle;
-//            }
             $item->statustype = $request->statustype;
             $item->contents = $request->contents;
             $item->status = $request->status;
@@ -61,13 +62,13 @@ class productModel extends Model
                 $filename = $request->coverimg->getClientOriginalName();
                 $item->coverimg = $filename;
                 $request->coverimg->move('public/media', $filename);
-                //$request->coverimg->storeAs('media',$filename);
             }
             $item->save();
             if (isset($request->idcategory)) {
                 $this->cate_product->addItem($item->id, $request->idcategory);
             }
             $this->media->addItem($request, $item->id, null);
+            $this->rate->addItemProduct($item->id);
             return $item->id;
         } catch (Exception $ex) {
             report($ex);

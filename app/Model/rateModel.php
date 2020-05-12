@@ -20,6 +20,15 @@ class rateModel extends Model
         $item->save();
         return true;
     }
+    public function addItemProduct($idproduct)
+    {
+        $item= new rateModel();
+        $item->iduser=Auth::user()->id;
+        $item->idproduct=$idproduct;
+        $item->rating=0;
+        $item->save();
+        return true;
+    }
     public function avgItem($id)
     {
         $item=DB::table('rate')->where('idproduct',$id)->avg('rating');

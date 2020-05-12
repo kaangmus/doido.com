@@ -5,6 +5,11 @@
         img{
             width: 100%;
         }
+
+        .stars .checked
+        {
+            color: orange;
+        }
     </style>
     <div class="box-landing">
         <div class="heading-area top-area banner" style="margin-bottom:0;">
@@ -12,19 +17,19 @@
                 <div class="slider-carousel owl-carousel owl-theme">
                     <a href="bo-suu-tap/thoi-trang-tre.html">
                         <img class="owl-lazy" data-src="images/banner.jpg" data-srcset="images/banner.jpg"
-                             sizes="50vw" alt="RENDER - Thời trang thiết kế cao cấp"/>
+                             sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
                     </a>
                     <a href="bo-suu-tap/dong-gia.html">
                         <img class="owl-lazy" data-src="images/banner2.jpg" data-srcset="images/banner2.jpg"
-                             sizes="50vw" alt="RENDER - Thời trang thiết kế cao cấp"/>
+                             sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
                     </a>
                     <a href="sale.html">
                         <img class="owl-lazy" data-src="images/banner3.jpg" data-srcset="images/banner3.jpg"
-                             sizes="50vw" alt="RENDER - Thời trang thiết kế cao cấp"/>
+                             sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
                     </a>
                     <a href="bo-suu-tap/my-pham-02.html">
                         <img class="owl-lazy" data-src="images/banner2.jpg" data-srcset="images/banner2.jpg"
-                             sizes="50vw" alt="RENDER - Thời trang thiết kế cao cấp"/>
+                             sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
                     </a>
                 </div>
             </div>
@@ -56,9 +61,16 @@
                                             <div class="content productnew">
                                                 <a href="{{asset('product-'.$item1->id)}}">
                                                     <div class="title"><span>{{$item1->title}}</span></div>
+                                                    <div class="stars">
+                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=1?'checked':'':''}}"></span>
+                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=2?'checked':'':''}}"></span>
+                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=3?'checked':'':''}}"></span>
+                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=4?'checked':'':''}}"></span>
+                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=5?'checked':'':''}}"></span>
+                                                    </div>
                                                     <div class="desc">
                                                     	<span>
-                                                            {{$item1->content}}
+                                                            {{$item1->describe}}
                                                                 <br>
                                                                 <span class="color-red">
                                                                     {{isset($item1->price)?number_format($item1->price,0,',','.'):0 }} VND</span>

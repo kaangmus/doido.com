@@ -36,7 +36,6 @@
     <link rel="stylesheet" type="text/css" href="css/style2048.css?v=1.5">
     <link rel="stylesheet" type="text/css" href="css/responsivee67d.css?v=1.3">
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    <link rel="stylesheet" type="text/css" href="../maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/fonts-telo/css/fontello.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
@@ -47,11 +46,6 @@
     <script type="text/javascript" src="js/bootstrapValidator.js"></script>
     <script type="text/javascript" src="js/owl.carousel.min.js"></script>
     <script type='text/javascript' src="js/main83a7.js?v=1.9"></script>
-    <!-- harafunnel -->
-    <script src="../assets.harafunnel.com/widget/552107388329416.js" async="async"></script>
-
-    <script src="../cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-
     <script type="text/javascript">
         /*var showImage;
           while (showImage--) {
@@ -66,8 +60,6 @@
         ga('send', 'pageview');*/
     </script>
     <script type="text/javascript">
-        $('select').picker();
-
         function changeImg(input) {
             //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
             if (input.files && input.files[0]) {
@@ -97,21 +89,6 @@
         })(window,document,'script','dataLayer','GTM-MH7SMDT');
     </script>
     <!-- End Google Tag Manager -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['EmaticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','../api.ematicsolutions.com/v1/ematic.min.js','ematics');
-        var ematicApikey = "21218b2f5d1a11ea939d0242ac110002-sg5";
-        var opt = {
-            email: "",
-            country_iso: "vietnam",
-            currency_iso: "vnd",
-            language_iso: "vietnam"
-        };
-        //initialize
-        ematics("create", ematicApikey, opt);
-    </script>
 
     <script>
         var OneSignal = window.OneSignal || [];
@@ -123,19 +100,6 @@
     </script>
 
     <!-- Facebook Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window,document,'script',
-            '../connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1122064037846188');
-        fbq('track', 'PageView');
-
-    </script>
     <noscript>
         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1122064037846188&amp;ev=PageView%20%20&amp;noscript=1" />
     </noscript>
@@ -157,7 +121,8 @@
 
     <script>
         window.dataLayer = window.dataLayer || [];
-    </script>      <style type="text/css">
+    </script>
+    <style type="text/css">
         @media  screen and (max-width: 650px) {
             #callnowbutton {
                 display: block;
@@ -173,6 +138,193 @@
                 z-index: 9999;
                 background-size: 58px 58px;
             }
+        }
+        .comment_comment {
+            border-top: 1px solid #e3e3e3;
+            border-bottom: 1px solid #e3e3e3;
+            /* width: 200px; */
+            height: 250px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .card-white {
+            border-bottom: 1px solid #e3e3e3;
+        }
+
+        .inline-comment {
+            display: inline-block !important;
+        }
+
+        div.stars {
+            width: 270px;
+            display: inline-block;
+        }
+
+        input.star {
+            display: none;
+        }
+
+        label.star {
+            float: right;
+            padding: 0 10px;
+            font-size: 36px;
+            color: #444;
+            transition: all .2s;
+        }
+
+        input.star:checked ~ label.star:before {
+            content: '\f005';
+            color: #FD4;
+            transition: all .25s;
+        }
+
+        input.star-5:checked ~ label.star:before {
+            color: #FE7;
+            text-shadow: 0 0 20px #952;
+        }
+
+        input.star-1:checked ~ label.star:before {
+            color: #F62;
+        }
+
+        label.star:hover {
+            transform: rotate(-15deg) scale(1.3);
+        }
+
+        label.star:before {
+            content: '\f006';
+            font-family: FontAwesome;
+        }
+        .card-white .card-heading {
+            color: #333;
+            background-color: #fff;
+            border-color: #ddd;
+            border: 1px solid #dddddd;
+        }
+
+        .card-white .card-footer {
+            background-color: #fff;
+            border-color: #ddd;
+        }
+
+        .card-white .h5 {
+            font-size: 14px;
+        / / font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .card-white .time {
+            font-size: 12px;
+        / / font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .post .post-heading {
+            height: 95px;
+            padding: 20px 15px;
+        }
+
+        .post .post-heading .avatar {
+            width: 60px;
+            height: 60px;
+            display: block;
+            margin-right: 15px;
+        }
+
+        .post .post-heading .meta .title {
+            margin-bottom: 0;
+        }
+
+        .post .post-heading .meta .title a {
+            color: black;
+        }
+
+        .post .post-heading .meta .title a:hover {
+            color: #aaaaaa;
+        }
+
+        .post .post-heading .meta .time {
+            margin-top: 8px;
+            color: #999;
+        }
+
+        .post .post-image .image {
+            width: 100%;
+            height: auto;
+        }
+
+        .post .post-description {
+            padding: 15px;
+        }
+
+        .post .post-description p {
+            font-size: 14px;
+        }
+
+        .post .post-description .stats {
+            margin-top: 20px;
+        }
+
+        .post .post-description .stats .stat-item {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .post .post-description .stats .stat-item .icon {
+            margin-right: 8px;
+        }
+
+        .post .post-footer {
+            border-top: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        .post .post-footer .input-group-addon a {
+            color: #454545;
+        }
+
+        .post .post-footer .comments-list {
+            padding: 0;
+            margin-top: 20px;
+            list-style-type: none;
+        }
+
+        .post .post-footer .comments-list .comment {
+            display: block;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .post .post-footer .comments-list .comment .avatar {
+            width: 35px;
+            height: 35px;
+        }
+
+        .post .post-footer .comments-list .comment .comment-heading {
+            display: block;
+            width: 100%;
+        }
+
+        .post .post-footer .comments-list .comment .comment-heading .user {
+            font-size: 14px;
+            font-weight: bold;
+            display: inline;
+            margin-top: 0;
+            margin-right: 10px;
+        }
+
+        .post .post-footer .comments-list .comment .comment-heading .time {
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 0;
+            display: inline;
+        }
+
+        .post .post-footer .comments-list .comment .comment-body {
+            margin-left: 50px;
+        }
+
+        .post .post-footer .comments-list .comment > .comments-list {
+            margin-left: 50px;
         }
     </style>
 </head>
@@ -519,7 +671,6 @@
     var google_remarketing_only = true;
     /* ]]> */
 </script>
-<script type="text/javascript" src="../www.googleadservices.com/pagead/f.txt"></script>
 <noscript>
     <div style="display:inline;">
         <img height="1" width="1" style="border-style:none;" alt=""
