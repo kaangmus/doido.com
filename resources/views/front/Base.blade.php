@@ -143,7 +143,7 @@
             border-top: 1px solid #e3e3e3;
             border-bottom: 1px solid #e3e3e3;
             /* width: 200px; */
-            height: 250px;
+            max-height: 250px;
             overflow-x: hidden;
             overflow-y: auto;
         }
@@ -477,11 +477,11 @@
                                 <h3 class="heading">Liên hệ chúng tôi</h3>
                                 <p class="margin-top15">
                                     <a class="icon icon-fb icon-footer" target="_blank"
-                                       href="https://www.facebook.com/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                                       href="https://www.facebook.com/"></a>
                                     <a class="icon icon-youtube icon-footer" target="_blank"
-                                       href="https://www.youtube.com/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                                       href="https://www.youtube.com/"></a>
                                     <a class="icon icon-in icon-footer" target="_blank"
-                                       href="https://www.linkedin.com/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                                       href="https://www.linkedin.com/"></a>
                                 </p>
                                 <div class="hidden-xs">
                                     <p class="heading margin-top15" style="letter-spacing: 1px;">ĐĂNG KÝ THÀNH VIÊN NGAY !!!</p>

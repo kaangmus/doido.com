@@ -67,7 +67,6 @@ class usersModel extends Model
             {
                 $item->password=bcrypt($request->password);
             }
-            $item->lever=isset($request->lever)?0:1;
             $item->status=$request->status;
             if($request->hasFile('img'))
             {

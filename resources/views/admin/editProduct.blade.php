@@ -2,8 +2,6 @@
 @section('title','Danh mục sản phẩm')
 @section('main')
     <script type="text/javascript">
-        $('select').picker();
-
         function changeImg(input) {
             //Nếu như tồn thuộc tính file, đồng nghĩa người dùng đã chọn file mới
             if (input.files && input.files[0]) {
@@ -31,16 +29,19 @@
             <li class="active">Sản phẩm/ Thêm mới</li>
         </ol>
     </div><!--/.row-->
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Thêm sản phẩm</h1>
-        </div>
-    </div><!--/.row-->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Thêm sản phẩm</div>
+                <div class="panel-heading">
+                    @if(isset($item))
+                        Sửa sản phẩm
+                        <a class="btn btn-info"
+                           href="{{asset('admin/product/toggle/'.$item->id.'-'.($item->toggle==1?'0':'1'))}}"><i
+                                    class="{{$item->toggle==1?'fa fa-eye':'fa fa-eye-slash'}}"
+                                    aria-hidden="true"></i></a>
+                    @else
+                        Thêm sản phẩm
+                    @endif</div>
                 <div class="panel-body">
                     <form method="POST" role="form" enctype="multipart/form-data">
                         {{csrf_field()}}
@@ -53,21 +54,23 @@
                                         sản phẩm <span class="caret"></span></button>
                                     <ul class="dropdown-menu" style="color: black !important;">
                                         @foreach($listCate as $itemCate)
-                                            <?php $check = 0?>
-                                            @if(isset($itemCatecheck))
-                                                @foreach($itemCatecheck as $itemCheck)
-                                                    @if($itemCate->id==$itemCheck->idca)
-                                                        <?php $check = 1;?>
-                                                        <li><input type="checkbox" value="{{$itemCate->id}}"
-                                                                   checked="checked"
-                                                                   name="idcategory[]">{{$itemCate->title}}</li>
-                                                        @break
-                                                    @endif
-                                                @endforeach
-                                            @endif
-                                            @if($check==0)
-                                                <li><input type="checkbox" value="{{$itemCate->id}}"
-                                                           name="idcategory[]">{{$itemCate->title}}</li>
+                                            @if($itemCate->status==1)
+                                                <?php $check = 0?>
+                                                @if(isset($itemCatecheck))
+                                                    @foreach($itemCatecheck as $itemCheck)
+                                                        @if($itemCate->id==$itemCheck->idca)
+                                                            <?php $check = 1;?>
+                                                            <li><input type="checkbox" value="{{$itemCate->id}}"
+                                                                       checked="checked"
+                                                                       name="idcategory[]">{{$itemCate->title}}</li>
+                                                            @break
+                                                        @endif
+                                                    @endforeach
+                                                @endif
+                                                @if($check==0)
+                                                    <li><input type="checkbox" value="{{$itemCate->id}}"
+                                                               name="idcategory[]">{{$itemCate->title}}</li>
+                                                @endif
                                             @endif
                                         @endforeach
                                     </ul>
@@ -143,16 +146,15 @@
                             </div>
                             <div class="col-sm-6">
                                 <script>
-                                    function preview_image()
-                                    {
-                                        var total_file=document.getElementById("upload_file").files.length;
-                                        for(var i=0;i<total_file;i++)
-                                        {
-                                            $('#image_preview').append("<img class='col-sm-3 click-hide' src='"+URL.createObjectURL(event.target.files[i])+"'>");
+                                    function preview_image() {
+                                        var total_file = document.getElementById("upload_file").files.length;
+                                        for (var i = 0; i < total_file; i++) {
+                                            $('#image_preview').append("<img class='col-sm-3 click-hide' src='" + URL.createObjectURL(event.target.files[i]) + "'>");
                                         }
                                     }
-                                    $(document).ready(function(){
-                                        $("#upload_file").click(function(){
+
+                                    $(document).ready(function () {
+                                        $("#upload_file").click(function () {
                                             $(".click-hide").hide();
                                         });
                                     });
@@ -173,11 +175,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Hình ảnh sản phẩm</label>
-                                    <input id="upload_file" multiple type="file" name="media[]" onchange="preview_image();" value="" class="form-control">
+                                    <input id="upload_file" multiple type="file" name="media[]"
+                                           onchange="preview_image();" value="" class="form-control">
                                     <div id="image_preview" class="row">
                                         @if(isset($media))
                                             @foreach($media as $mediaItem)
-                                                <img class='col-sm-3 click-hide' src='{{asset('public/media/'.$mediaItem->url)}}'>
+                                                <img class='col-sm-3 click-hide'
+                                                     src='{{asset('public/media/'.$mediaItem->url)}}'>
                                             @endforeach
                                         @endif
                                     </div>

@@ -38,7 +38,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Sửa danh mục</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -47,23 +47,23 @@
                     <form id="myForm" role="form" method="post"  action="{{ url('/admin/category/update') }}">
                         {{csrf_field()}}
                         <div class="form-group">
-                            <label>Category Name</label>
+                            <label>Tên danh mục</label>
                             <input class="form-control title" placeholder="Category Name" name="title">
                         </div>
                         <div class="form-group">
-                            <label>Describe Category</label>
+                            <label>Mô tả danh mục</label>
                             <input class="form-control describe" placeholder="Describe" name="describe">
                         </div>
                         <div class="form-group">
-                            <label>Status</label>
+                            <label>Trạng thái</label>
                             <select name="status" class="status">
                                 <option value="1">Hoạt động</option>
                                 <option value="0">Không hoạt động</option>
                             </select>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary save" onclick="updateItem()">Save changes</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary save" onclick="updateItem()">Sửa</button>
                         </div>
                     </form>
                 </div>
@@ -73,16 +73,16 @@
     {{--code popup---------------------------------------------------------------------}}
     <div class="row">
         <ol class="breadcrumb">
-            <li><a href="#">
+            <li><a href="{{asset('admin')}}">
                     <em class="fa fa-home"></em>
                 </a></li>
-            <li class="active">Forms</li>
+            <li class="active">danh mục sản phẩm</li>
         </ol>
     </div><!--/.row-->
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Category</h1>
+            <h1 class="page-header">Danh mục sản phẩm</h1>
         </div>
     </div><!--/.row-->
 
@@ -90,38 +90,38 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Create Category</div>
+                <div class="panel-heading">Tạo mới danh mục</div>
                 <div class="panel-body">
                     <div class="col-md-3">
                         <form method="POST" action="{{asset('admin/category')}}">
                             {{csrf_field()}}
                             <div class="form-group">
-                                <label>Category name</label>
-                                <input class="form-control" placeholder="Category name" name="title">
+                                <label>Tên danh mục</label>
+                                <input class="form-control" placeholder="Tên danh mục" name="title">
                             </div>
                             <div class="form-group">
-                                <label>Describe</label>
-                                <input class="form-control" placeholder="describe" name="describe">
+                                <label>Mô tả</label>
+                                <input class="form-control" placeholder="Mô tả" name="describe">
                             </div>
                             <div class="form-group">
-                                <label>Status</label>
+                                <label>Trạng thái</label>
                                 <select class="form-control form-control-sm" name="status">
                                     <option value="1">Hoạt động</option>
                                     <option value="0">Không hoạt động</option>
                                 </select>
                             </div>
-                            <button class="btn btn-lg btn-primary">Add</button>
+                            <button class="btn btn-lg btn-primary">Thêm</button>
                         </form>
                     </div>
                     <div class="col-md-9">
                         <table id="tb1" class="table table-striped">
                             <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Title</th>
-                                <th>Describe</th>
-                                <th>Status</th>
-                                <th>Option</th>
+                                <th>Stt</th>
+                                <th>Tên danh mục</th>
+                                <th>Mô tả</th>
+                                <th>Trạng thái</th>
+                                <th>Tùy chọn</th>
                             </tr>
                             </thead>
 
@@ -131,10 +131,10 @@
                                     <td scope="row">{{$item->id}}</td>
                                     <td>{{$item->title}}</td>
                                     <td>{{$item->describe}}</td>
-                                    <td>{{$item->status==1?'Action':'No Action'}}</td>
+                                    <td>{{$item->status==1?'Hoạt động':'Không hoạt động'}}</td>
                                     <td>
-                                        <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit</a>
-                                        <a href="{{asset('admin/category/delete/'.$item->id)}}">Delete</a>
+                                        <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Sửa</a>
+                                        <a href="{{asset('admin/category/delete/'.$item->id)}}">Xóa</a>
                                     </td>
                                 </tr>
                                 @endforeach

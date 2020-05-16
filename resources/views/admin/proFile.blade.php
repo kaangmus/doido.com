@@ -21,13 +21,13 @@
             <li><a href="#">
                     <em class="fa fa-home"></em>
                 </a></li>
-            <li class="active">ProFile</li>
+            <li class="active">Thông tin cá nhân</li>
         </ol>
     </div><!--/.row-->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Tạo mới người dùng</div>
+                <div class="panel-heading">{{isset($item)?'Sửa người dùng':'Tạo mới người dùng'}}</div>
                 <div class="panel-body">
                     <form method="POST" enctype="multipart/form-data">
                         {{csrf_field()}}
@@ -71,7 +71,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label>Product Img</label>
+                                <label>Ảnh đại diện</label>
                                 <input id="img" type="file" name="img" value="" class="form-control"
                                        onchange="changeImg(this)">
                                 <img id="avatar" class="thumbnail" width="300px"

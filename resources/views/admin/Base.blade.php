@@ -57,7 +57,7 @@
             <a class="navbar-brand" href="{{asset('/')}}"><img width="140px" src="{{asset('public/img/logo1.png')}}"></a>
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown"><a class=" count-info" href="{{asset('admin/messenger')}}">
-                        <em class="fa fa-envelope"></em><span class="label label-danger"></span>
+                        <i style="font-size: 18px" class="fa fa-paper-plane-o" aria-hidden="true"></i><span class="label label-danger"></span>
                     </a>
                 </li>
                     <ul class="dropdown-menu dropdown-alerts">

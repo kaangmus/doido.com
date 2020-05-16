@@ -11,14 +11,9 @@
     </div><!--/.row-->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Danh sách người dùng</h1>
-        </div>
-    </div><!--/.row-->
-    <div class="row">
-        <div class="col-lg-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <a href="{{asset('admin/user/add')}}">Thêm người dùng</a>
+                    <a class="btn btn-primary" href="{{asset('admin/user/add')}}">Thêm người dùng</a>
                 </div>
                 <div class="panel-body">
                     <table id="tb1" class="table table-striped">
@@ -29,7 +24,7 @@
                             <th>Hình ảnh</th>
                             <th>Email</th>
                             <th>Chức vụ</th>
-                            <th>Option</th>
+                            <th>Tùy chọn</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -43,8 +38,8 @@
                                 <td>{{$item->email}}</td>
                                 <td>{{$item->lever==0?'Admin':'Khách hàng'}}</td>
                                 <td>
-                                    <a href="{{asset('admin/profile/update/'.$item->id)}}">Edit</a>
-                                    <a href="{{asset('admin/profile/delete/'.$item->id)}}">Delete</a>
+                                    <a class="btn btn-info" href="{{asset('admin/profile/update/'.$item->id)}}">Sửa</a>
+                                    <a class="btn btn-danger" href="{{asset('admin/profile/delete/'.$item->id)}}">Xóa</a>
                                 </td>
                             </tr>
                         @endforeach

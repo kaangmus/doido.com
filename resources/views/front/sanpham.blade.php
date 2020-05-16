@@ -15,15 +15,6 @@
                         </div>
                     </a>
                 </div>
-                <!-- <div class="img" style="background-image: url('https://Doido.com/upload/files/W2-10-NA-2000X668-02.jpg')">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-1">
-                <div class="slide-content">
-
-                </div>
-            </div>
-        </div>
-    </div> -->
             </div>
         </div> <!-- End heading area -->
         <div class="content-area home-content-area">
@@ -80,10 +71,6 @@
                                             <input class="form-control" type="number" name="max" value="100000">
                                             <br>
                                             <button class="btn">Lọc</button>
-                                            {{--<input id="txtPrice" type="text" style="width:100%" data-slider-handle="square"--}}
-                                            {{--data-slider-min="0" data-slider-max="180000000"--}}
-                                            {{--data-slider-tooltip="hide" data-slider-step="100000"--}}
-                                            {{--data-slider-value="[0,60000000]"/>--}}
                                         </form>
                                     </div>
                                 </div>
@@ -95,38 +82,34 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="row" id="list-product-ajax">
                                     @foreach($items as $item)
-                                            <div class="col-sm-4  col-xs-6">
-                                                <div class="prod-img1">
-                                                    <a href="{{asset('/product-'.$item->id)}}" class="">
-                                                        <img data-src="{{asset('public/media/'.$item->coverimg)}}"
-                                                             class="lazyload"/>
-                                                    </a>
-                                                </div>
-                                                <div class="content ">
-                                                    <a href="{{asset('/product-'.$item->id)}}">
-                                                        <div class="title"><span>{{$item->title}}</span></div>
-                                                        <div class="desc"><span>{{$item->describe}}s<br>
+                                        <div class="col-sm-4  col-xs-6">
+                                            <div class="prod-img1">
+                                                <a href="{{asset('/product-'.$item->id)}}" class="">
+                                                    <img data-src="{{asset('public/media/'.$item->coverimg)}}"
+                                                         class="lazyload"/>
+                                                </a>
+                                            </div>
+                                            <div class="content ">
+                                                <a href="{{asset('/product-'.$item->id)}}">
+                                                    <div class="title"><span>{{$item->title}}</span></div>
+                                                    <div class="desc"><span>{{$item->describe}}s<br>
                                                     <span class="color-red">
                                                         {{number_format($item->price,0,',','.')}} VND
                                                         </span>
                                                                                                         </span>
-                                                            </span>
-                                                        </div>
-                                                    </a>
-
-                                                    <!-- <span class="status">Exclusive</span> -->
-                                                </div>
+                                                        </span>
+                                                    </div>
+                                                </a>
                                             </div>
-                                        @endforeach
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
                         <div class="text-right paging-bottom" id="pagging-ajax">
                             {{$items->links()}}
-                            {{--{{ isset($items->links)?$items->links():'' }}--}}
                         </div>
                     </div>
                 </div>

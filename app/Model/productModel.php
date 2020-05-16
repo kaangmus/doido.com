@@ -35,7 +35,7 @@ class productModel extends Model
 //            ->avg('rate.rating')
 //            ->groupBy('product.id')
 //            ->get();
-        $items=DB::select('SELECT product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser,AVG(rate.rating) as diem FROM product,rate WHERE product.id=rate.idproduct GROUP BY product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser');
+        $items=DB::select('SELECT product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser,AVG(rate.rating) as diem FROM product,rate WHERE product.id=rate.idproduct and toggle=1 GROUP BY product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser');
         return $items;
     }
 
@@ -149,6 +149,7 @@ class productModel extends Model
     public function product()
     {
         $items = DB::table('product')
+            ->where('toggle',1)
             ->select('product.*')
             ->paginate(9);
 //            ->get();
@@ -161,6 +162,7 @@ class productModel extends Model
 //            ->join('cate_product', 'product.id', '=', 'cate_product.idproduct')
 //            ->join('category', 'category.id', '=', 'cate_product.idcategory')
             ->where('product.title', 'like', '%' . $search . '%')
+            ->where('toggle',1)
             ->orwhere('product.tag', 'like', '%' . $search . '%')
             ->select('product.*', 'product.id')
             ->paginate(9);
@@ -176,6 +178,7 @@ class productModel extends Model
             ->join('cate_product', 'product.id', '=', 'cate_product.idproduct')
             ->join('category', 'category.id', '=', 'cate_product.idcategory')
             ->where('category.title', 'like', '%' . $search . '%')
+            ->where('toggle',1)
             ->select('product.*')
             ->paginate(9);
         return $items;

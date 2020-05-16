@@ -10,6 +10,7 @@ use App\Model\mediaModel;
 use App\Model\productModel;
 use App\Model\rateModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class indexController extends Controller
 {
@@ -36,7 +37,7 @@ class indexController extends Controller
     public function searchItem($search)
     {
         $search= str_replace(' ', '%', $search);
-        $data['items']=$this->product->searchItem($search);
+        $data['items']=$check=$this->product->searchItem($search);
         return view('front.sanpham',$data);
     }
     public function getsearch(Request $request)
@@ -69,11 +70,6 @@ class indexController extends Controller
     {
         $data['items']=$this->product->listProductCate($id);
         return view('front.sanpham',$data);
-    }
-    public function blog($id)
-    {
-        $data['item']= $this->blog->showItem($id);
-        return view('front.blogDetail',$data);
     }
     public function product()
     {

@@ -2,6 +2,8 @@
 @section('title','DOIDO.COM | Thế giới đổi đồ')
 @section('main')
     <script src="js/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="js/jqueryez.js"></script>
     <script>
         $(document).ready(function () {
             $(".stars input").click(function () {
@@ -18,6 +20,18 @@
             });
         });
     </script>
+    <style>
+        .upcase{
+            font-weight: bold;
+        }
+        label{
+            font-weight: unset;
+        }
+        .detail label.box, .lstproducts label.box{
+            font-weight: unset;
+            padding: 5px;
+        }
+    </style>
     <div class="content-area home-content-area top-area">
         <div class="container">
             <div class="navigation margin-top20">
@@ -35,32 +49,38 @@
                         </div>
                         <div id="thumbnails-mask" style="height: auto;">
                             <div id="thumbnails-container">
-                                <ul>
-                                    <li color-id="22286" class="show active">
+                                <div id="gal1">
+                                    <ul>
+                                        <li color-id="22286" class="show active">
                                         <img class="lazyload"
-                                             data-src="{{asset('public/media/'.$item->coverimg)}}"
-                                             data-image="{{asset('public/media/'.$item->coverimg)}}"
-                                             data-zoom-image="{{asset('public/media/'.$item->coverimg)}}"
-                                             src="{{asset('public/media/'.$item->coverimg)}}">
-                                    </li>
-                                    @foreach($itemsMedia as $media)
-                                        <li color-id="22286" class="show">
-                                            <img class="lazyload"
-                                                 data-src="{{asset('public/media/'.$media->url)}}"
-                                                 data-image="{{asset('public/media/'.$media->url)}}"
-                                                 data-zoom-image="{{asset('public/media/'.$media->url)}}"
-                                                 src="{{asset('public/media/'.$media->url)}}">
+                                        data-src="{{asset('public/media/'.$item->coverimg)}}"
+                                        data-image="{{asset('public/media/'.$item->coverimg)}}"
+                                        data-zoom-image="{{asset('public/media/'.$item->coverimg)}}"
+                                        src="{{asset('public/media/'.$item->coverimg)}}">
                                         </li>
-                                    @endforeach
-                                </ul>
+                                        @foreach($itemsMedia as $media)
+                                        <li><a href="{{asset('product-'.$item->id)}}" data-image="{{asset('public/media/'.$media->url)}}" data-zoom-image="{{asset('public/media/'.$media->url)}}">
+                                                <img  src="{{asset('public/media/'.$media->url)}}"/>
+                                            </a></li>
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div id="down-arrow">
                             <span class="thumbnails-arrow"></span>
                         </div>
                     </div>
+                    <script>
+                        $(document).ready(function () {
+                            $("#zoom1").ezPlus();
+                            $(".detail ul li.collapse-toogle.in::after").click(function(){
+                                $(".detail ul li.collapse-toogle.in .content").toggle();
+                            });
+                        });
+                    </script>
                     <div class="prod-image relative">
-                        <img src="{{asset('public/media/'.$item->coverimg)}}"
+                        <img id="zoom1" src="{{asset('public/media/'.$item->coverimg)}}"
                              data-zoom-image="{{asset('public/media/'.$item->coverimg)}}">
                         <div class="imageNav hide">
                             <div class="icon icon-imgnext"></div>
@@ -127,10 +147,12 @@
                         </li>
                         <li>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <a href="{{asset('order/'.$item->id)}}" class="btn btn-black btnaddtocart">Đặt
-                                        đồ</a>
-                                </div>
+                                @if($item->statustype==1)
+                                    <div class="col-md-6">
+                                        <a href="{{asset('order/'.$item->id)}}" class="btn btn-black btnaddtocart">Đặt
+                                            đồ</a>
+                                    </div>
+                                @endif
                                 <div class="col-md-6">
                                     <a class="btn btn-info" href="{{asset('admin/messenger/chat/'.$item->iduser)}}"><i
                                                 class="fa fa-commenting-o"

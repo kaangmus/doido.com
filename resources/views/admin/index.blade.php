@@ -21,7 +21,7 @@
                 <div class="panel panel-teal panel-widget border-right">
                     <div class="row no-padding"><em class="fa fa-xl fa-shopping-cart color-blue"></em>
                         <div class="large">{{count($order)}}</div>
-                        <div class="text-muted">Orders</div>
+                        <div class="text-muted">Giao dịch</div>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             </div>
             <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
                 <div class="panel panel-red panel-widget ">
-                    <div class="row no-padding"><em class="fa fa-xl fa-search color-red"></em>
+                    <div class="row no-padding"><i class="fa fa-cubes" aria-hidden="true"></i>
                         <div class="large">{{count($product)}}</div>
                         <div class="text-muted">Sản phẩm</div>
                     </div>
@@ -111,7 +111,8 @@
 
     <div class="row">
         <div class="col-md-6">
-            <div class="panel panel-default">
+            <div class="panel panel-default" style="max-height: 300px;overflow-x:hidden;
+    overflow-y: auto;">
                 <div class="panel-heading">
                     Sản phẩm mới đăng
                     <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>

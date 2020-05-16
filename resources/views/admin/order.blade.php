@@ -3,20 +3,12 @@
 @section('main')
     <div class="row">
         <ol class="breadcrumb">
-            <li><a href="#">
+            <li><a href="{{asset('admin')}}">
                     <em class="fa fa-home"></em>
                 </a></li>
-            <li class="active">Order management</li>
+            <li class="active">Quản lý giao dịch</li>
         </ol>
     </div><!--/.row-->
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Order management</h1>
-        </div>
-    </div><!--/.row-->
-
-
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -51,8 +43,8 @@
                                     <td>{{$item->idproductre}}</td>
                                     <td>{{$item->status==1?'Đã đổi':'Chưa đổi'}}</td>
                                     <td>
-                                        <a href="{{asset('admin/ordermanger/detail/'.$item->id)}}">Chi tiết</a>
-                                        <a href="{{asset('admin/ordermanger/delete/'.$item->id)}}">Xóa</a>
+                                        <a class="btn btn-info" href="{{asset('admin/ordermanger/detail/'.$item->id)}}">Chi tiết</a>
+                                        <a class="btn btn-danger" href="{{asset('admin/ordermanger/delete/'.$item->id)}}">Xóa</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -87,8 +79,8 @@
                                     <td>{{$item->idproductex}}</td>
                                     <td>{{$item->orderStatus==1?'Đã đổi':'Chưa đổi'}}</td>
                                     <td>
-                                        <a href="{{asset('admin/ordermanger/detail/'.$item->idOrder)}}">Chi tiết</a>
-                                        <a href="{{asset('admin/ordermanger/delete/'.$item->idOrder)}}">Xóa</a>
+                                        <a class="btn btn-info" href="{{asset('admin/ordermanger/detail/'.$item->idOrder)}}">Chi tiết</a>
+                                        <a class="btn btn-danger" href="{{asset('admin/ordermanger/delete/'.$item->idOrder)}}">Xóa</a>
                                     </td>
                                 </tr>
                             @endforeach

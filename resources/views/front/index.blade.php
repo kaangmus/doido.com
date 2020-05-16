@@ -23,7 +23,7 @@
                         <img class="owl-lazy" data-src="images/banner2.jpg" data-srcset="images/banner2.jpg"
                              sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
                     </a>
-                    <a href="sale.html">
+                    <a href="#">
                         <img class="owl-lazy" data-src="images/banner3.jpg" data-srcset="images/banner3.jpg"
                              sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
                     </a>
@@ -309,7 +309,7 @@
         <div class="heading-area top-area bottom-0">
             <div class="container">
                 <div class="slider-carousel owl-carousel owl-theme">
-                    <a href="sale.html">
+                    <a href="#">
                         <img class="owl-lazy" data-src="images/bannerfooter.jpg"/>
                     </a>
                 </div>
