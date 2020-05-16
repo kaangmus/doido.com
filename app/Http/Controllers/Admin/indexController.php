@@ -47,6 +47,7 @@ class indexController extends Controller
             $data['comment'] = $this->comment->listAll();
             $data['order'] = $this->order->listAll();
             $data['itemsCategory'] = $this->category->listAll();
+            $data['listAllProduct']=$this->product->listAllProduct();
             return view('admin.index', $data);
         }
     }

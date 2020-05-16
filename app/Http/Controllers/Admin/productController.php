@@ -53,5 +53,10 @@ class productController extends Controller
         $this->product->deleteItem($id);
         return back();
     }
+    public function toggle($id,$toggle)
+    {
+        $this->product->updateToggle($id,$toggle);
+        return back();
+    }
 
 }

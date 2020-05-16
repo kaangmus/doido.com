@@ -113,6 +113,34 @@
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
+                    Sản phẩm mới đăng
+                    <span class="pull-right clickable panel-toggle panel-button-tab-left"><em class="fa fa-toggle-up"></em></span></div>
+                <div class="panel-body">
+                    <ul class="todo-list">
+                        @foreach($listAllProduct as $itemProduct)
+                            <li class="todo-list-item row">
+                                <div class="img col-sm-2">
+                                    <img style="width: 50px;" src="{{asset('public/media/'.$itemProduct->coverimg)}}"/>
+                                </div>
+                                <div class="col-sm-10">
+                                <div class="checkbox">
+                                    <a href="{{asset('admin/product/update/'.$itemProduct->id)}}">
+                                    <label for="checkbox-1">{{$itemProduct->title}}</label>
+                                    </a>
+                                </div>
+                                <div class="pull-right action-buttons">
+                                    <a href="{{asset('admin/product/toggle/'.$itemProduct->id.'-'.($itemProduct->toggle==1?'0':'1'))}}"><i class="{{$itemProduct->toggle==1?'fa fa-eye':'fa fa-eye-slash'}}" aria-hidden="true"></i></a>
+                                    <a href="{{asset('admin/product/delete/'.$itemProduct->id)}}" class="trash">
+                                        <em class="fa fa-trash"></em>
+                                    </a></div>
+                                </div>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
                     Danh mục sản phẩm
                     <span class="pull-right clickable panel-toggle panel-button-tab-left"><em
                                 class="fa fa-toggle-up"></em></span></div>
@@ -126,7 +154,8 @@
                                 <div class="pull-right action-buttons"><a
                                             href="{{asset('admin/category/delete/'.$itemcate->id)}}" class="trash">
                                         <em class="fa fa-trash"></em>
-                                    </a></div>
+                                    </a>
+                                </div>
                             </li>
                         @endforeach
                     </ul>
@@ -134,12 +163,12 @@
                 <div class="panel-footer">
                     <form action="{{asset('admin/category')}}" method="post">
                         {{csrf_field()}}
-                    <div class="input-group">
-                        <input type="text" class="form-control input-md" name="title"
-                               placeholder="Thêm danh mục"/><span class="input-group-btn">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-md" name="title"
+                                   placeholder="Thêm danh mục"/><span class="input-group-btn">
 								<button class="btn btn-primary btn-md">Thêm</button>
 						</span>
-                    </div>
+                        </div>
                     </form>
                 </div>
             </div>

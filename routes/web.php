@@ -66,6 +66,7 @@ Route::group(['namespace'=>'Admin'],function(){
             Route::get('update/{id}','productController@updateShow');
             Route::post('update/{id}','productController@updateItem');
             Route::get('delete/{id}','productController@deleteItem');
+            Route::get('toggle/{id}-{toggle}','productController@toggle');
        });
        Route::group(['prefix'=>'ordermanger'],function (){
           Route::get('/','orderController@listAll');

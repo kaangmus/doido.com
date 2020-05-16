@@ -26,6 +26,7 @@ class CreateProductTable extends Migration
             $table->text('coverimg')->nullable();
             $table->text('desiredproducts')->nullable();
             $table->integer('iduser')->nullable();
+            $table->integer('toggle')->nullable();
             $table->timestamps();
         });
     }

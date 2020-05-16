@@ -19,7 +19,11 @@ class productModel extends Model
         $this->media = new mediaModel();
         $this->rate=new rateModel();
     }
-
+    public function listAllProduct()
+    {
+        $items=DB::table('product')->orderBy('created_at', 'DESC')->get();
+        return $items;
+    }
     public function listAll()
     {
 //        $item = productModel::orderBy('created_at', 'DESC')
@@ -57,6 +61,7 @@ class productModel extends Model
             $item->statustype = $request->statustype;
             $item->contents = $request->contents;
             $item->status = $request->status;
+            $item->toggle = 1;
             $item->desiredproducts = $request->desiredproducts;
             if ($request->hasFile('coverimg')) {
                 $filename = $request->coverimg->getClientOriginalName();
@@ -100,6 +105,7 @@ class productModel extends Model
             $item->statustype = $request->statustype;
             $item->contents = $request->contents;
             $item->status = $request->status;
+            $item->toggle = $request->toggle;
             $item->desiredproducts = $request->desiredproducts;
             if ($request->hasFile('coverimg')) {
                 $filename = $request->coverimg->getClientOriginalName();
@@ -123,7 +129,12 @@ class productModel extends Model
         }
 
     }
-
+    public function updateToggle($id,$toggle)
+    {
+        $item = productModel::find($id);
+        $item->toggle=$toggle;
+        $item->save();
+    }
     public function deleteItem($id)
     {
         try {
