@@ -112,7 +112,6 @@ ON      le.id = t.idguest');
             return false;
         }
     }
-
     public function productEx($id)
     {
         $item = DB::table('orderproduct')

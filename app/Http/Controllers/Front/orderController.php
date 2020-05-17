@@ -20,7 +20,7 @@ class orderController extends Controller
     }
     public function showOrder($id)
     {
-        $data['product']=$this->product->showItem($id);
+        $data['product']=$this->product->productDetail($id);
         $data['listproduct']=$this->product->listProduct();
         return view('front.order',$data);
     }

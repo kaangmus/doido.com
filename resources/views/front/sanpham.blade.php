@@ -1,6 +1,12 @@
 @extends('front.Base')
 @section('title','DOIDO.COM | Thế giới đổi đồ')
 @section('main')
+    <style>
+    .footer-box-center .hidden-xs{
+        margin-top: 30px;
+    }
+
+    </style>
     <div class="box-content">
         <script type='text/javascript' src="js/jquery.slimscroll.min.js"></script>
         <script type='text/javascript' src="js/bootstrap-slider.js"></script>
@@ -35,12 +41,11 @@
                 <div class="row prod-list">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-sm-3">
+                            <div class="col-sm-3" style="border-right: 1px solid #cccccc">
                                 <div class="">
                                     <div class="product-type1">
                                         <div class="row">
-                                            <div class="col-xs-9 heading"
-                                                 style="font-weight: bolder;font-size: 14px;text-transform: uppercase;">
+                                            <div class="col-xs-9 heading" style="font-weight: bolder;font-size: 14px;text-transform: uppercase;">
                                                 Danh mục
                                             </div>
                                         </div>
@@ -62,7 +67,6 @@
                                         <form method="get" action="{{asset('searchprice')}}">
                                             <div class="row">
                                                 <div class="col-xs-9 heading">Giá</div>
-                                                <div class="col-xs-3 delete">Xóa</div>
                                             </div>
                                             <div id="lblPrice"></div>
                                             <p>Min</p>
@@ -83,7 +87,9 @@
                                     </div>
                                 </div>
                                 <div class="row" id="list-product-ajax">
+                                    <?php $check=0 ?>
                                     @foreach($items as $item)
+                                        <?php $check=1?>
                                         <div class="col-sm-4  col-xs-6">
                                             <div class="prod-img1">
                                                 <a href="{{asset('/product-'.$item->id)}}" class="">
@@ -105,6 +111,9 @@
                                             </div>
                                         </div>
                                     @endforeach
+                                    @if($check==0)
+                                        <center><span style="font-size: 18px; color: #cccccc">Không tìm thấy sản phẩm.</span></center>
+                                        @endif
                                 </div>
                             </div>
                         </div>

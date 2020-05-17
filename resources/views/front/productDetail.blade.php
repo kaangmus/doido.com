@@ -21,13 +21,15 @@
         });
     </script>
     <style>
-        .upcase{
+        .upcase {
             font-weight: bold;
         }
-        label{
+
+        label {
             font-weight: unset;
         }
-        .detail label.box, .lstproducts label.box{
+
+        .detail label.box, .lstproducts label.box {
             font-weight: unset;
             padding: 5px;
         }
@@ -52,16 +54,18 @@
                                 <div id="gal1">
                                     <ul>
                                         <li color-id="22286" class="show active">
-                                        <img class="lazyload"
-                                        data-src="{{asset('public/media/'.$item->coverimg)}}"
-                                        data-image="{{asset('public/media/'.$item->coverimg)}}"
-                                        data-zoom-image="{{asset('public/media/'.$item->coverimg)}}"
-                                        src="{{asset('public/media/'.$item->coverimg)}}">
+                                            <img class="lazyload"
+                                                 data-src="{{asset('public/media/'.$item->coverimg)}}"
+                                                 data-image="{{asset('public/media/'.$item->coverimg)}}"
+                                                 data-zoom-image="{{asset('public/media/'.$item->coverimg)}}"
+                                                 src="{{asset('public/media/'.$item->coverimg)}}">
                                         </li>
-                                        @foreach($itemsMedia as $media)
-                                        <li><a href="{{asset('product-'.$item->id)}}" data-image="{{asset('public/media/'.$media->url)}}" data-zoom-image="{{asset('public/media/'.$media->url)}}">
-                                                <img  src="{{asset('public/media/'.$media->url)}}"/>
-                                            </a></li>
+                                        @foreach($itemsMedia->slice(0,3) as $media)
+                                            <li><a href="{{asset('product-'.$item->id)}}"
+                                                   data-image="{{asset('public/media/'.$media->url)}}"
+                                                   data-zoom-image="{{asset('public/media/'.$media->url)}}">
+                                                    <img class="zoom" src="{{asset('public/media/'.$media->url)}}"/>
+                                                </a></li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -73,8 +77,18 @@
                     </div>
                     <script>
                         $(document).ready(function () {
-                            $("#zoom1").ezPlus();
-                            $(".detail ul li.collapse-toogle.in::after").click(function(){
+                            // $("#zoom1").ezPlus();
+
+                            $("#zoom1").ezPlus({
+                                tint: true,
+                                tintColour: '#F90', tintOpacity: 0.5
+                            });
+                            $(".zoom").ezPlus({
+                                tint: true,
+                                tintColour: '#F90', tintOpacity: 0.5
+                            });
+                            // $("#zoom1").elevateZoom({tint:true, tintColour:'#F90', tintOpacity:0.5});
+                            $(".detail ul li.collapse-toogle.in::after").click(function () {
                                 $(".detail ul li.collapse-toogle.in .content").toggle();
                             });
                         });
@@ -222,12 +236,14 @@
                                                  alt="user profile image">
                                             <span class="inline-comment">{{$itemComment->comment}}</span>
                                         </div>
-                                        @if(Auth::user()->id==$itemComment->id)
-                                            <div class="col-sm-1">
-                                                <a href="{{asset('comment/delete/'.$itemComment->idcomment)}}">
-                                                    <i class="fa fa-times" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
+                                        @if(isset(Auth::user()->id))
+                                            @if(Auth::user()->id==$itemComment->id)
+                                                <div class="col-sm-1">
+                                                    <a href="{{asset('comment/delete/'.$itemComment->idcomment)}}">
+                                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            @endif
                                         @endif
                                     </div>
                                 </div>

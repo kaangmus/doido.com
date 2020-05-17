@@ -111,7 +111,6 @@ class productModel extends Model
                 $filename = $request->coverimg->getClientOriginalName();
                 $item->coverimg = $filename;
                 $request->coverimg->move('public/media', $filename);
-                //$request->coverimg->storeAs('media',$filename);
             }
             $item->save();
             if (isset($request->idcategory)) {
@@ -210,6 +209,15 @@ FROM
 GROUP BY month(created_at)
 ORDER BY month DESC
 LIMIT 2');
+        return $item;
+    }
+    public function productDetail($id)
+    {
+        $item=DB::table('users')
+            ->join('product', 'product.iduser', '=', 'users.id')
+            ->where('product.id',$id)
+            //->get();
+            ->first();
         return $item;
     }
 }

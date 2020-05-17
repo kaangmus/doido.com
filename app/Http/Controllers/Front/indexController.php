@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Session;
 class indexController extends Controller
 {
     //
-    private $product,$media,$blog,$cate_product,$comment,$rate;
+    private $product,$media,$cate_product,$comment,$rate;
     public function __construct()
     {
         $this->product= new productModel();
@@ -43,8 +43,7 @@ class indexController extends Controller
     public function getsearch(Request $request)
     {
         $key= str_replace(' ', '%', $request->search);
-        $data['items']=$this->product->searchItem($key);
-       // return $data['items'];
+        $ok=$data['items']=$this->product->searchItem($key);
         return view('front.sanpham',$data);
     }
     public function searchPrice(Request $request)

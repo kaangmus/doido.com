@@ -152,11 +152,24 @@
                         </div>
                         <div class="col-sm-4">
                             <h4 class="nav-horizontal"><span>{{$product->title}}</span></h4>
-                            <span>Mô tả ngắn:</span>
+                            <span style="font-weight: bold">Mô tả ngắn:</span>
                             <p>{{$product->describe}}</p>
+                            <span style="font-weight: bold">Giá:</span>
+                            <p>{{$product->price}}</p>
+                            <span style="font-weight: bold">Mặt hàng muốn đổi:</span>
+                            <p>{{$product->desiredproducts}}</p>
+
+                            <h4 class="nav-horizontal"><span>Thông tin người đổi</span></h4>
+                            <span style="font-weight: bold">Tên:</span>
+                            <p>{{$product->username}}</p>
+                            <span style="font-weight: bold">Email:</span>
+                            <p>{{$product->email}}</p>
+                            <span style="font-weight: bold">Số điện thoại:</span>
+                            <p>{{$product->phone}}</p>
                             <div class="prod-image relative">
                                 <img src="{{asset('public/media/'.$product->coverimg)}}">
                             </div>
+
                         </div>
                     </div>
 
