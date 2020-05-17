@@ -25,7 +25,7 @@ class rateModel extends Model
         $item= new rateModel();
         $item->iduser=Auth::user()->id;
         $item->idproduct=$idproduct;
-        $item->rating=0;
+        $item->rating=5;
         $item->save();
         return true;
     }

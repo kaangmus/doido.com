@@ -98,8 +98,8 @@
                                         <td>{{$item->idproductre}}</td>
                                         <td>{{$item->orderStatus==1?'Đã đổi':'Chưa đổi'}}</td>
                                         <td>
-                                            <a href="{{asset('admin/ordermanger/detail/'.$item->idOrder)}}">Chi tiết</a>
-                                            <a href="{{asset('admin/ordermanger/delete/'.$item->idOrder)}}">Xóa</a>
+                                            <a class="btn btn-info" href="{{asset('admin/ordermanger/detail/'.$item->idOrder)}}">Chi tiết</a>
+                                            <a class="btn btn-danger" href="{{asset('admin/ordermanger/delete/'.$item->idOrder)}}">Xóa</a>
                                         </td>
                                     </tr>
                                 @endforeach
