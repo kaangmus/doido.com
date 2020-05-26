@@ -2,9 +2,9 @@
 @section('title','DOIDO.COM | Thế giới đổi đồ')
 @section('main')
     <style>
-    .footer-box-center .hidden-xs{
-        margin-top: 30px;
-    }
+        .footer-box-center .hidden-xs {
+            margin-top: 30px;
+        }
 
     </style>
     <div class="box-content">
@@ -45,7 +45,8 @@
                                 <div class="">
                                     <div class="product-type1">
                                         <div class="row">
-                                            <div class="col-xs-9 heading" style="font-weight: bolder;font-size: 14px;text-transform: uppercase;">
+                                            <div class="col-xs-9 heading"
+                                                 style="font-weight: bolder;font-size: 14px;text-transform: uppercase;">
                                                 Danh mục
                                             </div>
                                         </div>
@@ -87,33 +88,35 @@
                                     </div>
                                 </div>
                                 <div class="row" id="list-product-ajax">
-                                    <?php $check=0 ?>
+                                    <?php $check = 0 ?>
                                     @foreach($items as $item)
-                                        <?php $check=1?>
-                                        <div class="col-sm-4  col-xs-6">
-                                            <div class="prod-img1">
-                                                <a href="{{asset('/product-'.$item->id)}}" class="">
-                                                    <img data-src="{{asset('public/media/'.$item->coverimg)}}"
-                                                         class="lazyload"/>
-                                                </a>
-                                            </div>
-                                            <div class="content ">
-                                                <a href="{{asset('/product-'.$item->id)}}">
-                                                    <div class="title"><span>{{$item->title}}</span></div>
-                                                    <div class="desc"><span>{{$item->describe}}s<br>
+                                        <?php $check = 1?>
+                                            <div class="col-sm-4  col-xs-6">
+                                                <div class="prod-img1">
+                                                    <a href="{{asset('/product-'.$item->id)}}" class="">
+                                                        <img data-src="{{asset('public/media/'.$item->coverimg)}}"
+                                                             class="lazyload"/>
+                                                    </a>
+                                                </div>
+                                                <div class="content ">
+                                                    <a href="{{asset('/product-'.$item->id)}}">
+                                                        <div class="title"><span>{{$item->title}}</span></div>
+                                                        <div class="desc"><span>{{$item->describe}}s<br>
                                                     <span class="color-red">
                                                         {{number_format($item->price,0,',','.')}} VND
                                                         </span>
                                                                                                         </span>
-                                                        </span>
-                                                    </div>
-                                                </a>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
                                     @endforeach
                                     @if($check==0)
-                                        <center><span style="font-size: 18px; color: #cccccc">Không tìm thấy sản phẩm.</span></center>
-                                        @endif
+                                        <center><span
+                                                    style="font-size: 18px; color: #cccccc">Không tìm thấy sản phẩm.</span>
+                                        </center>
+                                    @endif
                                 </div>
                             </div>
                         </div>

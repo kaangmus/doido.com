@@ -29,7 +29,6 @@
                     <a class="btn btn-primary" href="{{asset('admin/product/add')}}">Thêm sản phẩm</a>
                 </div>
                 <div class="panel-body">
-
                         <table id="tb1" class="table table-striped">
                             <thead>
                             <tr>
@@ -41,6 +40,7 @@
                                 <th># Tag</th>
                                 <th>Mô tả ngắn</th>
                                 <th>Trạng thái</th>
+                                <th>Thời gian hiện thị</th>
                                 <th>Chế độ</th>
                                 <th>Tùy chọn</th>
                             </tr>
@@ -56,6 +56,7 @@
                                     <td>{{$item->tag}}</td>
                                     <td>{{$item->describe}}</td>
                                     <td>{{$item->status==1?'Mới':'Cũ'}}</td>
+                                    <th>{{14-(int)((time()-strtotime($item->created_at))/86400) }} ngày</th>
                                     <td><a class="btn" href="{{asset('admin/product/toggle/'.$item->id.'-'.($item->toggle==1?'0':'1'))}}"><i class="{{$item->toggle==1?'fa fa-eye':'fa fa-eye-slash'}}" aria-hidden="true"></i></a></td>
                                     <td>
                                         <a class="btn btn-info" href="{{asset('admin/product/update/'.$item->id)}}">Sửa</a>

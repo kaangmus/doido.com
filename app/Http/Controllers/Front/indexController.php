@@ -29,6 +29,7 @@ class indexController extends Controller
     {
         $data['items1']=$this->product->listAll();
         $data['items2']=$this->product->searchCategoryProduct('Đồ điện tử');
+       // return $data['items2'];
         $data['items3']=$this->product->searchCategoryProduct('Đồ dùng cá nhân');
         $data['items4']=$this->product->searchCategoryProduct('Giải trí');
       //  $data['items5']=$this->product->listAll();

@@ -8,7 +8,6 @@ use App\Model\categoryModel;
 use App\Model\mediaModel;
 use App\Model\productModel;
 use Illuminate\Http\Request;
-
 class productController extends Controller
 {
     //

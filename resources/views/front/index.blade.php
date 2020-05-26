@@ -2,12 +2,11 @@
 @section('title','Doido.com | Thế giới giao vặt')
 @section('main')
     <style>
-        img{
+        img {
             width: 100%;
         }
 
-        .stars .checked
-        {
+        .stars .checked {
             color: orange;
         }
     </style>
@@ -17,19 +16,19 @@
                 <div class="slider-carousel owl-carousel owl-theme">
                     <a href="bo-suu-tap/thoi-trang-tre.html">
                         <img class="owl-lazy" data-src="images/banner.jpg" data-srcset="images/banner.jpg"
-                             sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
+                             sizes="50vw" alt="DoiDo.com - Thế giới giao vặt"/>
                     </a>
                     <a href="bo-suu-tap/dong-gia.html">
                         <img class="owl-lazy" data-src="images/banner2.jpg" data-srcset="images/banner2.jpg"
-                             sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
+                             sizes="50vw" alt="DoiDo.com - Thế giới giao vặt"/>
                     </a>
                     <a href="#">
                         <img class="owl-lazy" data-src="images/banner3.jpg" data-srcset="images/banner3.jpg"
-                             sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
+                             sizes="50vw" alt="DoiDo.com - Thế giới giao vặt"/>
                     </a>
                     <a href="bo-suu-tap/my-pham-02.html">
                         <img class="owl-lazy" data-src="images/banner2.jpg" data-srcset="images/banner2.jpg"
-                             sizes="50vw" alt="DoiDo.com - Thời trang thiết kế cao cấp"/>
+                             sizes="50vw" alt="DoiDo.com - Thế giới giao vặt"/>
                     </a>
                 </div>
             </div>
@@ -51,35 +50,37 @@
                             <div class="products--wrapper">
                                 <div class="bestsale-carousel">
                                     @foreach($items1 as $item1)
-                                        <div class="prod-item">
-                                            <div class="prod-img1">
-                                                <a href="{{asset('product-'.$item1->id)}}" class="">
-                                                    <img class="owl-lazy"
-                                                         data-src="{{asset('public/media/'.$item1->coverimg)}}"/>
-                                                </a>
-                                            </div>
-                                            <div class="content productnew">
-                                                <a href="{{asset('product-'.$item1->id)}}">
-                                                    <div class="title"><span>{{$item1->title}}</span></div>
-                                                    <div class="stars">
-                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=1?'checked':'':''}}"></span>
-                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=2?'checked':'':''}}"></span>
-                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=3?'checked':'':''}}"></span>
-                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=4?'checked':'':''}}"></span>
-                                                        <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=5?'checked':'':''}}"></span>
-                                                    </div>
-                                                    <div class="desc">
+                                        @if((int)((time()-strtotime($item1->procreated_at))/86400)<=14)
+                                            <div class="prod-item">
+                                                <div class="prod-img1">
+                                                    <a href="{{asset('product-'.$item1->id)}}" class="">
+                                                        <img class="owl-lazy"
+                                                             data-src="{{asset('public/media/'.$item1->coverimg)}}"/>
+                                                    </a>
+                                                </div>
+                                                <div class="content productnew">
+                                                    <a href="{{asset('product-'.$item1->id)}}">
+                                                        <div class="title"><span>{{$item1->title}}</span></div>
+                                                        <div class="stars">
+                                                            <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=1?'checked':'':''}}"></span>
+                                                            <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=2?'checked':'':''}}"></span>
+                                                            <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=3?'checked':'':''}}"></span>
+                                                            <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=4?'checked':'':''}}"></span>
+                                                            <span class="fa fa-star {{isset($item1->diem)?ceil($item1->diem)>=5?'checked':'':''}}"></span>
+                                                        </div>
+                                                        <div class="desc">
                                                     	<span>
                                                             {{$item1->describe}}
                                                                 <br>
                                                                 <span class="color-red">
                                                                     {{isset($item1->price)?number_format($item1->price,0,',','.'):0 }} VND</span>
                                                         </span>
-                                                    </div>
-                                                    <span class="product-new">{{$item1->statustype==0?'Hàng đã đổi':'Hàng chưa đổi'}}</span>
-                                                </a>
+                                                        </div>
+                                                        <span class="product-new">{{$item1->statustype==0?'Hàng đã đổi':'Hàng chưa đổi'}}</span>
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
+                                        @endif
                                     @endforeach
                                 </div>
                             </div>
@@ -102,12 +103,14 @@
                     <div class="col-md-12">
                         <div class="row">
                             @foreach($items2->slice(0, 8) as $item2)
+                                @if((int)((time()-strtotime($item2->created_at))/86400)<=14)
                                 <div class="col-sm-3 col-xs-6">
                                     <div class="prod-img1">
                                         <a href="{{asset('product-'.$item2->id)}}"
                                            class="">
                                             <img data-src="{{asset('public/media/'.$item2->coverimg)}}"/>
-                                            <img data-src="{{asset('public/media/'.$item2->coverimg)}}" class="lazyload" style="display: block !important;"/>
+                                            <img data-src="{{asset('public/media/'.$item2->coverimg)}}" class="lazyload"
+                                                 style="display: block !important;"/>
                                         </a>
                                     </div>
                                     <div
@@ -123,6 +126,7 @@
                                         <!-- <span class="status">Exclusive</span> -->
                                     </div>
                                 </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>
@@ -146,6 +150,7 @@
                             <div class="products--wrapper">
                                 <div class="bestsale-carousel">
                                     @foreach($items3->slice(0, 4) as $item3)
+                                        @if((int)((time()-strtotime($item3->created_at))/86400)<=14)
                                         <div class="prod-item">
                                             <div class="prod-img1">
                                                 <a href="{{asset('product-'.$item3->id)}}" class="">
@@ -169,6 +174,7 @@
                                                 </a>
                                             </div>
                                         </div>
+                                        @endif
                                     @endforeach
                                 </div>
                             </div>
@@ -276,26 +282,29 @@
                     <div class="col-md-12">
                         <div class="row">
                             @foreach($items4->slice(0, 8) as $item4)
-                            <div class="col-sm-3 col-xs-6">
-                                <div class="prod-img1">
-                                    <a href="{{asset('product-'.$item4->id)}}"
-                                       class="">
-                                        <img data-src="{{asset('public/media/'.$item4->coverimg)}}"/>
-                                        <img data-src="{{asset('public/media/'.$item4->coverimg)}}" class="lazyload" style="display: block !important;"/>
-                                    </a>
+                                @if((int)((time()-strtotime($item4->created_at))/86400)<=14)
+                                <div class="col-sm-3 col-xs-6">
+                                    <div class="prod-img1">
+                                        <a href="{{asset('product-'.$item4->id)}}"
+                                           class="">
+                                            <img data-src="{{asset('public/media/'.$item4->coverimg)}}"/>
+                                            <img data-src="{{asset('public/media/'.$item4->coverimg)}}" class="lazyload"
+                                                 style="display: block !important;"/>
+                                        </a>
+                                    </div>
+                                    <div
+                                            class="content ">
+                                        <a href="{{asset('product-'.$item4->id)}}">
+                                            <div class="title"><span>{{$item4->title}}</span></div>
+                                            <div class="desc">
+                                                <span>{{isset($item4->price)?number_format($item4->price,0,',','.'):0 }} VND </span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                        <!-- <span class="status">Exclusive</span> -->
+                                    </div>
                                 </div>
-                                <div
-                                        class="content ">
-                                    <a href="{{asset('product-'.$item4->id)}}">
-                                        <div class="title"><span>{{$item4->title}}</span></div>
-                                        <div class="desc">
-                                            	<span>{{isset($item4->price)?number_format($item4->price,0,',','.'):0 }} VND </span>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <!-- <span class="status">Exclusive</span> -->
-                                </div>
-                            </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>

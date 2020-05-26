@@ -35,7 +35,7 @@ class productModel extends Model
 //            ->avg('rate.rating')
 //            ->groupBy('product.id')
 //            ->get();
-        $items=DB::select('SELECT product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser,AVG(rate.rating) as diem FROM product,rate WHERE product.id=rate.idproduct and toggle=1 GROUP BY product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser');
+        $items=DB::select('SELECT product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser,AVG(rate.rating) as diem,product.created_at as procreated_at FROM product,rate WHERE product.id=rate.idproduct and toggle=1 GROUP BY product.id,product.title,product.describe,product.tag,product.price,product.status,product.statustype,product.contents,product.coverimg,product.desiredproducts,product.iduser,product.created_at');
         return $items;
     }
 
@@ -149,6 +149,7 @@ class productModel extends Model
     {
         $items = DB::table('product')
             ->where('toggle',1)
+            ->whereRaw('DATEDIFF(CURDATE(),created_at)<14')
             ->select('product.*')
             ->paginate(9);
 //            ->get();
