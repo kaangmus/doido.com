@@ -71,18 +71,24 @@ ON      le.id = t.idguest');
     public function updateStatus($id, $status)
     {
         $idproduct=orderModel::find($id);
+       // $idproductex=
         if($status==0)
         {
             $this->product->updateStatus($idproduct['idproductex'],1);
             $this->product->updateStatus($idproduct['idproductre'],1);
+            DB::table('orderproduct')->where('idproductex',$idproduct['idproductex'])
+                ->where('id','!=',$idproduct['id'])
+                ->update(['status' => 0]);
         }
         else{
             $this->product->updateStatus($idproduct['idproductex'],0);
             $this->product->updateStatus($idproduct['idproductre'],0);
+            DB::table('orderproduct')->where('idproductex',$idproduct['idproductex'])
+                ->where('id','!=',$idproduct['id'])
+                ->update(['status' => 3]);
         }
-        $item = orderModel::find($id);
-        $item->status = $status;
-        $item->save();
+        $idproduct->status = $status;
+        $idproduct->save();
         return true;
     }
 

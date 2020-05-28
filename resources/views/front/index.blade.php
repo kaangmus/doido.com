@@ -50,7 +50,7 @@
                             <div class="products--wrapper">
                                 <div class="bestsale-carousel">
                                     @foreach($items1 as $item1)
-                                        @if((int)((time()-strtotime($item1->procreated_at))/86400)<=14)
+                                        @if((int)((time()-strtotime($item1->procreated_at))/86400)<=14&&$item1->statustype!=0)
                                             <div class="prod-item">
                                                 <div class="prod-img1">
                                                     <a href="{{asset('product-'.$item1->id)}}" class="">
@@ -103,7 +103,7 @@
                     <div class="col-md-12">
                         <div class="row">
                             @foreach($items2->slice(0, 8) as $item2)
-                                @if((int)((time()-strtotime($item2->created_at))/86400)<=14)
+                                @if((int)((time()-strtotime($item2->created_at))/86400)<=14&&$item2->statustype!=0)
                                 <div class="col-sm-3 col-xs-6">
                                     <div class="prod-img1">
                                         <a href="{{asset('product-'.$item2->id)}}"
@@ -150,7 +150,7 @@
                             <div class="products--wrapper">
                                 <div class="bestsale-carousel">
                                     @foreach($items3->slice(0, 4) as $item3)
-                                        @if((int)((time()-strtotime($item3->created_at))/86400)<=14)
+                                        @if((int)((time()-strtotime($item3->created_at))/86400)<=14&&$item3->statustype!=0)
                                         <div class="prod-item">
                                             <div class="prod-img1">
                                                 <a href="{{asset('product-'.$item3->id)}}" class="">
@@ -282,7 +282,7 @@
                     <div class="col-md-12">
                         <div class="row">
                             @foreach($items4->slice(0, 8) as $item4)
-                                @if((int)((time()-strtotime($item4->created_at))/86400)<=14)
+                                @if((int)((time()-strtotime($item4->created_at))/86400)<=14&&$item4->statustype!=0)
                                 <div class="col-sm-3 col-xs-6">
                                     <div class="prod-img1">
                                         <a href="{{asset('product-'.$item4->id)}}"

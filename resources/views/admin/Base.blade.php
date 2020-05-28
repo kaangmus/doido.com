@@ -94,12 +94,12 @@
     </div>
     <div class="divider"></div>
     <ul class="nav menu">
-        @if(Auth::user()->lever==0)<li class="{{ (request()->is('admin/admin')) ? 'active' : '' }}"><a href="{{asset('admin')}}"><em class="fa fa-dashboard">&nbsp;</em>Bảng điều khiển</a></li>@endif
+        @if(Auth::user()->lever==0)<li class="{{ (request()->is('admin')) ? 'active' : '' }}"><a href="{{asset('admin')}}"><em class="fa fa-dashboard">&nbsp;</em>Bảng điều khiển</a></li>@endif
         <li class="{{ (request()->is('admin/profile')) ? 'active' : '' }}"><a href="{{asset('admin/profile')}}"><em class="fa fa-calendar"></em> Hồ sơ cá nhân</a></li>
         <li class="{{ (request()->is('admin/product')) ? 'active' : '' }}"><a href="{{asset('admin/product')}}"><em class="fa fa-calendar"></em> Sản phẩm</a></li>
         <li class="{{ (request()->is('admin/ordermanger')) ? 'active' : '' }}"><a href="{{asset('admin/ordermanger')}}"><em class="fa fa-calendar"></em> Quản lý giao dịch</a></li>
         @if(Auth::user()->lever==0)<li class="{{ (request()->is('admin/profile/user')) ? 'active' : '' }}"><a href="{{asset('admin/profile/user')}}"><em class="fa fa-bar-chart">&nbsp;</em> Danh sách người dùng</a></li>@endif
-        @if(Auth::user()->lever==0) <li class="parent"><a data-toggle="collapse" href="#sub-item-1">
+        @if(Auth::user()->lever==0) <li class="parent {{ (request()->is('admin/category')) ? 'active' : '' }}"><a data-toggle="collapse" href="#sub-item-1">
                 <em class="fa fa-navicon">&nbsp;</em> Tùy chọn <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">

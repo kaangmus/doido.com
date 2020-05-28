@@ -41,7 +41,7 @@
                                     <td>{{$item->userid2}}</td>
                                     <td>{{$item->username2}}</td>
                                     <td>{{$item->idproductre}}</td>
-                                    <td>{{$item->status==1?'Đã đổi':'Chưa đổi'}}</td>
+                                    <td>{{$item->status==1?'Đã đổi':($item->status==3?'Đã bị đổi':'Chưa đổi')}}</td>
                                     <td>
                                         <a class="btn btn-info" href="{{asset('admin/ordermanger/detail/'.$item->id)}}">Chi tiết</a>
                                         <a class="btn btn-danger" href="{{asset('admin/ordermanger/delete/'.$item->id)}}">Xóa</a>
@@ -66,6 +66,7 @@
                             </tr>
                             </thead>
                             <tbody>
+                            {{$items}}
                             @foreach($items as $item)
                                 <tr class="onRow">
                                     <td scope="row">{{$item->idOrder}}</td>
@@ -77,7 +78,7 @@
                                     <td>{{$item->status==0?'Cũ':'Mới'}}</td>
                                     <td>{{$item->username}}</td>
                                     <td>{{$item->idproductex}}</td>
-                                    <td>{{$item->orderStatus==1?'Đã đổi':'Chưa đổi'}}</td>
+                                    <td>{{$item->orderStatus==1?'Đã đổi':($item->orderStatus==3?'Đã bị đổi':'Chưa đổi')}}</td>
                                     <td>
                                         <a class="btn btn-info" href="{{asset('admin/ordermanger/detail/'.$item->idOrder)}}">Chi tiết</a>
                                         <a class="btn btn-danger" href="{{asset('admin/ordermanger/delete/'.$item->idOrder)}}">Xóa</a>
@@ -96,7 +97,7 @@
                                         <td>{{$item->status==0?'Cũ':'Mới'}}</td>
                                         <td>{{$item->username}}</td>
                                         <td>{{$item->idproductre}}</td>
-                                        <td>{{$item->orderStatus==1?'Đã đổi':'Chưa đổi'}}</td>
+                                        <td>{{$item->orderStatus==1?'Đã đổi':($item->orderStatus==3?'Đã bị đổi':'Chưa đổi')}}</td>
                                         <td>
                                             <a class="btn btn-info" href="{{asset('admin/ordermanger/detail/'.$item->idOrder)}}">Chi tiết</a>
                                             <a class="btn btn-danger" href="{{asset('admin/ordermanger/delete/'.$item->idOrder)}}">Xóa</a>

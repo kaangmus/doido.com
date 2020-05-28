@@ -49,7 +49,7 @@
                             <div class="col-sm-6">
                                 <h4>Thông tin sản phẩm của tôi</h4>
                                 <hr>
-                                <span>Mã sản phẩm: {{$productexItem[0]->idproductre}}</span><br/>
+                                <span>Mã sản phẩm: {{$productexItem[0]->idproductex}}</span><br/>
                                 <span>Tên sản phẩm: {{$productexItem[0]->title}}</span><br/>
                                 <span>Hình ảnh:</span><br>
                                 <img style="width: 300px"
@@ -57,12 +57,13 @@
                                 <br/>
                                 <span>Giá ước tính: {{$productexItem[0]->price}}</span><br/>
                                 <span>Tình trạng sản phẩm: {{$productexItem[0]->status==0?'Cũ':'Mới'}}</span><br/>
+                                {{$order}}
                                 <b>Trạng thái giao dịch:</b>
-                                @if(Auth::user()->id==$order->iduser)
+                                @if(Auth::user()->id==$order->iduser&&$order->status!=3)
                                 <a class=" btn btn-success"
                                    href="{{asset('admin/ordermanger/status/'.$order->id.'/'.($order->status==1?'0':'1'))}}">{{$order->status==1?'Đã đổi':'Chưa đổi'}}</a>
                                 @else
-                                    {{$order->status==1?'Đã đổi':'Chưa đổi'}}
+                                    {{$order->status==1?'Đã đổi':($order->status==3?'Đã bị đổi':'Chưa đổi')}}
                                 @endif
                             </div>
                         @else
@@ -113,7 +114,7 @@
                                     </div>
                                 @endif
                                 <hr>
-                                <span>Mã sản phẩm: {{$productreItem[0]->idproductre}}</span><br/>
+                                <span>Mã sản phẩm: {{$productreItem[0]->idproductex}}</span><br/>
                                 <span>Tên sản phẩm: {{$productreItem[0]->title}}</span><br/>
                                 <span>Hình ảnh:</span><br>
                                 <img style="width: 300px"
@@ -126,7 +127,7 @@
                                     <a class=" btn btn-success"
                                        href="{{asset('admin/ordermanger/status/'.$order->id.'/'.($order->status==1?'0':'1'))}}">{{$order->status==1?'Đã đổi':'Chưa đổi'}}</a>
                                 @else
-                                    {{$order->status==1?'Đã đổi':'Chưa đổi'}}
+                                    {{$order->status==1?'Đã đổi':($order->status==3?'Đã bị đổi':'Chưa đổi')}}
                                 @endif
                             </div>
                         @endif
