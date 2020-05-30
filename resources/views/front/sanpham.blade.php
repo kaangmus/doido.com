@@ -88,9 +88,11 @@
                                     </div>
                                 </div>
                                 <div class="row" id="list-product-ajax">
+
                                     <?php $check = 0 ?>
                                     @foreach($items as $item)
                                         <?php $check = 1?>
+                                        @if($item->statustype==1)
                                             <div class="col-sm-4  col-xs-6">
                                                 <div class="prod-img1">
                                                     <a href="{{asset('/product-'.$item->id)}}" class="">
@@ -111,6 +113,7 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                        @endif
                                     @endforeach
                                     @if($check==0)
                                         <center><span
