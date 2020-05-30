@@ -57,7 +57,6 @@
                                 <br/>
                                 <span>Giá ước tính: {{$productexItem[0]->price}}</span><br/>
                                 <span>Tình trạng sản phẩm: {{$productexItem[0]->status==0?'Cũ':'Mới'}}</span><br/>
-                                {{$order}}
                                 <b>Trạng thái giao dịch:</b>
                                 @if(Auth::user()->id==$order->iduser&&$order->status!=3)
                                 <a class=" btn btn-success"
