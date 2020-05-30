@@ -66,7 +66,6 @@
                             </tr>
                             </thead>
                             <tbody>
-                            {{$items}}
                             @foreach($items as $item)
                                 <tr class="onRow">
                                     <td scope="row">{{$item->idOrder}}</td>
